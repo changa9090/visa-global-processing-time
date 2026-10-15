@@ -36,6 +36,11 @@ tr:hover td { background: var(--burgundy-wash); }
 .neutral { color: var(--muted); }
 .note { color: var(--charcoal-soft); font-size: 0.84rem; margin-top: 6px; }
 footer p { margin: 0 0 8px; }
+.visit-counter { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 14px; }
+.visit-counter[hidden] { display: none; }
+.visit-counter span { background: var(--white); border: 1px solid var(--line); border-radius: 999px;
+                      padding: 4px 12px; font-size: 0.8rem; color: var(--charcoal-soft); }
+.visit-counter b { color: var(--burgundy); font-weight: 800; margin-left: 4px; font-variant-numeric: tabular-nums; }
 footer { margin-top: 56px; color: var(--charcoal-soft); font-size: 0.8rem; border-top: 1px solid var(--line);
          padding-top: 14px; }
 a { color: var(--burgundy); }
@@ -115,6 +120,7 @@ input[type=search]:focus, select:focus { outline: 2px solid var(--burgundy); out
 }
 @media (max-width: 720px) {
   .hide-sm { display: none; }
+  .site-header .btn-cafe { display: none; }
   .site-header .bar { padding: 8px 12px; gap: 8px; }
   .site-header .brand img { height: 26px; }
   .site-header .actions { gap: 6px; }
@@ -139,6 +145,8 @@ input[type=search]:focus, select:focus { outline: 2px solid var(--burgundy); out
 <a class="product" href="index.html">Visa Processing Times &middot; 비자 처리 기간</a>
 <div class="actions"><button id="help-btn" class="btn btn-secondary" type="button"
 aria-controls="help-panel" aria-expanded="false"><span class="hide-sm">How to use &middot; </span>사용법</button>
+<a class="btn btn-secondary btn-cafe" href="https://cafe.naver.com/immispecialist" target="_blank" rel="noopener"
+ title="Free Q&amp;A board on Naver Cafe">무료 상담 게시판</a>
 <a class="btn btn-primary" href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener" title="Contact Park &amp; Co Lawyers">박앤코 문의하기 &rarr;</a></div>
 
 <div id="help-panel" role="dialog" aria-label="How to use / 사용법">
@@ -322,6 +330,13 @@ Red = slower, green = faster. The page address keeps your choice, so you can sha
 </script>
 
 <footer>
+<div class="visit-counter" id="visit-counter" hidden>
+<span>Total visits &middot; 누적 방문<b id="vc-total">-</b></span>
+<span>Today &middot; 오늘 방문<b id="vc-today">-</b></span>
+<span>Visitors &middot; 방문자<b id="vc-visitors">-</b></span>
+</div>
+<p>Free questions: <a href="https://cafe.naver.com/immispecialist">무료 상담 게시판 (Naver Cafe)</a> &middot;
+Contact: <a href="https://parklawyers.com.au/links/?lang=ko">박앤코 문의하기</a></p>
 <p>Data source: Australian Government Department of Home Affairs,
 <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/global-visa-processing-times">Global visa processing times</a>.
 Source material licensed under
@@ -378,6 +393,30 @@ Australian Government or the Department of Home Affairs.</p>
       if (picker.value) window.location.href = picker.value;
     });
   }
+})();
+</script>
+<script>
+(function () {
+  var NS = 'changa9090.github.io', API = 'https://abacus.jasoncameron.dev/';
+  var P = 'vgpt' + (location.hostname === 'changa9090.github.io' ? '' : '-dev');
+  var day = new Intl.DateTimeFormat('en-CA', { timeZone: 'Australia/Brisbane' })
+    .format(new Date()).replace(/-/g, '');
+  var seen = false;
+  try { seen = !!localStorage.getItem(P + '-seen'); localStorage.setItem(P + '-seen', '1'); } catch (e) {}
+  function call(kind, key) {
+    return fetch(API + kind + '/' + NS + '/' + P + '-' + key)
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (j) { return j.value; });
+  }
+  Promise.all([call('hit', 'total'), call('hit', 'day-' + day), call(seen ? 'get' : 'hit', 'visitors')])
+    .then(function (v) {
+      var fmt = function (n) { return Number(n).toLocaleString('en-AU'); };
+      document.getElementById('vc-total').textContent = fmt(v[0]);
+      document.getElementById('vc-today').textContent = fmt(v[1]);
+      document.getElementById('vc-visitors').textContent = fmt(v[2]);
+      document.getElementById('visit-counter').hidden = false;
+    })
+    .catch(function () {});
 })();
 </script>
 </body>
