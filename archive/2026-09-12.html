@@ -581,6 +581,9 @@ Australian Government or the Department of Home Affairs.</p>
     var clean = lang === 'en' ? 'en' : 'ko';
     document.body.setAttribute('data-ui-lang', clean);
     document.documentElement.setAttribute('lang', clean);
+    document.querySelectorAll('a[href^="https://parklawyers.com.au/links/"]').forEach(function (a) {
+      a.setAttribute('href', clean === 'en' ? 'https://parklawyers.com.au/links/' : 'https://parklawyers.com.au/links/?lang=ko');
+    });
     if (langKoBtn) langKoBtn.classList.toggle('active', clean === 'ko');
     if (langEnBtn) langEnBtn.classList.toggle('active', clean === 'en');
     try { localStorage.setItem('vgpt-ui-lang', clean); } catch (e) {}
