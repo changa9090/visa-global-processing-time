@@ -1,9 +1,9 @@
 {
   "schema_version": "visa-processing-typed-manifest-2.0",
-  "generated_at_utc": "2026-10-28 10:09 UTC",
-  "latest_date": "2026-10-28",
-  "snapshot_sha256": "0a896c6779146d564a1355c2fe3918504edc5cec02c942f9dd3ef491f5383705",
-  "total_dates_archived": 189,
+  "generated_at_utc": "2026-10-28 20:55 UTC",
+  "latest_date": "2026-10-29",
+  "snapshot_sha256": "5785cd1da2d93d4a0978ab0c06c67750d73ba0f7867e910dd3616ccfeb0cde6e",
+  "total_dates_archived": 190,
   "latest_stream_count": 74,
   "official_cohort_end_dates": [
     "31 August 2026"
