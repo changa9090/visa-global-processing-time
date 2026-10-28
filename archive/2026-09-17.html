@@ -44,7 +44,9 @@ body[data-ui-lang="ko"] [data-i18n-en] { display: none !important; }
 .container { max-width: 1200px; width: 100%; margin: 0 auto; padding: 24px 20px 64px; }
 h1 { font-size: 1.85rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.2; margin: 4px 0 8px; }
 h2 { font-size: 1.22rem; font-weight: 800; margin-top: 38px; padding-bottom: 8px;
-     border-bottom: 2px solid var(--line-strong); display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+     border-bottom: 2px solid var(--line-strong); display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap;
+     scroll-margin-top: 132px; }
+section, .tracker-card { scroll-margin-top: 132px; }
 .updated { color: var(--charcoal-soft); font-size: 0.88rem; margin: 0 0 12px; }
 
 /* Cadence transparency banner */
@@ -553,7 +555,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 <tr><td>2026-09-05</td><td>Student<span class='ko-sub'>학생비자</span></td><td>Foreign Affairs or Defence Sector<span class='ko-sub'>외교·국방부 장학 과정</span></td><td class='num'><span class='down'>-1 days</span></td><td class='num'><span class='down'>-25.0%</span></td></tr></tbody></table></div>
 
 <footer>
-<div class="visit-counter" id="visit-counter" hidden>
+<div class="visit-counter" id="visit-counter" data-seed-total="787" data-seed-visitors="305" hidden>
 <span><span data-i18n-en>Total visits &middot; </span>누적 방문<b id="vc-total">-</b></span>
 <span><span data-i18n-en>Today &middot; </span>오늘 방문<b id="vc-today">-</b></span>
 <span><span data-i18n-en>Visitors &middot; </span>방문자<b id="vc-visitors">-</b></span>
@@ -591,8 +593,7 @@ Australian Government or the Department of Home Affairs.</p>
     try { initLang = localStorage.getItem('vgpt-ui-lang'); } catch (e) {}
   }
   if (!initLang) {
-    var navLang = (navigator.language || '').toLowerCase();
-    initLang = navLang.indexOf('en') === 0 ? 'en' : 'ko';
+    initLang = 'ko';
   }
   applyUiLang(initLang);
   if (langKoBtn) langKoBtn.addEventListener('click', function () { applyUiLang('ko'); });
@@ -1222,14 +1223,18 @@ Australian Government or the Department of Home Affairs.</p>
     if (tot != null || tod != null || vis != null) box.hidden = false;
   }
 
-  if (cached.total != null || cached.visitors != null) {
-    renderBadge(cached.total, cached.day === day ? cached.today : null, cached.visitors);
+  var seedTot = Number(box.getAttribute('data-seed-total')) || 0;
+  var seedVis = Number(box.getAttribute('data-seed-visitors')) || 0;
+  var initTot = Math.max(cached.total || 0, seedTot) || null;
+  var initVis = Math.max(cached.visitors || 0, seedVis) || null;
+  if (initTot != null || initVis != null) {
+    renderBadge(initTot, cached.day === day ? cached.today : null, initVis);
   }
 
   function fetchRetry(url, isHit, attempt) {
     var tries = attempt || 0;
     var ctrl = typeof AbortController !== 'undefined' ? new AbortController() : null;
-    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 8500) : null;
+    var timer = ctrl ? setTimeout(function () { ctrl.abort(); }, 16000) : null;
     var opts = { mode: 'cors' };
     if (ctrl) opts.signal = ctrl.signal;
     if (isHit) opts.keepalive = true;
@@ -1276,15 +1281,15 @@ Australian Government or the Department of Home Affairs.</p>
       });
     })
   ]).then(function (res) {
-    var tot = res[0].status === 'fulfilled' ? res[0].value : cached.total;
+    var tot = res[0].status === 'fulfilled' ? res[0].value : initTot;
     var tod = res[1].status === 'fulfilled' ? res[1].value : (cached.day === day ? cached.today : null);
-    var vis = res[2].status === 'fulfilled' ? res[2].value : cached.visitors;
+    var vis = res[2].status === 'fulfilled' ? res[2].value : initVis;
     renderBadge(tot, tod, vis);
     try {
       localStorage.setItem(CACHE_KEY, JSON.stringify({
-        total: tot != null ? tot : cached.total,
+        total: tot != null ? tot : initTot,
         today: tod != null ? tod : cached.today,
-        visitors: vis != null ? vis : cached.visitors,
+        visitors: vis != null ? vis : initVis,
         day: day
       }));
     } catch (e) {}
