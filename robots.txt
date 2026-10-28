@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://changa9090.github.io/visa-global-processing-time/sitemap.xml
