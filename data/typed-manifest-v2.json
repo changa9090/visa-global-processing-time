@@ -1,6 +1,6 @@
 {
-  "schema_version": "visa-processing-typed-manifest-2.0",
-  "generated_at_utc": "2026-10-30 20:55 UTC",
+  "schema_version": "visa-processing-typed-manifest-2.1",
+  "generated_at_utc": "2026-10-31 07:41 UTC",
   "latest_date": "2026-10-31",
   "snapshot_sha256": "d6736e0bf223f47b7033af9f95522c29175193fc4e7ad6b494cdf6185ffa6afd",
   "total_dates_archived": 192,
@@ -12,6 +12,80 @@
     "12 October 2026",
     "29 September 2026"
   ],
+  "release_forecast": {
+    "status": "imminent",
+    "current_cohort_end_iso": "2026-08-31",
+    "current_official_updated_iso": "2026-09-29",
+    "next_cohort_end_iso": "2026-09-30",
+    "next_cohort_label_ko": "2026년 9월 마감분",
+    "next_cohort_label_en": "Sep 2026 cohort",
+    "window_start_iso": "2026-10-27",
+    "window_end_iso": "2026-11-05",
+    "empirical_lags_days": [
+      23,
+      26,
+      27,
+      30,
+      36,
+      36
+    ],
+    "badge_ko": "다음 공식 발표 임박 (2026년 9월 마감분 · 예상 10.27~11.05)",
+    "badge_en": "Next DHA Release Imminent (Sep 2026 cohort · Est. Oct 27–Nov 05)"
+  },
+  "parent_queue_guide": {
+    "as_at_date": "31 August 2026",
+    "trigger_keywords": [
+      "143",
+      "173",
+      "103",
+      "804",
+      "864",
+      "884",
+      "기여제",
+      "부모초청"
+    ],
+    "source_ref": "Home Affairs Parent Visa Queue (31 August 2026) & FOI DA26/06/00275 (31 May 2026)",
+    "headline_ko": "영주 부모초청 비자(143·173·864·103·804)는 백분위 통계 대신 '연간 쿼터 대기열(Queue Release Date)'이 적용됩니다",
+    "headline_en": "Permanent Parent Visas (143/173/864/103/804) are Capped & Queued (s 85) rather than percentile-tracked",
+    "rows": [
+      {
+        "subclasses": "143 / 173",
+        "label_ko": "기여제 부모 (Contributory Parent)",
+        "label_en": "Contributory Parent (143 / 173)",
+        "stage1_assessment": "April 2024",
+        "queue_release": "November 2018",
+        "official_new_wait": "18 years",
+        "onhand_total": 83027
+      },
+      {
+        "subclasses": "864 / 884",
+        "label_ko": "기여제 고령부모 (Contributory Aged Parent)",
+        "label_en": "Contributory Aged Parent (864 / 884)",
+        "stage1_assessment": "April 2023",
+        "queue_release": "November 2020",
+        "official_new_wait": "18 years",
+        "onhand_total": 15603
+      },
+      {
+        "subclasses": "103 / 804",
+        "label_ko": "일반 부모 · 고령부모 (Non-Contributory)",
+        "label_en": "Parent (103) & Aged Parent (804)",
+        "stage1_assessment": "103: February 2023 / 804: January 2023",
+        "queue_release": "103: March 2014 / 804: October 2014",
+        "official_new_wait": "42 years",
+        "onhand_total": null
+      },
+      {
+        "subclasses": "173→143 / 884→864",
+        "label_ko": "2단계 영주 전환 (2-Stage Step-Up)",
+        "label_en": "2-Stage Temp-to-Perm Step-Up",
+        "stage1_assessment": "N/A (Direction 103 1차 접수일 승계)",
+        "queue_release": "May 2026",
+        "official_new_wait": "~3–4 months",
+        "onhand_total": null
+      }
+    ]
+  },
   "source_url": "https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/global-visa-processing-times",
   "licence": "CC BY 3.0 Australia",
   "streams": [
@@ -30,7 +104,30 @@
       "raw_p75": "13 Months",
       "raw_p90": "21 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        240.0,
+        270.0,
+        390.0,
+        630.0,
+        930.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.44
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": -30,
+        "delta_p90_days": 60,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(300일→270일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (300d→270d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "101",
@@ -47,7 +144,30 @@
       "raw_p75": "30 Months",
       "raw_p90": "33 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        600.0,
+        720.0,
+        900.0,
+        990.0,
+        1207.8
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.25
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 30,
+        "delta_p90_days": 90,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(690일→720일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (690d→720d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "102",
@@ -64,7 +184,30 @@
       "raw_p75": "12 Months",
       "raw_p90": "19 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        120.0,
+        240.0,
+        360.0,
+        570.0,
+        832.5
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.5
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 120,
+        "delta_p90_days": 210,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 120일→240일(+120일, +100%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 120d to 240d (+120d, +100%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "117",
@@ -81,7 +224,30 @@
       "raw_p75": "85 Months",
       "raw_p90": "97 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        1680.0,
+        2250.0,
+        2550.0,
+        2910.0,
+        3550.2
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.13
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": -30,
+        "delta_p90_days": 30,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(2280일→2250일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (2280d→2250d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "132",
@@ -98,7 +264,30 @@
       "raw_p75": "69 Months",
       "raw_p90": "70 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        1800.0,
+        2010.0,
+        2070.0,
+        2100.0,
+        2562.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.03
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 30,
+        "delta_p90_days": 30,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(1980일→2010일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (1980d→2010d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "155",
@@ -115,7 +304,30 @@
       "raw_p75": "4 Days",
       "raw_p90": "6 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        0.25,
+        1.25,
+        4.0,
+        6.0,
+        8.5
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 4.0
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 0,
+        "delta_p90_days": -24,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(1일→1일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (1d→1d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "157",
@@ -132,7 +344,30 @@
       "raw_p75": "45 Days",
       "raw_p90": "65 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        5.0,
+        18.0,
+        45.0,
+        65.0,
+        90.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 2.5
+      },
+      "regime": {
+        "code": "clearing",
+        "span_days": 213,
+        "delta_p50_days": -16,
+        "delta_p90_days": -3,
+        "label_ko": "전반적 심사 단축(해소) 국면",
+        "label_en": "Accelerating / Clearing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 34일→18일(-16일, -47%)로 뚜렷하게 단축되고 있습니다.",
+        "summary_en": "Median processing speed improved from 34d to 18d (-16d, -47%) since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "186",
@@ -149,7 +384,45 @@
       "raw_p75": "12 Months",
       "raw_p90": "12 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        24.0,
+        50.0,
+        351.88,
+        368.12,
+        449.11
+      ],
+      "two_tier": {
+        "is_two_tier": true,
+        "cliff_type": "p50_to_p75",
+        "cliff_ratio": 7.2,
+        "fast_track_days": 50,
+        "second_tier_days": 360,
+        "label_ko": "이원화 심사 절벽 감지 (50% 50일 → 75% 360일, 7.2배 점프)",
+        "label_en": "Two-Tier Processing Cliff (50% 50d → 75% 360d, 7.2x jump)",
+        "note_ko": "우선심사·완비 서류 트랙은 50일 이내에 빠르게 종결되지만, 50일을 넘기면 일반 대기·보완(s56) 코호트(360~360일 구간)로 편입되는 양봉형 구조입니다.",
+        "note_en": "Priority/decision-ready files clear within 50d, whereas applications passing 50d enter the standard/RFI cohort targeting 360–360 days."
+      },
+      "regime": {
+        "code": "backlog_flush_tail",
+        "span_days": 213,
+        "delta_p50_days": 3,
+        "delta_p90_days": 90,
+        "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
+        "label_en": "Legacy Backlog Flush · 90% Tail Widening",
+        "summary_ko": "2026-04-01 대비 50% 중앙값(47일→50일)은 안정/단축된 반면, 묵은 장기 미결건 처리분이 반영되며 90% 상한(270일→360일)만 확대된 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (47d→50d) while 90th pct widened (270d→360d) as older backlog files were finalised."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": null,
+        "onhand_total": 88094,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026)",
+        "headline_ko": "서브클래스 186 공식 미결 재고(On-hand) 88,094명",
+        "headline_en": "Subclass 186 Active On-hand Inventory: 88,094",
+        "detail_ko": "이민성 정보공개(FOI DA26/06/00275, 31 May 2026 기준 서브클래스 전체 합산) 활성 대기 인원은 주신청자 40,565명 + 동반가족 47,529명 = 총 88,094명입니다.",
+        "detail_en": "Per Home Affairs FOI disclosure (FOI DA26/06/00275, as at 31 May 2026), active on-hand inventory across Subclass 186 is 40,565 primary + 47,529 secondary = 88,094 applicants."
+      }
     },
     {
       "subclass": "186",
@@ -166,7 +439,39 @@
       "raw_p75": "24 Months",
       "raw_p90": "25 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        450.0,
+        630.0,
+        720.0,
+        750.0,
+        915.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.14
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 300,
+        "delta_p90_days": 120,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 330일→630일(+300일, +91%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 330d to 630d (+300d, +91%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": null,
+        "onhand_total": 88094,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026)",
+        "headline_ko": "서브클래스 186 공식 미결 재고(On-hand) 88,094명",
+        "headline_en": "Subclass 186 Active On-hand Inventory: 88,094",
+        "detail_ko": "이민성 정보공개(FOI DA26/06/00275, 31 May 2026 기준 서브클래스 전체 합산) 활성 대기 인원은 주신청자 40,565명 + 동반가족 47,529명 = 총 88,094명입니다.",
+        "detail_en": "Per Home Affairs FOI disclosure (FOI DA26/06/00275, as at 31 May 2026), active on-hand inventory across Subclass 186 is 40,565 primary + 47,529 secondary = 88,094 applicants."
+      }
     },
     {
       "subclass": "186",
@@ -183,7 +488,39 @@
       "raw_p75": "24 Months",
       "raw_p90": "25 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        420.0,
+        630.0,
+        720.0,
+        750.0,
+        915.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.14
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 300,
+        "delta_p90_days": 150,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 330일→630일(+300일, +91%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 330d to 630d (+300d, +91%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": null,
+        "onhand_total": 88094,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026)",
+        "headline_ko": "서브클래스 186 공식 미결 재고(On-hand) 88,094명",
+        "headline_en": "Subclass 186 Active On-hand Inventory: 88,094",
+        "detail_ko": "이민성 정보공개(FOI DA26/06/00275, 31 May 2026 기준 서브클래스 전체 합산) 활성 대기 인원은 주신청자 40,565명 + 동반가족 47,529명 = 총 88,094명입니다.",
+        "detail_en": "Per Home Affairs FOI disclosure (FOI DA26/06/00275, as at 31 May 2026), active on-hand inventory across Subclass 186 is 40,565 primary + 47,529 secondary = 88,094 applicants."
+      }
     },
     {
       "subclass": "188",
@@ -200,7 +537,30 @@
       "raw_p75": "9 Months",
       "raw_p90": "11 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        150.0,
+        180.0,
+        270.0,
+        330.0,
+        405.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.5
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 60,
+        "delta_p90_days": 120,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 120일→180일(+60일, +50%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 120d to 180d (+60d, +50%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "189",
@@ -217,7 +577,29 @@
       "raw_p75": "58 Months",
       "raw_p90": "61 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        1470.0,
+        1620.0,
+        1740.0,
+        1830.0,
+        2232.6
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.07
+      },
+      "regime": {
+        "code": "accumulating_baseline",
+        "span_days": 213,
+        "obs_count": 6,
+        "label_ko": "신규 편입 · 추세 누적 중",
+        "label_en": "Newly Added · Accumulating Baseline",
+        "summary_ko": "수집 기간이 45일 미만인 신규 편입 스트림으로 최소 2회 이상 월간 발표 누적 후 추세를 판정합니다.",
+        "summary_en": "Fewer than 45 days of history; trend regime activates once multiple monthly releases accumulate."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "189",
@@ -234,7 +616,45 @@
       "raw_p75": "8 Months",
       "raw_p90": "8 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        54.0,
+        61.0,
+        231.88,
+        248.12,
+        302.71
+      ],
+      "two_tier": {
+        "is_two_tier": true,
+        "cliff_type": "p50_to_p75",
+        "cliff_ratio": 3.93,
+        "fast_track_days": 61,
+        "second_tier_days": 240,
+        "label_ko": "이원화 심사 절벽 감지 (50% 61일 → 75% 240일, 3.9배 점프)",
+        "label_en": "Two-Tier Processing Cliff (50% 61d → 75% 240d, 3.9x jump)",
+        "note_ko": "우선심사·완비 서류 트랙은 61일 이내에 빠르게 종결되지만, 61일을 넘기면 일반 대기·보완(s56) 코호트(240~240일 구간)로 편입되는 양봉형 구조입니다.",
+        "note_en": "Priority/decision-ready files clear within 61d, whereas applications passing 61d enter the standard/RFI cohort targeting 240–240 days."
+      },
+      "regime": {
+        "code": "backlog_flush_tail",
+        "span_days": 213,
+        "delta_p50_days": -59,
+        "delta_p90_days": 60,
+        "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
+        "label_en": "Legacy Backlog Flush · 90% Tail Widening",
+        "summary_ko": "2026-04-01 대비 50% 중앙값(120일→61일)은 안정/단축된 반면, 묵은 장기 미결건 처리분이 반영되며 90% 상한(180일→240일)만 확대된 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (120d→61d) while 90th pct widened (180d→240d) as older backlog files were finalised."
+      },
+      "supply_pressure": {
+        "pressure_level": "moderate",
+        "inflow_ratio": null,
+        "onhand_total": 4557,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026) & SkillSelect (4 June 2026)",
+        "headline_ko": "활성 대기(On-hand) 4,557명 · 최근 라운드 10,000건 초청",
+        "headline_en": "Active On-hand 4,557 · Latest Round 10,000 invited",
+        "detail_ko": "31 May 2026 기준 미결 재고는 4,557명(주신청 3,527·동반 1,030)이며, 최근 SkillSelect 라운드(4 June 2026, 10,000건 초청) 본신청 유입분이 순차 반영됩니다.",
+        "detail_en": "Active on-hand stood at 4,557 (31 May 2026), ahead of post-invitation lodgements from the 4 June 2026 SkillSelect round (10,000 invited)."
+      }
     },
     {
       "subclass": "190",
@@ -251,7 +671,45 @@
       "raw_p75": "15 Months",
       "raw_p90": "16 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        72.0,
+        120.0,
+        450.0,
+        480.0,
+        585.6
+      ],
+      "two_tier": {
+        "is_two_tier": true,
+        "cliff_type": "p50_to_p75",
+        "cliff_ratio": 3.75,
+        "fast_track_days": 120,
+        "second_tier_days": 450,
+        "label_ko": "이원화 심사 절벽 감지 (50% 120일 → 75% 450일, 3.8배 점프)",
+        "label_en": "Two-Tier Processing Cliff (50% 120d → 75% 450d, 3.8x jump)",
+        "note_ko": "우선심사·완비 서류 트랙은 120일 이내에 빠르게 종결되지만, 120일을 넘기면 일반 대기·보완(s56) 코호트(450~480일 구간)로 편입되는 양봉형 구조입니다.",
+        "note_en": "Priority/decision-ready files clear within 120d, whereas applications passing 120d enter the standard/RFI cohort targeting 450–480 days."
+      },
+      "regime": {
+        "code": "clearing",
+        "span_days": 213,
+        "delta_p50_days": -180,
+        "delta_p90_days": 30,
+        "label_ko": "전반적 심사 단축(해소) 국면",
+        "label_en": "Accelerating / Clearing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 300일→120일(-180일, -60%)로 뚜렷하게 단축되고 있습니다.",
+        "summary_en": "Median processing speed improved from 300d to 120d (-180d, -60%) since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": 1.72,
+        "onhand_total": 22056,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026) & National State Allocation",
+        "headline_ko": "활성 적체 22,056명 vs 전국 주정부 노미네이션 배정 12,850석",
+        "headline_en": "Active On-hand 22,056 vs National State Quota 12,850",
+        "detail_ko": "주신청 12,696명·동반 9,360명(합계 22,056명, 31 May 2026)이 대기 중이며, 전국 주정부 노미네이션 배정량은 12,850석입니다 (FOI DA26/06/00275).",
+        "detail_en": "22,056 active applicants on-hand (12,696 primary + 9,360 secondary, 31 May 2026) against 12,850 national state nomination places (FOI DA26/06/00275)."
+      }
     },
     {
       "subclass": "191",
@@ -268,7 +726,39 @@
       "raw_p75": "9 Months",
       "raw_p90": "10 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        210.0,
+        240.0,
+        270.0,
+        300.0,
+        366.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.12
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 0,
+        "delta_p90_days": -150,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(240일→240일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (240d→240d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "moderate",
+        "inflow_ratio": null,
+        "onhand_total": 24890,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026)",
+        "headline_ko": "서브클래스 191 공식 미결 재고(On-hand) 24,890명",
+        "headline_en": "Subclass 191 Active On-hand Inventory: 24,890",
+        "detail_ko": "이민성 정보공개(FOI DA26/06/00275, 31 May 2026 기준 서브클래스 전체 합산) 활성 대기 인원은 주신청자 10,212명 + 동반가족 14,678명 = 총 24,890명입니다.",
+        "detail_en": "Per Home Affairs FOI disclosure (FOI DA26/06/00275, as at 31 May 2026), active on-hand inventory across Subclass 191 is 10,212 primary + 14,678 secondary = 24,890 applicants."
+      }
     },
     {
       "subclass": "300",
@@ -285,7 +775,30 @@
       "raw_p75": "20 Months",
       "raw_p90": "26 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        270.0,
+        420.0,
+        600.0,
+        780.0,
+        1005.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.43
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 30,
+        "delta_p90_days": -150,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(390일→420일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (390d→420d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "309",
@@ -302,7 +815,39 @@
       "raw_p75": "27 Months",
       "raw_p90": "32 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        540.0,
+        630.0,
+        810.0,
+        960.0,
+        1171.2
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.29
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 150,
+        "delta_p90_days": 210,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 480일→630일(+150일, +31%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 480d to 630d (+150d, +31%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": null,
+        "onhand_total": 30929,
+        "source_ref": "FOI DA26/06/00275 & DA26/06/00299 (as at 31 May 2026)",
+        "headline_ko": "글로벌 활성 대기 30,929명 · 서울 심사오피스 중앙값 15개월",
+        "headline_en": "Global On-hand 30,929 · Seoul Office Median 15 Months",
+        "detail_ko": "글로벌 미결 30,929명(주신청 22,531명) 중 한국 관할 서울 오피스(Seoul)는 활성 대기 473건·월평균 종결 16.31건·중앙값 15개월로 집계되었습니다 (FOI DA26/06/00299, 31 May 2026).",
+        "detail_en": "Global active on-hand is 30,929. For Korean offshore applicants, the Seoul office recorded 473 on-hand, 16.31/mo finalised, and a 15-month median (FOI DA26/06/00299, 31 May 2026)."
+      }
     },
     {
       "subclass": "400",
@@ -319,7 +864,30 @@
       "raw_p75": "20 Days",
       "raw_p90": "43 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        5.0,
+        8.0,
+        20.0,
+        43.0,
+        71.75
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 2.5
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 0,
+        "delta_p90_days": 15,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(8일→8일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (8d→8d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "403",
@@ -336,7 +904,30 @@
       "raw_p75": "57 Days",
       "raw_p90": "78 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        7.0,
+        27.0,
+        57.0,
+        78.0,
+        104.25
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 2.11
+      },
+      "regime": {
+        "code": "clearing",
+        "span_days": 213,
+        "delta_p50_days": -28,
+        "delta_p90_days": -4,
+        "label_ko": "전반적 심사 단축(해소) 국면",
+        "label_en": "Accelerating / Clearing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 55일→27일(-28일, -51%)로 뚜렷하게 단축되고 있습니다.",
+        "summary_en": "Median processing speed improved from 55d to 27d (-28d, -51%) since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "403",
@@ -353,7 +944,30 @@
       "raw_p75": "85 Days",
       "raw_p90": "4 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        13.0,
+        50.0,
+        85.0,
+        120.0,
+        163.75
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.7
+      },
+      "regime": {
+        "code": "clearing",
+        "span_days": 213,
+        "delta_p50_days": -17,
+        "delta_p90_days": 0,
+        "label_ko": "전반적 심사 단축(해소) 국면",
+        "label_en": "Accelerating / Clearing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 67일→50일(-17일, -25%)로 뚜렷하게 단축되고 있습니다.",
+        "summary_en": "Median processing speed improved from 67d to 50d (-17d, -25%) since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "403",
@@ -370,7 +984,30 @@
       "raw_p75": "29 Days",
       "raw_p90": "45 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        5.0,
+        12.0,
+        29.0,
+        45.0,
+        65.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 2.42
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": -1,
+        "delta_p90_days": -21,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(13일→12일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (13d→12d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "403",
@@ -387,7 +1024,30 @@
       "raw_p75": "4 Months",
       "raw_p90": "5 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        90.0,
+        111.88,
+        128.12,
+        150.0,
+        183.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.0
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 34,
+        "delta_p90_days": 30,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 86일→120일(+34일, +40%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 86d to 120d (+34d, +40%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "403",
@@ -404,7 +1064,30 @@
       "raw_p75": "18 Days",
       "raw_p90": "30 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        13.0,
+        15.0,
+        18.0,
+        30.0,
+        45.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.2
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 3,
+        "delta_p90_days": 8,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(12일→15일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (12d→15d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "407",
@@ -421,7 +1104,36 @@
       "raw_p75": "18 Months",
       "raw_p90": "20 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        67.0,
+        360.0,
+        540.0,
+        600.0,
+        732.0
+      ],
+      "two_tier": {
+        "is_two_tier": true,
+        "cliff_type": "p25_to_p50",
+        "cliff_ratio": 5.37,
+        "fast_track_days": 67,
+        "second_tier_days": 360,
+        "label_ko": "상위 트랙 분리 감지 (25% 67일 → 50% 360일, 5.4배 격차)",
+        "label_en": "Early Fast-Track Split (25% 67d → 50% 360d, 5.4x gap)",
+        "note_ko": "상위 25% 우선 케이스(67일) 이후 본류 코호트 중앙값(360일)까지 대기 구간이 크게 벌어져 있습니다.",
+        "note_en": "Top-quartile priority cases finish around 67d, with standard median cases clustering near 360d."
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 120,
+        "delta_p90_days": 180,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 240일→360일(+120일, +50%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 240d to 360d (+120d, +50%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "408",
@@ -438,7 +1150,30 @@
       "raw_p75": "36 Days",
       "raw_p90": "47 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        8.0,
+        23.0,
+        36.0,
+        47.0,
+        60.75
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.57
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 10,
+        "delta_p90_days": 25,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(13일→23일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (13d→23d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "408",
@@ -455,7 +1190,30 @@
       "raw_p75": "41 Days",
       "raw_p90": "52 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        17.0,
+        28.0,
+        41.0,
+        52.0,
+        65.75
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.46
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 0,
+        "delta_p90_days": -98,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(28일→28일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (28d→28d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "408",
@@ -472,7 +1230,30 @@
       "raw_p75": "11 Days",
       "raw_p90": "22 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        2.0,
+        4.0,
+        11.0,
+        22.0,
+        35.75
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 2.75
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 1,
+        "delta_p90_days": 8,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(3일→4일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (3d→4d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "408",
@@ -489,7 +1270,30 @@
       "raw_p75": "4 Months",
       "raw_p90": "5 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        81.88,
+        98.12,
+        120.0,
+        150.0,
+        187.5
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.33
+      },
+      "regime": {
+        "code": "clearing",
+        "span_days": 213,
+        "delta_p50_days": -30,
+        "delta_p90_days": -450,
+        "label_ko": "전반적 심사 단축(해소) 국면",
+        "label_en": "Accelerating / Clearing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 120일→90일(-30일, -25%)로 뚜렷하게 단축되고 있습니다.",
+        "summary_en": "Median processing speed improved from 120d to 90d (-30d, -25%) since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "408",
@@ -506,7 +1310,30 @@
       "raw_p75": "17 Months",
       "raw_p90": "17 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        210.0,
+        450.0,
+        501.88,
+        518.12,
+        632.11
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.13
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 432,
+        "delta_p90_days": 300,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 18일→450일(+432일, +2400%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 18d to 450d (+432d, +2400%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "408",
@@ -523,7 +1350,30 @@
       "raw_p75": "34 Days",
       "raw_p90": "56 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        21.0,
+        31.0,
+        34.0,
+        56.0,
+        83.5
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.1
+      },
+      "regime": {
+        "code": "clearing",
+        "span_days": 213,
+        "delta_p50_days": -12,
+        "delta_p90_days": 6,
+        "label_ko": "전반적 심사 단축(해소) 국면",
+        "label_en": "Accelerating / Clearing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 43일→31일(-12일, -28%)로 뚜렷하게 단축되고 있습니다.",
+        "summary_en": "Median processing speed improved from 43d to 31d (-12d, -28%) since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "408",
@@ -540,7 +1390,30 @@
       "raw_p75": "32 Days",
       "raw_p90": "4 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        5.0,
+        16.0,
+        32.0,
+        120.0,
+        230.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 2.0
+      },
+      "regime": {
+        "code": "backlog_flush_tail",
+        "span_days": 213,
+        "delta_p50_days": 1,
+        "delta_p90_days": 81,
+        "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
+        "label_en": "Legacy Backlog Flush · 90% Tail Widening",
+        "summary_ko": "2026-04-01 대비 50% 중앙값(15일→16일)은 안정/단축된 반면, 묵은 장기 미결건 처리분이 반영되며 90% 상한(39일→120일)만 확대된 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (15d→16d) while 90th pct widened (39d→120d) as older backlog files were finalised."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "408",
@@ -557,7 +1430,30 @@
       "raw_p75": "9 Days",
       "raw_p90": "35 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        1.0,
+        7.0,
+        9.0,
+        35.0,
+        67.5
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.29
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": -7,
+        "delta_p90_days": 4,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(14일→7일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (14d→7d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "417",
@@ -574,7 +1470,30 @@
       "raw_p75": "12 Days",
       "raw_p90": "58 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        1.0,
+        2.0,
+        12.0,
+        58.0,
+        115.5
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 6.0
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 1,
+        "delta_p90_days": -25,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(1일→2일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (1d→2d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "445",
@@ -591,7 +1510,30 @@
       "raw_p75": "29 Months",
       "raw_p90": "32 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        660.0,
+        750.0,
+        870.0,
+        960.0,
+        1171.2
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.16
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 60,
+        "delta_p90_days": 120,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(690일→750일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (690d→750d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "461",
@@ -608,7 +1550,30 @@
       "raw_p75": "5 Months",
       "raw_p90": "6 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        90.0,
+        141.88,
+        158.12,
+        180.0,
+        219.6
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.0
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 72,
+        "delta_p90_days": 30,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 78일→150일(+72일, +92%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 78d to 150d (+72d, +92%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "462",
@@ -625,7 +1590,30 @@
       "raw_p75": "11 Days",
       "raw_p90": "44 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        1.0,
+        3.0,
+        11.0,
+        44.0,
+        85.25
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 3.67
+      },
+      "regime": {
+        "code": "clearing",
+        "span_days": 213,
+        "delta_p50_days": -43,
+        "delta_p90_days": -76,
+        "label_ko": "전반적 심사 단축(해소) 국면",
+        "label_en": "Accelerating / Clearing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 46일→3일(-43일, -93%)로 뚜렷하게 단축되고 있습니다.",
+        "summary_en": "Median processing speed improved from 46d to 3d (-43d, -93%) since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "482",
@@ -642,7 +1630,39 @@
       "raw_p75": "8 Months",
       "raw_p90": "9 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        51.0,
+        120.0,
+        240.0,
+        270.0,
+        329.4
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 2.0
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 30,
+        "delta_p90_days": 30,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 90일→120일(+30일, +33%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 90d to 120d (+30d, +33%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": null,
+        "onhand_total": 56994,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026)",
+        "headline_ko": "서브클래스 482 공식 미결 재고(On-hand) 56,994명",
+        "headline_en": "Subclass 482 Active On-hand Inventory: 56,994",
+        "detail_ko": "이민성 정보공개(FOI DA26/06/00275, 31 May 2026 기준 서브클래스 전체 합산) 활성 대기 인원은 주신청자 30,850명 + 동반가족 26,144명 = 총 56,994명입니다.",
+        "detail_en": "Per Home Affairs FOI disclosure (FOI DA26/06/00275, as at 31 May 2026), active on-hand inventory across Subclass 482 is 30,850 primary + 26,144 secondary = 56,994 applicants."
+      }
     },
     {
       "subclass": "482",
@@ -659,7 +1679,38 @@
       "raw_p75": "7 Months",
       "raw_p90": "9 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        90.0,
+        150.0,
+        210.0,
+        270.0,
+        345.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.4
+      },
+      "regime": {
+        "code": "accumulating_baseline",
+        "span_days": 213,
+        "obs_count": 6,
+        "label_ko": "신규 편입 · 추세 누적 중",
+        "label_en": "Newly Added · Accumulating Baseline",
+        "summary_ko": "수집 기간이 45일 미만인 신규 편입 스트림으로 최소 2회 이상 월간 발표 누적 후 추세를 판정합니다.",
+        "summary_en": "Fewer than 45 days of history; trend regime activates once multiple monthly releases accumulate."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": null,
+        "onhand_total": 56994,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026)",
+        "headline_ko": "서브클래스 482 공식 미결 재고(On-hand) 56,994명",
+        "headline_en": "Subclass 482 Active On-hand Inventory: 56,994",
+        "detail_ko": "이민성 정보공개(FOI DA26/06/00275, 31 May 2026 기준 서브클래스 전체 합산) 활성 대기 인원은 주신청자 30,850명 + 동반가족 26,144명 = 총 56,994명입니다.",
+        "detail_en": "Per Home Affairs FOI disclosure (FOI DA26/06/00275, as at 31 May 2026), active on-hand inventory across Subclass 482 is 30,850 primary + 26,144 secondary = 56,994 applicants."
+      }
     },
     {
       "subclass": "482",
@@ -676,7 +1727,45 @@
       "raw_p75": "6 months",
       "raw_p90": "9 months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        1.0,
+        64.0,
+        180.0,
+        270.0,
+        382.5
+      ],
+      "two_tier": {
+        "is_two_tier": true,
+        "cliff_type": "p50_to_p75",
+        "cliff_ratio": 2.81,
+        "fast_track_days": 64,
+        "second_tier_days": 180,
+        "label_ko": "이원화 심사 절벽 감지 (50% 64일 → 75% 180일, 2.8배 점프)",
+        "label_en": "Two-Tier Processing Cliff (50% 64d → 75% 180d, 2.8x jump)",
+        "note_ko": "우선심사·완비 서류 트랙은 64일 이내에 빠르게 종결되지만, 64일을 넘기면 일반 대기·보완(s56) 코호트(180~270일 구간)로 편입되는 양봉형 구조입니다.",
+        "note_en": "Priority/decision-ready files clear within 64d, whereas applications passing 64d enter the standard/RFI cohort targeting 180–270 days."
+      },
+      "regime": {
+        "code": "clearing",
+        "span_days": 213,
+        "delta_p50_days": -17,
+        "delta_p90_days": 30,
+        "label_ko": "전반적 심사 단축(해소) 국면",
+        "label_en": "Accelerating / Clearing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 81일→64일(-17일, -21%)로 뚜렷하게 단축되고 있습니다.",
+        "summary_en": "Median processing speed improved from 81d to 64d (-17d, -21%) since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": null,
+        "onhand_total": 56994,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026)",
+        "headline_ko": "서브클래스 482 공식 미결 재고(On-hand) 56,994명",
+        "headline_en": "Subclass 482 Active On-hand Inventory: 56,994",
+        "detail_ko": "이민성 정보공개(FOI DA26/06/00275, 31 May 2026 기준 비자 본신청 서브클래스 전체 합산) 활성 대기 인원은 주신청자 30,850명 + 동반가족 26,144명 = 총 56,994명입니다.",
+        "detail_en": "Per Home Affairs FOI disclosure (FOI DA26/06/00275, as at 31 May 2026), active on-hand inventory across Subclass 482 is 30,850 primary + 26,144 secondary = 56,994 applicants."
+      }
     },
     {
       "subclass": "482",
@@ -693,7 +1782,39 @@
       "raw_p75": "51 Days",
       "raw_p90": "78 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        28.0,
+        37.0,
+        51.0,
+        78.0,
+        111.75
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.38
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 29,
+        "delta_p90_days": 10,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 8일→37일(+29일, +362%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 8d to 37d (+29d, +362%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": null,
+        "onhand_total": 56994,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026)",
+        "headline_ko": "서브클래스 482 공식 미결 재고(On-hand) 56,994명",
+        "headline_en": "Subclass 482 Active On-hand Inventory: 56,994",
+        "detail_ko": "이민성 정보공개(FOI DA26/06/00275, 31 May 2026 기준 서브클래스 전체 합산) 활성 대기 인원은 주신청자 30,850명 + 동반가족 26,144명 = 총 56,994명입니다.",
+        "detail_en": "Per Home Affairs FOI disclosure (FOI DA26/06/00275, as at 31 May 2026), active on-hand inventory across Subclass 482 is 30,850 primary + 26,144 secondary = 56,994 applicants."
+      }
     },
     {
       "subclass": "482",
@@ -710,7 +1831,38 @@
       "raw_p75": "28 days",
       "raw_p90": "57 days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        4.0,
+        11.0,
+        28.0,
+        57.0,
+        93.25
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 2.55
+      },
+      "regime": {
+        "code": "accumulating_baseline",
+        "span_days": 213,
+        "obs_count": 6,
+        "label_ko": "신규 편입 · 추세 누적 중",
+        "label_en": "Newly Added · Accumulating Baseline",
+        "summary_ko": "수집 기간이 45일 미만인 신규 편입 스트림으로 최소 2회 이상 월간 발표 누적 후 추세를 판정합니다.",
+        "summary_en": "Fewer than 45 days of history; trend regime activates once multiple monthly releases accumulate."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": null,
+        "onhand_total": 56994,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026)",
+        "headline_ko": "서브클래스 482 공식 미결 재고(On-hand) 56,994명",
+        "headline_en": "Subclass 482 Active On-hand Inventory: 56,994",
+        "detail_ko": "이민성 정보공개(FOI DA26/06/00275, 31 May 2026 기준 비자 본신청 서브클래스 전체 합산) 활성 대기 인원은 주신청자 30,850명 + 동반가족 26,144명 = 총 56,994명입니다.",
+        "detail_en": "Per Home Affairs FOI disclosure (FOI DA26/06/00275, as at 31 May 2026), active on-hand inventory across Subclass 482 is 30,850 primary + 26,144 secondary = 56,994 applicants."
+      }
     },
     {
       "subclass": "485",
@@ -727,7 +1879,41 @@
       "raw_p75": "13 Days",
       "raw_p90": "55 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        1.0,
+        5.0,
+        13.0,
+        55.0,
+        107.5
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 2.6
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": -1,
+        "delta_p90_days": 3,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(6일→5일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (6d→5d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "moderate",
+        "inflow_ratio": 1.22,
+        "lodged_recent": 38799,
+        "granted_recent": 31746,
+        "onhand_total": null,
+        "source_ref": "data.gov.au BP0016 (as at 30 Sep 2026)",
+        "headline_ko": "수급 압력 지수 1.22x (신규 접수 38,799건 vs 승인 31,746건)",
+        "headline_en": "Inflow/Grant Ratio 1.22x (38,799 lodged vs 31,746 granted)",
+        "detail_ko": "2026.07~09 분기 접수(38,799건)가 승인(31,746건)을 소폭 상회 중입니다 (출처: data.gov.au BP0016 (as at 30 Sep 2026)).",
+        "detail_en": "Jul–Sep 2026 lodgements (38,799) slightly outpaced grants (31,746) (Source: data.gov.au BP0016 (as at 30 Sep 2026))."
+      }
     },
     {
       "subclass": "485",
@@ -744,7 +1930,41 @@
       "raw_p75": "4 Months",
       "raw_p90": "5 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        12.0,
+        52.0,
+        120.0,
+        150.0,
+        187.5
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 2.31
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": -6,
+        "delta_p90_days": 0,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(58일→52일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (58d→52d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "moderate",
+        "inflow_ratio": 1.21,
+        "lodged_recent": 6943,
+        "granted_recent": 5743,
+        "onhand_total": null,
+        "source_ref": "data.gov.au BP0016 (as at 30 Sep 2026)",
+        "headline_ko": "수급 압력 지수 1.21x (신규 접수 6,943건 vs 승인 5,743건)",
+        "headline_en": "Inflow/Grant Ratio 1.21x (6,943 lodged vs 5,743 granted)",
+        "detail_ko": "2026.07~09 분기 접수(6,943건)가 승인(5,743건)을 소폭 상회 중입니다 (출처: data.gov.au BP0016 (as at 30 Sep 2026)).",
+        "detail_en": "Jul–Sep 2026 lodgements (6,943) slightly outpaced grants (5,743) (Source: data.gov.au BP0016 (as at 30 Sep 2026))."
+      }
     },
     {
       "subclass": "491",
@@ -761,7 +1981,39 @@
       "raw_p75": "5 Months",
       "raw_p90": "7 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        71.0,
+        120.0,
+        150.0,
+        210.0,
+        285.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.25
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 42,
+        "delta_p90_days": -690,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 78일→120일(+42일, +54%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 78d to 120d (+42d, +54%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": 2.61,
+        "onhand_total": 19553,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026) & National State Allocation",
+        "headline_ko": "활성 적체 19,553명 vs 전국 주정부 491 배정 7,500석",
+        "headline_en": "Active On-hand 19,553 vs National 491 State Quota 7,500",
+        "detail_ko": "주신청 8,830명·동반 10,723명(합계 19,553명, 31 May 2026)이 대기 중이며, 전국 주정부 491 노미네이션 배정량은 7,500석입니다 (FOI DA26/06/00275).",
+        "detail_en": "19,553 active applicants on-hand (31 May 2026) compared with 7,500 state nomination places (FOI DA26/06/00275)."
+      }
     },
     {
       "subclass": "491",
@@ -778,7 +2030,45 @@
       "raw_p75": "16 Months",
       "raw_p90": "18 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        120.0,
+        150.0,
+        480.0,
+        540.0,
+        658.8
+      ],
+      "two_tier": {
+        "is_two_tier": true,
+        "cliff_type": "p50_to_p75",
+        "cliff_ratio": 3.2,
+        "fast_track_days": 150,
+        "second_tier_days": 480,
+        "label_ko": "이원화 심사 절벽 감지 (50% 150일 → 75% 480일, 3.2배 점프)",
+        "label_en": "Two-Tier Processing Cliff (50% 150d → 75% 480d, 3.2x jump)",
+        "note_ko": "우선심사·완비 서류 트랙은 150일 이내에 빠르게 종결되지만, 150일을 넘기면 일반 대기·보완(s56) 코호트(480~540일 구간)로 편입되는 양봉형 구조입니다.",
+        "note_en": "Priority/decision-ready files clear within 150d, whereas applications passing 150d enter the standard/RFI cohort targeting 480–540 days."
+      },
+      "regime": {
+        "code": "clearing",
+        "span_days": 213,
+        "delta_p50_days": -210,
+        "delta_p90_days": -300,
+        "label_ko": "전반적 심사 단축(해소) 국면",
+        "label_en": "Accelerating / Clearing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 360일→150일(-210일, -58%)로 뚜렷하게 단축되고 있습니다.",
+        "summary_en": "Median processing speed improved from 360d to 150d (-210d, -58%) since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": 2.61,
+        "onhand_total": 19553,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026) & National State Allocation",
+        "headline_ko": "활성 적체 19,553명 vs 전국 주정부 491 배정 7,500석",
+        "headline_en": "Active On-hand 19,553 vs National 491 State Quota 7,500",
+        "detail_ko": "주신청 8,830명·동반 10,723명(합계 19,553명, 31 May 2026)이 대기 중이며, 전국 주정부 491 노미네이션 배정량은 7,500석입니다 (FOI DA26/06/00275).",
+        "detail_en": "19,553 active applicants on-hand (31 May 2026) compared with 7,500 state nomination places (FOI DA26/06/00275)."
+      }
     },
     {
       "subclass": "494",
@@ -795,7 +2085,39 @@
       "raw_p75": "11 Months",
       "raw_p90": "12 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        90.0,
+        240.0,
+        330.0,
+        360.0,
+        439.2
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.38
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 30,
+        "delta_p90_days": 30,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(210일→240일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (210d→240d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "moderate",
+        "inflow_ratio": null,
+        "onhand_total": 3697,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026)",
+        "headline_ko": "서브클래스 494 공식 미결 재고(On-hand) 3,697명",
+        "headline_en": "Subclass 494 Active On-hand Inventory: 3,697",
+        "detail_ko": "이민성 정보공개(FOI DA26/06/00275, 31 May 2026 기준 서브클래스 전체 합산) 활성 대기 인원은 주신청자 1,674명 + 동반가족 2,023명 = 총 3,697명입니다.",
+        "detail_en": "Per Home Affairs FOI disclosure (FOI DA26/06/00275, as at 31 May 2026), active on-hand inventory across Subclass 494 is 1,674 primary + 2,023 secondary = 3,697 applicants."
+      }
     },
     {
       "subclass": "494",
@@ -812,7 +2134,45 @@
       "raw_p75": "11 Months",
       "raw_p90": "12 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        66.0,
+        120.0,
+        330.0,
+        360.0,
+        439.2
+      ],
+      "two_tier": {
+        "is_two_tier": true,
+        "cliff_type": "p50_to_p75",
+        "cliff_ratio": 2.75,
+        "fast_track_days": 120,
+        "second_tier_days": 330,
+        "label_ko": "이원화 심사 절벽 감지 (50% 120일 → 75% 330일, 2.8배 점프)",
+        "label_en": "Two-Tier Processing Cliff (50% 120d → 75% 330d, 2.8x jump)",
+        "note_ko": "우선심사·완비 서류 트랙은 120일 이내에 빠르게 종결되지만, 120일을 넘기면 일반 대기·보완(s56) 코호트(330~360일 구간)로 편입되는 양봉형 구조입니다.",
+        "note_en": "Priority/decision-ready files clear within 120d, whereas applications passing 120d enter the standard/RFI cohort targeting 330–360 days."
+      },
+      "regime": {
+        "code": "backlog_flush_tail",
+        "span_days": 213,
+        "delta_p50_days": -90,
+        "delta_p90_days": 90,
+        "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
+        "label_en": "Legacy Backlog Flush · 90% Tail Widening",
+        "summary_ko": "2026-04-01 대비 50% 중앙값(210일→120일)은 안정/단축된 반면, 묵은 장기 미결건 처리분이 반영되며 90% 상한(270일→360일)만 확대된 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (210d→120d) while 90th pct widened (270d→360d) as older backlog files were finalised."
+      },
+      "supply_pressure": {
+        "pressure_level": "moderate",
+        "inflow_ratio": null,
+        "onhand_total": 3697,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026)",
+        "headline_ko": "서브클래스 494 공식 미결 재고(On-hand) 3,697명",
+        "headline_en": "Subclass 494 Active On-hand Inventory: 3,697",
+        "detail_ko": "이민성 정보공개(FOI DA26/06/00275, 31 May 2026 기준 서브클래스 전체 합산) 활성 대기 인원은 주신청자 1,674명 + 동반가족 2,023명 = 총 3,697명입니다.",
+        "detail_en": "Per Home Affairs FOI disclosure (FOI DA26/06/00275, as at 31 May 2026), active on-hand inventory across Subclass 494 is 1,674 primary + 2,023 secondary = 3,697 applicants."
+      }
     },
     {
       "subclass": "500",
@@ -829,7 +2189,41 @@
       "raw_p75": "10 Days",
       "raw_p90": "22 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        1.0,
+        3.0,
+        10.0,
+        22.0,
+        37.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 3.33
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 0,
+        "delta_p90_days": 8,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(3일→3일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (3d→3d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "balanced",
+        "inflow_ratio": 1.03,
+        "lodged_recent": 1061,
+        "granted_recent": 1027,
+        "onhand_total": null,
+        "source_ref": "data.gov.au BP0015 (as at 30 Sep 2026)",
+        "headline_ko": "수급 압력 지수 1.03x (신규 접수 1,061건 vs 승인 1,027건)",
+        "headline_en": "Inflow/Grant Ratio 1.03x (1,061 lodged vs 1,027 granted)",
+        "detail_ko": "2026.07~09(Foreign Affairs or Defence Sector 부문) 신규 유입이 승인 건수의 1.03배로 집계되었습니다 (출처: data.gov.au BP0015 (as at 30 Sep 2026)).",
+        "detail_en": "In Jul–Sep 2026 (Foreign Affairs or Defence Sector), new lodgements ran at 1.03x grants (Source: data.gov.au BP0015 (as at 30 Sep 2026))."
+      }
     },
     {
       "subclass": "500",
@@ -846,7 +2240,41 @@
       "raw_p75": "49 Days",
       "raw_p90": "4 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        8.0,
+        16.0,
+        49.0,
+        120.0,
+        208.75
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 3.06
+      },
+      "regime": {
+        "code": "clearing",
+        "span_days": 213,
+        "delta_p50_days": -16,
+        "delta_p90_days": -60,
+        "label_ko": "전반적 심사 단축(해소) 국면",
+        "label_en": "Accelerating / Clearing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 32일→16일(-16일, -50%)로 뚜렷하게 단축되고 있습니다.",
+        "summary_en": "Median processing speed improved from 32d to 16d (-16d, -50%) since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": 1.61,
+        "lodged_recent": 54649,
+        "granted_recent": 34026,
+        "onhand_total": null,
+        "source_ref": "data.gov.au BP0015 (as at 30 Sep 2026)",
+        "headline_ko": "수급 압력 지수 1.61x (신규 접수 54,649건 vs 승인 34,026건)",
+        "headline_en": "Inflow/Grant Ratio 1.61x (54,649 lodged vs 34,026 granted)",
+        "detail_ko": "2026.07~09(Higher Education Sector 부문) 신규 유입이 승인 건수의 1.61배로 집계되었습니다 (출처: data.gov.au BP0015 (as at 30 Sep 2026)).",
+        "detail_en": "In Jul–Sep 2026 (Higher Education Sector), new lodgements ran at 1.61x grants (Source: data.gov.au BP0015 (as at 30 Sep 2026))."
+      }
     },
     {
       "subclass": "500",
@@ -863,7 +2291,41 @@
       "raw_p75": "34 Days",
       "raw_p90": "53 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        2.0,
+        22.0,
+        34.0,
+        53.0,
+        76.75
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.55
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 11,
+        "delta_p90_days": -8,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(11일→22일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (11d→22d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "moderate",
+        "inflow_ratio": 1.28,
+        "lodged_recent": 5286,
+        "granted_recent": 4124,
+        "onhand_total": null,
+        "source_ref": "data.gov.au BP0015 (as at 30 Sep 2026)",
+        "headline_ko": "수급 압력 지수 1.28x (신규 접수 5,286건 vs 승인 4,124건)",
+        "headline_en": "Inflow/Grant Ratio 1.28x (5,286 lodged vs 4,124 granted)",
+        "detail_ko": "2026.07~09(Independent ELICOS Sector 부문) 신규 유입이 승인 건수의 1.28배로 집계되었습니다 (출처: data.gov.au BP0015 (as at 30 Sep 2026)).",
+        "detail_en": "In Jul–Sep 2026 (Independent ELICOS Sector), new lodgements ran at 1.28x grants (Source: data.gov.au BP0015 (as at 30 Sep 2026))."
+      }
     },
     {
       "subclass": "500",
@@ -880,7 +2342,41 @@
       "raw_p75": "18 Days",
       "raw_p90": "43 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        1.0,
+        3.0,
+        18.0,
+        43.0,
+        74.25
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 6.0
+      },
+      "regime": {
+        "code": "clearing",
+        "span_days": 213,
+        "delta_p50_days": -14,
+        "delta_p90_days": -7,
+        "label_ko": "전반적 심사 단축(해소) 국면",
+        "label_en": "Accelerating / Clearing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 17일→3일(-14일, -82%)로 뚜렷하게 단축되고 있습니다.",
+        "summary_en": "Median processing speed improved from 17d to 3d (-14d, -82%) since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "balanced",
+        "inflow_ratio": 0.89,
+        "lodged_recent": 1137,
+        "granted_recent": 1275,
+        "onhand_total": null,
+        "source_ref": "data.gov.au BP0015 (as at 30 Sep 2026)",
+        "headline_ko": "수급 압력 지수 0.89x (신규 접수 1,137건 vs 승인 1,275건)",
+        "headline_en": "Inflow/Grant Ratio 0.89x (1,137 lodged vs 1,275 granted)",
+        "detail_ko": "2026.07~09(Non-Award Sector 부문) 신규 유입이 승인 건수의 0.89배로 집계되었습니다 (출처: data.gov.au BP0015 (as at 30 Sep 2026)).",
+        "detail_en": "In Jul–Sep 2026 (Non-Award Sector), new lodgements ran at 0.89x grants (Source: data.gov.au BP0015 (as at 30 Sep 2026))."
+      }
     },
     {
       "subclass": "500",
@@ -897,7 +2393,41 @@
       "raw_p75": "50 Days",
       "raw_p90": "55 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        4.0,
+        17.0,
+        50.0,
+        55.0,
+        67.1
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 2.94
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": -4,
+        "delta_p90_days": -125,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(21일→17일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (21d→17d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": 1.91,
+        "lodged_recent": 5903,
+        "granted_recent": 3083,
+        "onhand_total": null,
+        "source_ref": "data.gov.au BP0015 (as at 30 Sep 2026)",
+        "headline_ko": "수급 압력 지수 1.91x (신규 접수 5,903건 vs 승인 3,083건)",
+        "headline_en": "Inflow/Grant Ratio 1.91x (5,903 lodged vs 3,083 granted)",
+        "detail_ko": "2026.07~09(Postgraduate Research Sector 부문) 신규 유입이 승인 건수의 1.91배로 집계되었습니다 (출처: data.gov.au BP0015 (as at 30 Sep 2026)).",
+        "detail_en": "In Jul–Sep 2026 (Postgraduate Research Sector), new lodgements ran at 1.91x grants (Source: data.gov.au BP0015 (as at 30 Sep 2026))."
+      }
     },
     {
       "subclass": "500",
@@ -914,7 +2444,41 @@
       "raw_p75": "57 Days",
       "raw_p90": "7 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        11.0,
+        28.0,
+        57.0,
+        210.0,
+        401.25
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 2.04
+      },
+      "regime": {
+        "code": "backlog_flush_tail",
+        "span_days": 213,
+        "delta_p50_days": -7,
+        "delta_p90_days": 126,
+        "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
+        "label_en": "Legacy Backlog Flush · 90% Tail Widening",
+        "summary_ko": "2026-04-01 대비 50% 중앙값(35일→28일)은 안정/단축된 반면, 묵은 장기 미결건 처리분이 반영되며 90% 상한(84일→210일)만 확대된 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (35d→28d) while 90th pct widened (84d→210d) as older backlog files were finalised."
+      },
+      "supply_pressure": {
+        "pressure_level": "balanced",
+        "inflow_ratio": 0.97,
+        "lodged_recent": 1286,
+        "granted_recent": 1323,
+        "onhand_total": null,
+        "source_ref": "data.gov.au BP0015 (as at 30 Sep 2026)",
+        "headline_ko": "수급 압력 지수 0.97x (신규 접수 1,286건 vs 승인 1,323건)",
+        "headline_en": "Inflow/Grant Ratio 0.97x (1,286 lodged vs 1,323 granted)",
+        "detail_ko": "2026.07~09(Schools Sector 부문) 신규 유입이 승인 건수의 0.97배로 집계되었습니다 (출처: data.gov.au BP0015 (as at 30 Sep 2026)).",
+        "detail_en": "In Jul–Sep 2026 (Schools Sector), new lodgements ran at 0.97x grants (Source: data.gov.au BP0015 (as at 30 Sep 2026))."
+      }
     },
     {
       "subclass": "500",
@@ -931,7 +2495,47 @@
       "raw_p75": "7 Months",
       "raw_p90": "7 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        25.0,
+        53.0,
+        201.88,
+        218.12,
+        266.11
+      ],
+      "two_tier": {
+        "is_two_tier": true,
+        "cliff_type": "p50_to_p75",
+        "cliff_ratio": 3.96,
+        "fast_track_days": 53,
+        "second_tier_days": 210,
+        "label_ko": "이원화 심사 절벽 감지 (50% 53일 → 75% 210일, 4.0배 점프)",
+        "label_en": "Two-Tier Processing Cliff (50% 53d → 75% 210d, 4.0x jump)",
+        "note_ko": "우선심사·완비 서류 트랙은 53일 이내에 빠르게 종결되지만, 53일을 넘기면 일반 대기·보완(s56) 코호트(210~210일 구간)로 편입되는 양봉형 구조입니다.",
+        "note_en": "Priority/decision-ready files clear within 53d, whereas applications passing 53d enter the standard/RFI cohort targeting 210–210 days."
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": -37,
+        "delta_p90_days": 30,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(90일→53일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (90d→53d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": 2.05,
+        "lodged_recent": 15726,
+        "granted_recent": 7668,
+        "onhand_total": null,
+        "source_ref": "data.gov.au BP0015 (as at 30 Sep 2026)",
+        "headline_ko": "수급 압력 지수 2.05x (신규 접수 15,726건 vs 승인 7,668건)",
+        "headline_en": "Inflow/Grant Ratio 2.05x (15,726 lodged vs 7,668 granted)",
+        "detail_ko": "2026.07~09(Vocational Education and Training Sector 부문) 신규 유입이 승인 건수의 2.05배로 집계되었습니다 (출처: data.gov.au BP0015 (as at 30 Sep 2026)).",
+        "detail_en": "In Jul–Sep 2026 (Vocational Education and Training Sector), new lodgements ran at 2.05x grants (Source: data.gov.au BP0015 (as at 30 Sep 2026))."
+      }
     },
     {
       "subclass": "590",
@@ -948,7 +2552,36 @@
       "raw_p75": "5 Months",
       "raw_p90": "8 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        21.0,
+        43.0,
+        150.0,
+        240.0,
+        352.5
+      ],
+      "two_tier": {
+        "is_two_tier": true,
+        "cliff_type": "p50_to_p75",
+        "cliff_ratio": 3.49,
+        "fast_track_days": 43,
+        "second_tier_days": 150,
+        "label_ko": "이원화 심사 절벽 감지 (50% 43일 → 75% 150일, 3.5배 점프)",
+        "label_en": "Two-Tier Processing Cliff (50% 43d → 75% 150d, 3.5x jump)",
+        "note_ko": "우선심사·완비 서류 트랙은 43일 이내에 빠르게 종결되지만, 43일을 넘기면 일반 대기·보완(s56) 코호트(150~240일 구간)로 편입되는 양봉형 구조입니다.",
+        "note_en": "Priority/decision-ready files clear within 43d, whereas applications passing 43d enter the standard/RFI cohort targeting 150–240 days."
+      },
+      "regime": {
+        "code": "backlog_flush_tail",
+        "span_days": 213,
+        "delta_p50_days": -6,
+        "delta_p90_days": 60,
+        "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
+        "label_en": "Legacy Backlog Flush · 90% Tail Widening",
+        "summary_ko": "2026-04-01 대비 50% 중앙값(49일→43일)은 안정/단축된 반면, 묵은 장기 미결건 처리분이 반영되며 90% 상한(180일→240일)만 확대된 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (49d→43d) while 90th pct widened (180d→240d) as older backlog files were finalised."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "600",
@@ -965,7 +2598,30 @@
       "raw_p75": "13 Days",
       "raw_p90": "19 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        3.0,
+        7.0,
+        13.0,
+        19.0,
+        26.5
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.86
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 2,
+        "delta_p90_days": 0,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(5일→7일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (5d→7d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "600",
@@ -982,7 +2638,30 @@
       "raw_p75": "61 Days",
       "raw_p90": "3 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        35.0,
+        40.0,
+        61.0,
+        90.0,
+        126.25
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.52
+      },
+      "regime": {
+        "code": "clearing",
+        "span_days": 213,
+        "delta_p50_days": -16,
+        "delta_p90_days": 0,
+        "label_ko": "전반적 심사 단축(해소) 국면",
+        "label_en": "Accelerating / Clearing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 56일→40일(-16일, -29%)로 뚜렷하게 단축되고 있습니다.",
+        "summary_en": "Median processing speed improved from 56d to 40d (-16d, -29%) since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "600",
@@ -999,7 +2678,30 @@
       "raw_p75": "26 Days",
       "raw_p90": "33 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        7.0,
+        21.0,
+        26.0,
+        33.0,
+        41.75
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.24
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 8,
+        "delta_p90_days": -2,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(13일→21일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (13d→21d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "601",
@@ -1016,7 +2718,30 @@
       "raw_p75": "Less than 1 Day",
       "raw_p90": "Less than 1 Day",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        0.25,
+        0.58,
+        0.92,
+        1.25,
+        2.25
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.0
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 0,
+        "delta_p90_days": 0,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(1일→1일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (1d→1d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "602",
@@ -1033,7 +2758,30 @@
       "raw_p75": "62 Days",
       "raw_p90": "3 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        3.0,
+        19.0,
+        62.0,
+        90.0,
+        125.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 3.26
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 16,
+        "delta_p90_days": 44,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 3일→19일(+16일, +533%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 3d to 19d (+16d, +533%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "651",
@@ -1050,7 +2798,30 @@
       "raw_p75": "Less than 1 Day",
       "raw_p90": "Less than 1 Day",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        0.25,
+        0.58,
+        0.92,
+        1.25,
+        2.25
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.0
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 0,
+        "delta_p90_days": 0,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(1일→1일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (1d→1d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "771",
@@ -1067,7 +2838,30 @@
       "raw_p75": "7  Days",
       "raw_p90": "13 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        1.0,
+        3.0,
+        7.0,
+        13.0,
+        20.5
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 2.33
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 0,
+        "delta_p90_days": -4,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(3일→3일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (3d→3d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "801",
@@ -1084,7 +2878,30 @@
       "raw_p75": "11 Months",
       "raw_p90": "19 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        72.0,
+        240.0,
+        330.0,
+        570.0,
+        870.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.38
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 0,
+        "delta_p90_days": 60,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(240일→240일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (240d→240d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "802",
@@ -1101,7 +2918,30 @@
       "raw_p75": "29 Months",
       "raw_p90": "31 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        540.0,
+        630.0,
+        870.0,
+        930.0,
+        1134.6
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.38
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": -30,
+        "delta_p90_days": 60,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(660일→630일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (660d→630d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "820",
@@ -1118,7 +2958,39 @@
       "raw_p75": "26 Months",
       "raw_p90": "30 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        570.0,
+        660.0,
+        780.0,
+        900.0,
+        1098.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.18
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 120,
+        "delta_p90_days": -60,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 540일→660일(+120일, +22%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 540d to 660d (+120d, +22%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": {
+        "pressure_level": "high",
+        "inflow_ratio": null,
+        "onhand_total": 75561,
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026)",
+        "headline_ko": "서브클래스 820 공식 미결 재고(On-hand) 75,561명",
+        "headline_en": "Subclass 820 Active On-hand Inventory: 75,561",
+        "detail_ko": "이민성 정보공개(FOI DA26/06/00275, 31 May 2026 기준 서브클래스 전체 합산) 활성 대기 인원은 주신청자 70,098명 + 동반가족 5,463명 = 총 75,561명입니다.",
+        "detail_en": "Per Home Affairs FOI disclosure (FOI DA26/06/00275, as at 31 May 2026), active on-hand inventory across Subclass 820 is 70,098 primary + 5,463 secondary = 75,561 applicants."
+      }
     },
     {
       "subclass": "858",
@@ -1135,7 +3007,30 @@
       "raw_p75": "19 Months",
       "raw_p90": "24 Months",
       "official_updated": "12 October 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        360.0,
+        480.0,
+        570.0,
+        720.0,
+        907.5
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.19
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 150,
+        "delta_p90_days": 0,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 330일→480일(+150일, +45%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 330d to 480d (+150d, +45%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "858",
@@ -1152,7 +3047,29 @@
       "raw_p75": "7 Months",
       "raw_p90": "7 Months",
       "official_updated": "12 October 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        90.0,
+        180.0,
+        201.88,
+        218.12,
+        266.11
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.17
+      },
+      "regime": {
+        "code": "accumulating_baseline",
+        "span_days": 31,
+        "obs_count": 7,
+        "label_ko": "신규 편입 · 추세 누적 중",
+        "label_en": "Newly Added · Accumulating Baseline",
+        "summary_ko": "수집 기간이 45일 미만인 신규 편입 스트림으로 최소 2회 이상 월간 발표 누적 후 추세를 판정합니다.",
+        "summary_en": "Fewer than 45 days of history; trend regime activates once multiple monthly releases accumulate."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "870",
@@ -1169,7 +3086,39 @@
       "raw_p75": "4 months",
       "raw_p90": "4 months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        86.0,
+        89.0,
+        111.88,
+        128.12,
+        156.31
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.35
+      },
+      "regime": {
+        "code": "clearing",
+        "span_days": 213,
+        "delta_p50_days": -61,
+        "delta_p90_days": -60,
+        "label_ko": "전반적 심사 단축(해소) 국면",
+        "label_en": "Accelerating / Clearing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 150일→89일(-61일, -41%)로 뚜렷하게 단축되고 있습니다.",
+        "summary_en": "Median processing speed improved from 150d to 89d (-61d, -41%) since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "moderate",
+        "inflow_ratio": null,
+        "onhand_total": null,
+        "source_ref": "DHA Parent Queue (31 August 2026) & FOI DA26/06/00275",
+        "headline_ko": "참고: 영주 부모초청(143) 큐 배정 November 2018 · 적체 83,027명",
+        "headline_en": "Context: Subclass 143 Queue Release at November 2018 (83,027 on-hand)",
+        "detail_ko": "870 임시 부모비자와 달리 영주 부모비자(143·103·864·804)는 연간 쿼터제(s 85 Queue)가 적용되어 143 기여제 기준 November 2018 큐 확정분까지 배정 중입니다 (31 August 2026 기준).",
+        "detail_en": "Unlike temporary Subclass 870, permanent Parent visas (143/103/864/804) are capped and queued under s 85 (143 released up to November 2018 as at 31 August 2026)."
+      }
     },
     {
       "subclass": "870",
@@ -1186,7 +3135,39 @@
       "raw_p75": "8 Months",
       "raw_p90": "9 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        180.0,
+        210.0,
+        240.0,
+        270.0,
+        329.4
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.14
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 0,
+        "delta_p90_days": -90,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(210일→210일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (210d→210d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": {
+        "pressure_level": "moderate",
+        "inflow_ratio": null,
+        "onhand_total": null,
+        "source_ref": "DHA Parent Queue (31 August 2026) & FOI DA26/06/00275",
+        "headline_ko": "참고: 영주 부모초청(143) 큐 배정 November 2018 · 적체 83,027명",
+        "headline_en": "Context: Subclass 143 Queue Release at November 2018 (83,027 on-hand)",
+        "detail_ko": "870 임시 부모비자와 달리 영주 부모비자(143·103·864·804)는 연간 쿼터제(s 85 Queue)가 적용되어 143 기여제 기준 November 2018 큐 확정분까지 배정 중입니다 (31 August 2026 기준).",
+        "detail_en": "Unlike temporary Subclass 870, permanent Parent visas (143/103/864/804) are capped and queued under s 85 (143 released up to November 2018 as at 31 August 2026)."
+      }
     },
     {
       "subclass": "887",
@@ -1203,7 +3184,30 @@
       "raw_p75": "11 Months",
       "raw_p90": "17 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        270.0,
+        300.0,
+        330.0,
+        510.0,
+        735.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.1
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 120,
+        "delta_p90_days": -120,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 180일→300일(+120일, +67%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 180d to 300d (+120d, +67%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "888",
@@ -1220,7 +3224,30 @@
       "raw_p75": "9 Months",
       "raw_p90": "10 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        240.0,
+        261.88,
+        278.12,
+        300.0,
+        366.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.0
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 90,
+        "delta_p90_days": 120,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 180일→270일(+90일, +50%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 180d to 270d (+90d, +50%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "888",
@@ -1237,7 +3264,30 @@
       "raw_p75": "5 Months",
       "raw_p90": "6 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        141.88,
+        150.0,
+        158.12,
+        180.0,
+        219.6
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.0
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 30,
+        "delta_p90_days": 30,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 120일→150일(+30일, +25%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 120d to 150d (+30d, +25%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "888",
@@ -1254,7 +3304,30 @@
       "raw_p75": "6 Months",
       "raw_p90": "8 Months",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        90.0,
+        120.0,
+        180.0,
+        240.0,
+        315.0
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.5
+      },
+      "regime": {
+        "code": "slowing",
+        "span_days": 213,
+        "delta_p50_days": 30,
+        "delta_p90_days": 60,
+        "label_ko": "전반적 병목·지연 확대 국면",
+        "label_en": "Broad Bottleneck / Slowing Regime",
+        "summary_ko": "2026-04-01 대비 50% 중앙값이 90일→120일(+30일, +33%)로 상승해 심사 적체 압력이 누적되고 있습니다.",
+        "summary_en": "Median wait expanded from 90d to 120d (+30d, +33%) since 2026-04-01, indicating rising queue pressure."
+      },
+      "supply_pressure": null
     },
     {
       "subclass": "988",
@@ -1271,7 +3344,30 @@
       "raw_p75": "Less than 1 Day",
       "raw_p90": "3 Days",
       "official_updated": "29 September 2026",
-      "official_end_date": "31 August 2026"
+      "official_end_date": "31 August 2026",
+      "knots": [
+        0.25,
+        0.75,
+        1.25,
+        3.0,
+        5.19
+      ],
+      "two_tier": {
+        "is_two_tier": false,
+        "cliff_type": null,
+        "cliff_ratio": 1.0
+      },
+      "regime": {
+        "code": "stable",
+        "span_days": 213,
+        "delta_p50_days": 0,
+        "delta_p90_days": 2,
+        "label_ko": "보합 · 안정 유지 국면",
+        "label_en": "Stable Processing Regime",
+        "summary_ko": "2026-04-01 이후 50% 중앙값(1일→1일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (1d→1d) has remained within a stable corridor since 2026-04-01."
+      },
+      "supply_pressure": null
     }
   ]
 }

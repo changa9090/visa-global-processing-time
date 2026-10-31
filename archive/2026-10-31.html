@@ -55,6 +55,12 @@ section, .tracker-card { scroll-margin-top: 132px; }
   display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; box-shadow: var(--shadow-1); }
 .cadence-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--burgundy-wash);
   color: var(--burgundy); font-weight: 800; font-size: 0.78rem; padding: 3px 10px; border-radius: 999px; }
+.release-forecast-pill { display: inline-flex; align-items: center; gap: 6px; font-weight: 800;
+  font-size: 0.78rem; padding: 3px 11px; border-radius: 999px; border: 1px solid var(--line-strong);
+  background: var(--navy-wash); color: var(--navy); }
+.release-forecast-pill.status-imminent { background: var(--amber-wash); color: var(--amber); border-color: #F59E0B; }
+.release-forecast-pill.status-just_released { background: var(--success-wash); color: var(--success); border-color: #10B981; }
+.release-forecast-pill.status-overdue { background: var(--burgundy-wash); color: var(--burgundy); border-color: #D9A7AD; }
 .cadence-note { color: var(--charcoal-soft); font-size: 0.84rem; width: 100%; margin-top: 2px; }
 
 /* Hero Personal Visa Wait Tracker */
@@ -111,6 +117,42 @@ section, .tracker-card { scroll-margin-top: 132px; }
 .kpi-label { font-size: 0.76rem; font-weight: 700; color: var(--charcoal-soft); margin-bottom: 4px; }
 .kpi-val { font-size: 1.15rem; font-weight: 800; color: var(--charcoal); font-variant-numeric: tabular-nums; line-height: 1.25; }
 .kpi-sub { font-size: 0.78rem; color: var(--charcoal-soft); margin-top: 3px; }
+
+/* Intelligence Diagnostics: Conditional Survival, Two-Tier Cliff, Regime & Supply Pressure */
+.intel-cond-panel { margin-top: 12px; padding: 13px 15px; border-radius: 10px; background: var(--paper);
+  border: 1px solid var(--line-strong); border-left: 4px solid var(--navy); }
+.intel-cond-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.intel-cond-title { font-size: 0.86rem; font-weight: 800; color: var(--navy); }
+.intel-cond-pct { font-size: 0.8rem; font-weight: 700; color: var(--charcoal); background: var(--white);
+  border: 1px solid var(--line-strong); border-radius: 999px; padding: 2px 10px; font-variant-numeric: tabular-nums; }
+.cond-prob-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; margin-bottom: 6px; }
+.cond-prob-cell { background: var(--white); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; min-width: 0; }
+.cond-prob-lbl { font-size: 0.73rem; font-weight: 700; color: var(--charcoal-soft); }
+.cond-prob-val { font-size: 1.02rem; font-weight: 800; color: var(--charcoal); font-variant-numeric: tabular-nums; margin-top: 2px; }
+.intel-cond-foot { font-size: 0.75rem; color: var(--charcoal-soft); margin: 4px 0 0; }
+
+.intel-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; margin-top: 12px; }
+.intel-card { background: var(--white); border: 1px solid var(--line-strong); border-radius: 9px; padding: 11px 13px; min-width: 0; }
+.intel-card.cliff-card { background: var(--amber-wash); border-color: #F59E0B; }
+.intel-card.regime-clearing { border-left: 4px solid var(--success); }
+.intel-card.regime-slowing { border-left: 4px solid var(--error); }
+.intel-card.regime-backlog_flush_tail { border-left: 4px solid var(--amber); }
+.intel-card.regime-stable { border-left: 4px solid var(--navy); }
+.intel-card.regime-accumulating_baseline { border-left: 4px solid var(--muted); }
+.intel-card.supply-card { border-left: 4px solid var(--burgundy); background: #FDFBFA; }
+.intel-tag { display: inline-block; font-size: 0.72rem; font-weight: 800; padding: 2px 8px; border-radius: 999px;
+  margin-bottom: 5px; background: var(--ivory); color: var(--charcoal); }
+.intel-card.cliff-card .intel-tag { background: #FDE68A; color: #92400E; }
+.intel-card.supply-card .intel-tag { background: var(--burgundy-wash); color: var(--burgundy); }
+.intel-card-title { font-size: 0.86rem; font-weight: 800; color: var(--charcoal); margin: 0 0 4px; line-height: 1.35; }
+.intel-card-body { font-size: 0.79rem; color: var(--charcoal-soft); margin: 0; line-height: 1.48; }
+.intel-source { font-size: 0.72rem; color: var(--muted); margin-top: 5px; font-weight: 600; }
+
+.intel-parent-banner { margin-bottom: 12px; padding: 13px 15px; border-radius: 10px;
+  background: var(--burgundy-wash); border: 1.5px solid var(--burgundy); }
+.intel-parent-title { font-size: 0.92rem; font-weight: 800; color: var(--burgundy); margin: 0 0 6px; }
+.intel-parent-list { margin: 0; padding-left: 18px; font-size: 0.81rem; color: var(--charcoal); line-height: 1.55; }
+.intel-parent-meta { font-size: 0.74rem; color: var(--charcoal-soft); margin: 6px 0 0; }
 
 /* Chart category pills */
 .chart-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; margin: 10px 0 12px; }
@@ -261,7 +303,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 
 @media (max-width: 960px) {
   .site-header .product { display: none; }
-  .kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .kpi-grid, .cond-prob-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .movers-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 720px) {
@@ -309,7 +351,8 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 <h4>1. 내 비자 대기 트래커 (최상단)</h4>
 <ul>
 <li><b>인기 비자 버튼</b> 또는 <b>비자 선택창</b>에서 본인이 신청한 비자(세부 스트림 포함)를 고르세요.</li>
-<li><b>내 비자 접수일</b>을 선택하면 오늘 기준 <b>경과 대기일수</b>, <b>50% 중앙값·90% 표준 상한 예상 완료일</b>, <b>접수 시점 대비 심사속도 변화</b>가 즉시 계산됩니다.</li>
+<li><b>내 비자 접수일</b>을 선택하면 오늘 기준 <b>경과 대기일수</b>, <b>조건부 완료 확률(+30·60·90일) 및 잔여 대기 구간</b>, <b>양봉형 이원화 절벽(Two-Tier) 경보</b>, <b>접수 시점 대비 심사속도 변화</b>가 즉시 계산됩니다.</li>
+<li>선별 핵심 비자(482·186·500·485·189·190·491·820·309 등)는 이민성 정보공개(FOI) 및 data.gov.au 공식 데이터셋 기반 <b>활성 미결 재고(On-hand) 및 수급 압력 지표</b>를 함께 제공합니다.</li>
 <li>선택 정보는 이 브라우저에 자동 저장되며, <b>트래커 고정(+핀)</b>으로 최대 3개(예: 482 노미네이션 + 비자 본신청)를 동시에 관리하거나 <b>링크 복사</b>로 그대로 공유할 수 있습니다.</li>
 </ul>
 <h4>2. 왜 매일 숫자가 안 바뀌나요? (월 1회 갱신)</h4>
@@ -509,7 +552,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 <p class="note"><span data-i18n-ko>최근 14일 이내 일간 급변동 내역이 없습니다. (이민성 월간 발표가 없는 기간에는 변동이 없는 것이 정상입니다.)</span><span data-i18n-en>No genuine day-over-day jumps detected in the last 14 days.</span></p>
 
 <footer>
-<div class="visit-counter" id="visit-counter" data-seed-total="912" data-seed-visitors="326" hidden>
+<div class="visit-counter" id="visit-counter" data-seed-total="921" data-seed-visitors="328" hidden>
 <span><span data-i18n-en>Total visits &middot; </span>누적 방문<b id="vc-total">-</b></span>
 <span><span data-i18n-en>Today &middot; </span>오늘 방문<b id="vc-today">-</b></span>
 <span><span data-i18n-en>Visitors &middot; </span>방문자<b id="vc-visitors">-</b></span>
@@ -613,8 +656,98 @@ Australian Government or the Department of Home Affairs.</p>
 
   var PAYLOAD = JSON.parse(dataEl.textContent);
   var STREAMS = PAYLOAD.streams || [];
+  var PARENT_GUIDE = PAYLOAD.parent_queue_guide || null;
   var BY_KEY = {};
   STREAMS.forEach(function (s) { BY_KEY[s.key] = s; });
+
+  /* Interval-Aware Monotone PCHIP Conditional Survival Engine (exact parity with intelligence.py) */
+  var Q_LEVELS = [0.0, 0.25, 0.50, 0.75, 0.90, 0.98];
+  function pchipSlopes(xs, ys) {
+    var n = xs.length, hs = [], ds = [], ms = new Array(n).fill(0);
+    for (var i = 0; i < n - 1; i++) {
+      hs.push(xs[i + 1] - xs[i]);
+      ds.push((ys[i + 1] - ys[i]) / hs[i]);
+    }
+    ms[0] = ds[0];
+    ms[n - 1] = ds[n - 2];
+    for (var k = 1; k < n - 1; k++) {
+      if (ds[k - 1] <= 0 || ds[k] <= 0) {
+        ms[k] = 0;
+      } else {
+        var w1 = 2 * hs[k] + hs[k - 1], w2 = hs[k] + 2 * hs[k - 1];
+        ms[k] = (w1 + w2) / (w1 / ds[k - 1] + w2 / ds[k]);
+      }
+    }
+    return ms;
+  }
+  function evalCdf(knots, t) {
+    if (!knots || knots.length < 5 || t <= 0) return 0.0;
+    var xs = [0.0, Number(knots[0]), Number(knots[1]), Number(knots[2]), Number(knots[3]), Number(knots[4])];
+    var ms = pchipSlopes(xs, Q_LEVELS);
+    if (t >= xs[5]) {
+      var lam = Math.max(ms[5] / 0.02, 1.0 / 730.0);
+      return Math.min(0.999, 1.0 - 0.02 * Math.exp(-lam * (t - xs[5])));
+    }
+    var idx = 0;
+    for (var k = 0; k < 5; k++) {
+      if (t < xs[k + 1] || k === 4) { idx = k; break; }
+    }
+    var h = xs[idx + 1] - xs[idx];
+    var s = (t - xs[idx]) / h, s2 = s * s, s3 = s2 * s;
+    var val = (2 * s3 - 3 * s2 + 1) * Q_LEVELS[idx] +
+              (s3 - 2 * s2 + s) * h * ms[idx] +
+              (-2 * s3 + 3 * s2) * Q_LEVELS[idx + 1] +
+              (s3 - s2) * h * ms[idx + 1];
+    return Math.max(0.0, Math.min(0.999, val));
+  }
+  function evalQuantile(knots, u) {
+    if (!knots || knots.length < 5 || u <= 0) return 0.0;
+    var clamped = Math.min(0.9985, u);
+    var xs = [0.0, Number(knots[0]), Number(knots[1]), Number(knots[2]), Number(knots[3]), Number(knots[4])];
+    var ms = pchipSlopes(xs, Q_LEVELS);
+    if (clamped >= 0.98) {
+      var lam = Math.max(ms[5] / 0.02, 1.0 / 730.0);
+      return xs[5] - Math.log((1.0 - clamped) / 0.02) / lam;
+    }
+    var idx = 0;
+    for (var k = 0; k < 5; k++) {
+      if (clamped <= Q_LEVELS[k + 1] || k === 4) { idx = k; break; }
+    }
+    var lo = xs[idx], hi = xs[idx + 1];
+    for (var iter = 0; iter < 32; iter++) {
+      var mid = 0.5 * (lo + hi);
+      if (evalCdf(knots, mid) < clamped) lo = mid; else hi = mid;
+    }
+    return 0.5 * (lo + hi);
+  }
+  function evalConditionalWait(knots, waitedDays) {
+    var w = Math.max(0, Number(waitedDays) || 0);
+    var fw = evalCdf(knots, w);
+    var surv = Math.max(1e-6, 1.0 - fw);
+    function cprob(delta) {
+      var ft = evalCdf(knots, w + delta);
+      var raw = (ft - fw) / surv;
+      return Math.round(Math.max(0.005, Math.min(0.99, raw)) * 10000) / 10000;
+    }
+    var t50 = evalQuantile(knots, 1.0 - 0.50 * surv);
+    var t80 = evalQuantile(knots, 1.0 - 0.20 * surv);
+    var rem50 = Math.max(1, Math.round(t50 - w));
+    var rem80 = Math.max(rem50, Math.round(t80 - w));
+    return {
+      waited_days: Math.round(w),
+      reached_pct: Math.round(fw * 10000) / 10000,
+      prob_30d: cprob(30),
+      prob_60d: cprob(60),
+      prob_90d: cprob(90),
+      rem_p50_days: rem50,
+      rem_p80_days: rem80,
+      target_p50_total_days: Math.round(w) + rem50,
+      target_p80_total_days: Math.round(w) + rem80
+    };
+  }
+  if (typeof window !== 'undefined') {
+    window.__vgptEvalCondWait = evalConditionalWait;
+  }
 
   var selectEl = document.getElementById('my-visa-select');
   var searchEl = document.getElementById('my-visa-filter');
@@ -913,6 +1046,7 @@ Australian Government or the Department of Home Affairs.</p>
                        : ('75th pct: ' + (p75 != null ? fmtDur(p75, s.raw_p75, s.raw_p75_ko, 'en') : '–')));
 
     resultBox.innerHTML =
+      renderParentQueueBanner(lang) +
       '<div class="tracker-status-box ' + zoneCls + '">' +
       '<p class="status-headline">' + headHtml + '</p>' +
       '<p class="status-detail">' + detailHtml + '</p>' +
@@ -923,7 +1057,101 @@ Australian Government or the Department of Home Affairs.</p>
       '<div class="kpi-box"><div class="kpi-label">' + (lang === 'ko' ? '50% 중앙값 (절반 완료)' : '50% Median Time') + '</div><div class="kpi-val">' + esc(kpi2Val) + '</div><div class="kpi-sub">' + esc(kpi2Sub) + '</div></div>' +
       '<div class="kpi-box"><div class="kpi-label">' + (lang === 'ko' ? '90% 표준 심사 상한' : '90th Percentile') + '</div><div class="kpi-val">' + esc(kpi3Val) + '</div><div class="kpi-sub">' + esc(kpi3Sub) + '</div></div>' +
       '<div class="kpi-box"><div class="kpi-label">' + (lang === 'ko' ? (lodged ? '내 접수일 대비 속도 변화' : '최초 기록 대비 속도 변화') : 'Speed Shift vs Past') + '</div><div class="kpi-val">' + cohortVal + '</div><div class="kpi-sub">' + esc(cohortSub) + '</div></div>' +
+      '</div>' +
+      renderIntelligencePanels(s, waited, todayIso, lang);
+  }
+
+  function renderParentQueueBanner(lang) {
+    if (!PARENT_GUIDE || !searchEl || !searchEl.value) return '';
+    var q = searchEl.value.trim().toLowerCase();
+    if (!q) return '';
+    var triggers = PARENT_GUIDE.trigger_keywords || ['143', '173', '103', '804', '864', '884'];
+    var hit = triggers.some(function (kw) { return q.indexOf(String(kw).toLowerCase()) >= 0; }) ||
+              q === '부모' || q === 'parent';
+    if (!hit) return '';
+    var items = (PARENT_GUIDE.rows || []).map(function (r) {
+      var onhandTxt = r.onhand_total
+        ? (lang === 'ko' ? (' · 활성 적체 ' + Number(r.onhand_total).toLocaleString('en-AU') + '명') : (' · ' + Number(r.onhand_total).toLocaleString('en-AU') + ' active on-hand'))
+        : '';
+      if (lang === 'ko') {
+        return '<li><b>' + esc(r.subclasses + ' ' + r.label_ko) + '</b>: 최종 큐 배정(Queue Release) <b>' + esc(r.queue_release) +
+               '</b> · 1차 요건심사 ' + esc(r.stage1_assessment) + ' · 신규 예상 ' + esc(r.official_new_wait) + esc(onhandTxt) + '</li>';
+      }
+      return '<li><b>' + esc(r.label_en) + '</b>: Queue Release up to <b>' + esc(r.queue_release) +
+             '</b> · Stage 1 at ' + esc(r.stage1_assessment) + ' · Est. new wait ' + esc(r.official_new_wait) + esc(onhandTxt) + '</li>';
+    }).join('');
+    return '<div class="intel-parent-banner">' +
+      '<p class="intel-parent-title">' + esc(lang === 'ko' ? PARENT_GUIDE.headline_ko : PARENT_GUIDE.headline_en) + '</p>' +
+      '<ul class="intel-parent-list">' + items + '</ul>' +
+      '<p class="intel-parent-meta">' + esc((lang === 'ko' ? '공식 출처: ' : 'Official source: ') + PARENT_GUIDE.source_ref) + '</p>' +
       '</div>';
+  }
+
+  function renderIntelligencePanels(s, waited, todayIso, lang) {
+    var htmlOut = '';
+    /* 1. Conditional Completion Probability & Remaining Band when user waited >= 0 */
+    if (waited != null && waited >= 0 && Array.isArray(s.knots) && s.knots.length >= 5) {
+      var cond = evalConditionalWait(s.knots, waited);
+      var pctReached = (cond.reached_pct * 100).toFixed(1);
+      var p30 = Math.round(cond.prob_30d * 100);
+      var p60 = Math.round(cond.prob_60d * 100);
+      var p90p = Math.round(cond.prob_90d * 100);
+      var remBandDates = addDaysIso(todayIso, cond.rem_p50_days) + ' ~ ' + addDaysIso(todayIso, cond.rem_p80_days);
+      htmlOut += '<div class="intel-cond-panel">' +
+        '<div class="intel-cond-head">' +
+        '<span class="intel-cond-title">' + (lang === 'ko'
+          ? '조건부 완료 확률 &amp; 잔여 대기 밴드 (경과일 반영 생존분석)'
+          : 'Conditional Completion Probability &amp; Remaining Wait Band') + '</span>' +
+        '<span class="intel-cond-pct">' + (lang === 'ko'
+          ? ('완료 분포 상위 ' + pctReached + '% 지점 통과')
+          : ('Passed ' + pctReached + '% of finalised distribution')) + '</span>' +
+        '</div>' +
+        '<div class="cond-prob-grid">' +
+        '<div class="cond-prob-cell"><div class="cond-prob-lbl">' + (lang === 'ko' ? '향후 +30일 내 결정 확률' : 'Within +30 Days') + '</div><div class="cond-prob-val">' + p30 + '%</div></div>' +
+        '<div class="cond-prob-cell"><div class="cond-prob-lbl">' + (lang === 'ko' ? '향후 +60일 내 결정 확률' : 'Within +60 Days') + '</div><div class="cond-prob-val">' + p60 + '%</div></div>' +
+        '<div class="cond-prob-cell"><div class="cond-prob-lbl">' + (lang === 'ko' ? '향후 +90일 내 결정 확률' : 'Within +90 Days') + '</div><div class="cond-prob-val">' + p90p + '%</div></div>' +
+        '<div class="cond-prob-cell"><div class="cond-prob-lbl">' + (lang === 'ko' ? '잔여 대기 50%~80% 구간' : 'Est. Remaining (50%–80%)') + '</div><div class="cond-prob-val">+' + cond.rem_p50_days + '~' + cond.rem_p80_days + (lang === 'ko' ? '일' : 'd') + '</div></div>' +
+        '</div>' +
+        '<p class="intel-cond-foot">' + (lang === 'ko'
+          ? ('오늘 이후 미결 코호트 예상 완료 구간: <b>' + remBandDates + '</b> · 이민성 공개 4분위수(25·50·75·90%) 구간보간(Monotone PCHIP) 조건부 추정치이며 보완요청(s56)·우선순위에 따라 달라집니다.')
+          : ('Projected window for remaining cohort: <b>' + remBandDates + '</b> · Interval-monotone PCHIP conditional survival estimate from DHA quartiles; individual s56/priority factors apply.')) +
+        '</p></div>';
+    }
+
+    /* 2. Multi-Step Regime, Two-Tier Cliff, and Verified Supply/Backlog Cards */
+    var cards = [];
+    if (s.two_tier && s.two_tier.is_two_tier) {
+      cards.push(
+        '<div class="intel-card cliff-card">' +
+        '<span class="intel-tag">' + (lang === 'ko' ? '양봉형 심사 구조 주의' : 'Bimodal Track Structure') + '</span>' +
+        '<p class="intel-card-title">' + esc(lang === 'ko' ? s.two_tier.label_ko : s.two_tier.label_en) + '</p>' +
+        '<p class="intel-card-body">' + esc(lang === 'ko' ? s.two_tier.note_ko : s.two_tier.note_en) + '</p>' +
+        '</div>'
+      );
+    }
+    if (s.regime && s.regime.code) {
+      cards.push(
+        '<div class="intel-card regime-' + esc(s.regime.code) + '">' +
+        '<span class="intel-tag">' + (lang === 'ko' ? '다단계 추세 국면 진단' : 'Multi-Release Trend Regime') + '</span>' +
+        '<p class="intel-card-title">' + esc(lang === 'ko' ? s.regime.label_ko : s.regime.label_en) + '</p>' +
+        '<p class="intel-card-body">' + esc(lang === 'ko' ? s.regime.summary_ko : s.regime.summary_en) + '</p>' +
+        '</div>'
+      );
+    }
+    if (s.supply) {
+      cards.push(
+        '<div class="intel-card supply-card">' +
+        '<span class="intel-tag">' + (lang === 'ko' ? '수급·적체 선행 압력 (1차 출처)' : 'Verified Queue &amp; Supply Pressure') + '</span>' +
+        '<p class="intel-card-title">' + esc(lang === 'ko' ? s.supply.headline_ko : s.supply.headline_en) + '</p>' +
+        '<p class="intel-card-body">' + esc(lang === 'ko' ? s.supply.detail_ko : s.supply.detail_en) + '</p>' +
+        '<div class="intel-source">' + esc(s.supply.source_ref) + '</div>' +
+        '</div>'
+      );
+    }
+    if (cards.length) {
+      htmlOut += '<div class="intel-grid">' + cards.join('') + '</div>';
+    }
+    return htmlOut;
   }
 
   /* Chart Controller: Focused Single-Visa (50% + 90%) vs Category Multi-Visa */
