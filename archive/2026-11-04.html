@@ -263,6 +263,7 @@ th small { font-weight: 500; color: var(--charcoal-soft); }
 td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
 td.raw-official { font-size: 0.8rem; color: var(--charcoal-soft); white-space: nowrap; }
 .ko-sub { display: block; font-size: 0.77rem; color: var(--charcoal-soft); font-weight: 500; }
+body[data-ui-lang="en"] .ko-sub { display: none !important; }
 tr.clickable-row { cursor: pointer; }
 tr:hover td { background: var(--burgundy-wash); }
 .up { color: var(--error); font-weight: 700; }
@@ -297,6 +298,16 @@ footer p { margin: 0 0 8px; }
 .vc-k-bar { background: var(--burgundy-wash); border: 1px solid #D9A7AD; }
 .vc-k-line { height: 2px !important; background: var(--burgundy); }
 .vc-sum { font-size: 0.8rem; color: var(--charcoal-soft); margin: 8px 0 0; }
+.vc-ref-box { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
+.vc-ref-title { font-size: 0.86rem; font-weight: 800; color: var(--charcoal); margin: 0 0 6px; display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 6px; }
+.vc-ref-title small { font-weight: 500; font-size: 0.75rem; color: var(--charcoal-soft); }
+.vc-ref-list { display: grid; gap: 5px; margin: 6px 0 0; }
+.vc-ref-row { display: grid; grid-template-columns: minmax(130px, 1.3fr) minmax(80px, 2fr) auto; align-items: center; gap: 8px; font-size: 0.79rem; }
+.vc-ref-name { font-weight: 600; color: var(--charcoal); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.vc-ref-track { height: 8px; background: var(--ivory); border-radius: 999px; overflow: hidden; }
+.vc-ref-fill { height: 100%; background: var(--burgundy); border-radius: 999px; }
+.vc-ref-val { font-variant-numeric: tabular-nums; font-weight: 700; color: var(--charcoal-soft); text-align: right; min-width: 72px; }
+.vc-ref-note { font-size: 0.74rem; color: var(--muted); margin: 6px 0 0; }
 .visit-counter span { background: var(--white); border: 1px solid var(--line); border-radius: 999px;
                       padding: 5px 12px; font-size: 0.8rem; color: var(--charcoal-soft); }
 .visit-counter b { color: var(--burgundy); font-weight: 800; margin-left: 4px; font-variant-numeric: tabular-nums; }
@@ -419,10 +430,11 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 <header class="site-header">
 <div class="bar">
 <a class="brand" href="https://parklawyers.com.au/"><img src="../assets/brand/logo-positive.png" alt="Park &amp; Co Lawyers" width="116" height="34"></a>
-<a class="product" href="../index.html">Visa Processing Times &middot; 호주 비자 심사기간</a>
-<div class="actions"><div class="lang-toggle" role="group" aria-label="Language / 언어 선택"><button id="lang-ko" type="button" class="active">한국어</button><button id="lang-en" type="button">EN</button></div><button id="help-btn" class="btn btn-secondary" type="button" aria-controls="help-panel" aria-expanded="false"><span class="hide-sm" data-i18n-en>How to use &middot; </span>사용법</button>
-<a class="btn btn-secondary btn-cafe" href="https://cafe.naver.com/immispecialist" target="_blank" rel="noopener" title="Free Q&amp;A board on Naver Cafe">무료 상담 게시판</a>
-<a class="btn btn-primary" href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener" title="Contact Park &amp; Co Lawyers">박앤코 문의하기 &rarr;</a></div>
+<a class="product" href="../index.html">Visa Processing Times<span data-i18n-ko> &middot; 호주 비자 심사기간</span></a>
+<div class="actions"><div class="lang-toggle" role="group" aria-label="Language / 언어 선택"><button id="lang-ko" type="button" class="active">한국어</button><button id="lang-en" type="button">EN</button></div><button id="help-btn" class="btn btn-secondary" type="button" aria-controls="help-panel" aria-expanded="false"><span data-i18n-ko>사용법</span><span data-i18n-en>How to use</span></button>
+<a class="btn btn-secondary btn-cafe" href="https://cafe.naver.com/immispecialist" target="_blank" rel="noopener" title="Free Q&amp;A board on Naver Cafe"><span data-i18n-ko>무료 상담 게시판</span><span data-i18n-en>Free Q&amp;A</span></a>
+<a class="btn btn-primary" data-i18n-ko href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener" title="Contact Park &amp; Co Lawyers">박앤코 문의하기 &rarr;</a>
+<a class="btn btn-primary" data-i18n-en href="https://parklawyers.com.au/links/" target="_blank" rel="noopener" title="Contact Park &amp; Co Lawyers">Contact Us &rarr;</a></div>
 <div aria-label="How to use / 사용법" id="help-panel" role="dialog">
 <button aria-label="Close" class="close" type="button">×</button>
 <div class="lang-tabs">
@@ -470,14 +482,19 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 </div>
 </div>
 <nav class="subnav" aria-label="Report navigation"><div class="inner"><a href="../index.html"><span data-i18n-ko>내 비자 계산기 &middot; 최신</span><span data-i18n-en>Latest &amp; Calculator</span></a><a href="../compare.html"><span data-i18n-ko>과거 vs 현재 비교</span><span data-i18n-en>Compare past vs now</span></a><a href="../archive/" class="active" aria-current="page"><span data-i18n-ko>일자별 기록</span><span data-i18n-en>Past reports</span></a>
-<a class="ext" href="https://changa9090.github.io/au-migration-law-tracker/"><span data-i18n-ko>이민법 개정 추적 &middot; </span>Migration law changes &rarr;</a>
+<a class="ext" href="https://changa9090.github.io/"><span data-i18n-ko>박앤코 통합 허브 &rarr;</span><span data-i18n-en>Legal &amp; Visa Hub &rarr;</span></a>
+<a class="ext" data-i18n-ko href="https://changa9090.github.io/parkco-visa-solution-guide/?lang=ko#module-pathways">비자 자격·직종 진단 &rarr;</a>
+<a class="ext" data-i18n-en href="https://changa9090.github.io/parkco-visa-solution-guide/?lang=en#module-pathways">Visa Eligibility &amp; SOL Guide &rarr;</a>
+<a class="ext" data-i18n-ko href="https://faq.immispecialist.com/?lang=ko" target="_blank" rel="noopener">호주이민 FAQ &rarr;</a>
+<a class="ext" data-i18n-en href="https://faq.immispecialist.com/?lang=en" target="_blank" rel="noopener">Immigration FAQ &rarr;</a>
+<a class="ext" href="https://changa9090.github.io/au-migration-law-tracker/"><span data-i18n-ko>이민법 개정 추적 &rarr;</span><span data-i18n-en>Migration law changes &rarr;</span></a>
 <label class="jump" for="history-select"><span data-i18n-ko>기준일 이동</span><span data-i18n-en>Go to date</span>
-<select id="history-select"><option value="../archive/2026-11-04.html" selected>2026-11-04</option><option value="../archive/2026-11-03.html">2026-11-03</option><option value="../archive/2026-11-02.html">2026-11-02</option><option value="../archive/2026-11-01.html">2026-11-01</option><option value="../archive/2026-10-31.html">2026-10-31</option><option value="../archive/2026-10-30.html">2026-10-30</option><option value="../archive/2026-10-29.html">2026-10-29</option><option value="../archive/2026-10-28.html">2026-10-28</option><option value="../archive/2026-10-27.html">2026-10-27</option><option value="../archive/2026-10-26.html">2026-10-26</option><option value="../archive/2026-10-25.html">2026-10-25</option><option value="../archive/2026-10-24.html">2026-10-24</option><option value="../archive/2026-10-23.html">2026-10-23</option><option value="../archive/2026-10-22.html">2026-10-22</option><option value="../archive/2026-10-21.html">2026-10-21</option><option value="../archive/2026-10-20.html">2026-10-20</option><option value="../archive/2026-10-19.html">2026-10-19</option><option value="../archive/2026-10-18.html">2026-10-18</option><option value="../archive/2026-10-17.html">2026-10-17</option><option value="../archive/2026-10-16.html">2026-10-16</option><option value="../archive/2026-10-15.html">2026-10-15</option><option value="../archive/2026-10-14.html">2026-10-14</option><option value="../archive/2026-10-13.html">2026-10-13</option><option value="../archive/2026-10-12.html">2026-10-12</option><option value="../archive/2026-10-11.html">2026-10-11</option><option value="../archive/2026-10-10.html">2026-10-10</option><option value="../archive/2026-10-09.html">2026-10-09</option><option value="../archive/2026-10-08.html">2026-10-08</option><option value="../archive/2026-10-07.html">2026-10-07</option><option value="../archive/2026-10-06.html">2026-10-06</option><option value="../archive/2026-10-05.html">2026-10-05</option><option value="../archive/2026-10-04.html">2026-10-04</option><option value="../archive/2026-10-03.html">2026-10-03</option><option value="../archive/2026-10-02.html">2026-10-02</option><option value="../archive/2026-10-01.html">2026-10-01</option><option value="../archive/2026-09-30.html">2026-09-30</option><option value="../archive/2026-09-29.html">2026-09-29</option><option value="../archive/2026-09-28.html">2026-09-28</option><option value="../archive/2026-09-27.html">2026-09-27</option><option value="../archive/2026-09-26.html">2026-09-26</option><option value="../archive/2026-09-25.html">2026-09-25</option><option value="../archive/2026-09-24.html">2026-09-24</option><option value="../archive/2026-09-23.html">2026-09-23</option><option value="../archive/2026-09-22.html">2026-09-22</option><option value="../archive/2026-09-21.html">2026-09-21</option><option value="../archive/2026-09-20.html">2026-09-20</option><option value="../archive/2026-09-19.html">2026-09-19</option><option value="../archive/2026-09-18.html">2026-09-18</option><option value="../archive/2026-09-17.html">2026-09-17</option><option value="../archive/2026-09-16.html">2026-09-16</option><option value="../archive/2026-09-15.html">2026-09-15</option><option value="../archive/2026-09-14.html">2026-09-14</option><option value="../archive/2026-09-13.html">2026-09-13</option><option value="../archive/2026-09-12.html">2026-09-12</option><option value="../archive/2026-09-11.html">2026-09-11</option><option value="../archive/2026-09-10.html">2026-09-10</option><option value="../archive/2026-09-09.html">2026-09-09</option><option value="../archive/2026-09-08.html">2026-09-08</option><option value="../archive/2026-09-07.html">2026-09-07</option><option value="../archive/2026-09-06.html">2026-09-06</option><option value="../archive/2026-09-05.html">2026-09-05</option><option value="../archive/2026-09-04.html">2026-09-04</option><option value="../archive/2026-09-03.html">2026-09-03</option><option value="../archive/2026-09-02.html">2026-09-02</option><option value="../archive/2026-09-01.html">2026-09-01</option><option value="../archive/2026-08-31.html">2026-08-31</option><option value="../archive/2026-08-30.html">2026-08-30</option><option value="../archive/2026-08-29.html">2026-08-29</option><option value="../archive/2026-08-28.html">2026-08-28</option><option value="../archive/2026-08-27.html">2026-08-27</option><option value="../archive/2026-08-26.html">2026-08-26</option><option value="../archive/2026-08-25.html">2026-08-25</option><option value="../archive/2026-08-24.html">2026-08-24</option><option value="../archive/2026-08-23.html">2026-08-23</option><option value="../archive/2026-08-22.html">2026-08-22</option><option value="../archive/2026-08-21.html">2026-08-21</option><option value="../archive/2026-08-20.html">2026-08-20</option><option value="../archive/2026-08-19.html">2026-08-19</option><option value="../archive/2026-08-18.html">2026-08-18</option><option value="../archive/2026-08-17.html">2026-08-17</option><option value="../archive/2026-08-16.html">2026-08-16</option><option value="../archive/2026-08-15.html">2026-08-15</option><option value="../archive/2026-08-14.html">2026-08-14</option><option value="../archive/2026-08-13.html">2026-08-13</option><option value="../archive/2026-08-12.html">2026-08-12</option><option value="../archive/2026-08-11.html">2026-08-11</option><option value="../archive/2026-08-10.html">2026-08-10</option><option value="../archive/2026-08-09.html">2026-08-09</option><option value="../archive/2026-08-08.html">2026-08-08</option><option value="../archive/2026-08-07.html">2026-08-07</option><option value="../archive/2026-08-06.html">2026-08-06</option><option value="../archive/2026-08-05.html">2026-08-05</option><option value="../archive/2026-08-04.html">2026-08-04</option><option value="../archive/2026-08-03.html">2026-08-03</option><option value="../archive/2026-08-02.html">2026-08-02</option><option value="../archive/2026-08-01.html">2026-08-01</option><option value="../archive/2026-07-31.html">2026-07-31</option><option value="../archive/2026-07-30.html">2026-07-30</option><option value="../archive/2026-07-29.html">2026-07-29</option><option value="../archive/2026-07-28.html">2026-07-28</option><option value="../archive/2026-07-27.html">2026-07-27</option><option value="../archive/2026-07-26.html">2026-07-26</option><option value="../archive/2026-07-25.html">2026-07-25</option><option value="../archive/2026-07-24.html">2026-07-24</option><option value="../archive/2026-07-23.html">2026-07-23</option><option value="../archive/2026-07-22.html">2026-07-22</option><option value="../archive/2026-07-21.html">2026-07-21</option><option value="../archive/2026-07-20.html">2026-07-20</option><option value="../archive/2026-07-19.html">2026-07-19</option><option value="../archive/2026-07-18.html">2026-07-18</option><option value="../archive/2026-07-17.html">2026-07-17</option><option value="../archive/2026-07-16.html">2026-07-16</option><option value="../archive/2026-07-15.html">2026-07-15</option><option value="../archive/2026-07-14.html">2026-07-14</option><option value="../archive/2026-07-13.html">2026-07-13</option><option value="../archive/2026-07-12.html">2026-07-12</option><option value="../archive/2026-07-11.html">2026-07-11</option><option value="../archive/2026-07-10.html">2026-07-10</option><option value="../archive/2026-07-09.html">2026-07-09</option><option value="../archive/2026-07-08.html">2026-07-08</option><option value="../archive/2026-07-07.html">2026-07-07</option><option value="../archive/2026-07-06.html">2026-07-06</option><option value="../archive/2026-07-05.html">2026-07-05</option><option value="../archive/2026-07-04.html">2026-07-04</option><option value="../archive/2026-07-03.html">2026-07-03</option><option value="../archive/2026-07-02.html">2026-07-02</option><option value="../archive/2026-07-01.html">2026-07-01</option><option value="../archive/2026-06-30.html">2026-06-30</option><option value="../archive/2026-06-29.html">2026-06-29</option><option value="../archive/2026-06-28.html">2026-06-28</option><option value="../archive/2026-06-27.html">2026-06-27</option><option value="../archive/2026-06-26.html">2026-06-26</option><option value="../archive/2026-06-25.html">2026-06-25</option><option value="../archive/2026-06-24.html">2026-06-24</option><option value="../archive/2026-06-23.html">2026-06-23</option><option value="../archive/2026-06-22.html">2026-06-22</option><option value="../archive/2026-06-21.html">2026-06-21</option><option value="../archive/2026-06-20.html">2026-06-20</option><option value="../archive/2026-06-19.html">2026-06-19</option><option value="../archive/2026-06-18.html">2026-06-18</option><option value="../archive/2026-06-17.html">2026-06-17</option><option value="../archive/2026-06-16.html">2026-06-16</option><option value="../archive/2026-06-15.html">2026-06-15</option><option value="../archive/2026-06-14.html">2026-06-14</option><option value="../archive/2026-06-13.html">2026-06-13</option><option value="../archive/2026-06-12.html">2026-06-12</option><option value="../archive/2026-06-11.html">2026-06-11</option><option value="../archive/2026-06-10.html">2026-06-10</option><option value="../archive/2026-06-09.html">2026-06-09</option><option value="../archive/2026-06-08.html">2026-06-08</option><option value="../archive/2026-06-07.html">2026-06-07</option><option value="../archive/2026-06-06.html">2026-06-06</option><option value="../archive/2026-06-05.html">2026-06-05</option><option value="../archive/2026-06-04.html">2026-06-04</option><option value="../archive/2026-06-03.html">2026-06-03</option><option value="../archive/2026-06-02.html">2026-06-02</option><option value="../archive/2026-06-01.html">2026-06-01</option><option value="../archive/2026-05-31.html">2026-05-31</option><option value="../archive/2026-05-30.html">2026-05-30</option><option value="../archive/2026-05-29.html">2026-05-29</option><option value="../archive/2026-05-28.html">2026-05-28</option><option value="../archive/2026-05-27.html">2026-05-27</option><option value="../archive/2026-05-26.html">2026-05-26</option><option value="../archive/2026-05-25.html">2026-05-25</option><option value="../archive/2026-05-24.html">2026-05-24</option><option value="../archive/2026-05-23.html">2026-05-23</option><option value="../archive/2026-05-22.html">2026-05-22</option><option value="../archive/2026-05-21.html">2026-05-21</option><option value="../archive/2026-05-20.html">2026-05-20</option><option value="../archive/2026-05-19.html">2026-05-19</option><option value="../archive/2026-05-18.html">2026-05-18</option><option value="../archive/2026-05-17.html">2026-05-17</option><option value="../archive/2026-05-16.html">2026-05-16</option><option value="../archive/2026-05-15.html">2026-05-15</option><option value="../archive/2026-05-14.html">2026-05-14</option><option value="../archive/2026-05-13.html">2026-05-13</option><option value="../archive/2026-05-12.html">2026-05-12</option><option value="../archive/2026-05-11.html">2026-05-11</option><option value="../archive/2026-05-09.html">2026-05-09</option><option value="../archive/2026-05-08.html">2026-05-08</option><option value="../archive/2026-05-07.html">2026-05-07</option><option value="../archive/2026-05-06.html">2026-05-06</option><option value="../archive/2026-05-05.html">2026-05-05</option><option value="../archive/2026-05-04.html">2026-05-04</option><option value="../archive/2026-05-03.html">2026-05-03</option><option value="../archive/2026-05-02.html">2026-05-02</option><option value="../archive/2026-05-01.html">2026-05-01</option><option value="../archive/2026-04-30.html">2026-04-30</option><option value="../archive/2026-04-29.html">2026-04-29</option><option value="../archive/2026-04-28.html">2026-04-28</option><option value="../archive/2026-04-27.html">2026-04-27</option><option value="../archive/2026-04-26.html">2026-04-26</option><option value="../archive/2026-04-25.html">2026-04-25</option><option value="../archive/2026-04-24.html">2026-04-24</option><option value="../archive/2026-04-23.html">2026-04-23</option><option value="../archive/2026-04-01.html">2026-04-01</option></select></label></div></nav>
+<select id="history-select"><option value="../archive/2026-11-05.html">2026-11-05</option><option value="../archive/2026-11-04.html" selected>2026-11-04</option><option value="../archive/2026-11-03.html">2026-11-03</option><option value="../archive/2026-11-02.html">2026-11-02</option><option value="../archive/2026-11-01.html">2026-11-01</option><option value="../archive/2026-10-31.html">2026-10-31</option><option value="../archive/2026-10-30.html">2026-10-30</option><option value="../archive/2026-10-29.html">2026-10-29</option><option value="../archive/2026-10-28.html">2026-10-28</option><option value="../archive/2026-10-27.html">2026-10-27</option><option value="../archive/2026-10-26.html">2026-10-26</option><option value="../archive/2026-10-25.html">2026-10-25</option><option value="../archive/2026-10-24.html">2026-10-24</option><option value="../archive/2026-10-23.html">2026-10-23</option><option value="../archive/2026-10-22.html">2026-10-22</option><option value="../archive/2026-10-21.html">2026-10-21</option><option value="../archive/2026-10-20.html">2026-10-20</option><option value="../archive/2026-10-19.html">2026-10-19</option><option value="../archive/2026-10-18.html">2026-10-18</option><option value="../archive/2026-10-17.html">2026-10-17</option><option value="../archive/2026-10-16.html">2026-10-16</option><option value="../archive/2026-10-15.html">2026-10-15</option><option value="../archive/2026-10-14.html">2026-10-14</option><option value="../archive/2026-10-13.html">2026-10-13</option><option value="../archive/2026-10-12.html">2026-10-12</option><option value="../archive/2026-10-11.html">2026-10-11</option><option value="../archive/2026-10-10.html">2026-10-10</option><option value="../archive/2026-10-09.html">2026-10-09</option><option value="../archive/2026-10-08.html">2026-10-08</option><option value="../archive/2026-10-07.html">2026-10-07</option><option value="../archive/2026-10-06.html">2026-10-06</option><option value="../archive/2026-10-05.html">2026-10-05</option><option value="../archive/2026-10-04.html">2026-10-04</option><option value="../archive/2026-10-03.html">2026-10-03</option><option value="../archive/2026-10-02.html">2026-10-02</option><option value="../archive/2026-10-01.html">2026-10-01</option><option value="../archive/2026-09-30.html">2026-09-30</option><option value="../archive/2026-09-29.html">2026-09-29</option><option value="../archive/2026-09-28.html">2026-09-28</option><option value="../archive/2026-09-27.html">2026-09-27</option><option value="../archive/2026-09-26.html">2026-09-26</option><option value="../archive/2026-09-25.html">2026-09-25</option><option value="../archive/2026-09-24.html">2026-09-24</option><option value="../archive/2026-09-23.html">2026-09-23</option><option value="../archive/2026-09-22.html">2026-09-22</option><option value="../archive/2026-09-21.html">2026-09-21</option><option value="../archive/2026-09-20.html">2026-09-20</option><option value="../archive/2026-09-19.html">2026-09-19</option><option value="../archive/2026-09-18.html">2026-09-18</option><option value="../archive/2026-09-17.html">2026-09-17</option><option value="../archive/2026-09-16.html">2026-09-16</option><option value="../archive/2026-09-15.html">2026-09-15</option><option value="../archive/2026-09-14.html">2026-09-14</option><option value="../archive/2026-09-13.html">2026-09-13</option><option value="../archive/2026-09-12.html">2026-09-12</option><option value="../archive/2026-09-11.html">2026-09-11</option><option value="../archive/2026-09-10.html">2026-09-10</option><option value="../archive/2026-09-09.html">2026-09-09</option><option value="../archive/2026-09-08.html">2026-09-08</option><option value="../archive/2026-09-07.html">2026-09-07</option><option value="../archive/2026-09-06.html">2026-09-06</option><option value="../archive/2026-09-05.html">2026-09-05</option><option value="../archive/2026-09-04.html">2026-09-04</option><option value="../archive/2026-09-03.html">2026-09-03</option><option value="../archive/2026-09-02.html">2026-09-02</option><option value="../archive/2026-09-01.html">2026-09-01</option><option value="../archive/2026-08-31.html">2026-08-31</option><option value="../archive/2026-08-30.html">2026-08-30</option><option value="../archive/2026-08-29.html">2026-08-29</option><option value="../archive/2026-08-28.html">2026-08-28</option><option value="../archive/2026-08-27.html">2026-08-27</option><option value="../archive/2026-08-26.html">2026-08-26</option><option value="../archive/2026-08-25.html">2026-08-25</option><option value="../archive/2026-08-24.html">2026-08-24</option><option value="../archive/2026-08-23.html">2026-08-23</option><option value="../archive/2026-08-22.html">2026-08-22</option><option value="../archive/2026-08-21.html">2026-08-21</option><option value="../archive/2026-08-20.html">2026-08-20</option><option value="../archive/2026-08-19.html">2026-08-19</option><option value="../archive/2026-08-18.html">2026-08-18</option><option value="../archive/2026-08-17.html">2026-08-17</option><option value="../archive/2026-08-16.html">2026-08-16</option><option value="../archive/2026-08-15.html">2026-08-15</option><option value="../archive/2026-08-14.html">2026-08-14</option><option value="../archive/2026-08-13.html">2026-08-13</option><option value="../archive/2026-08-12.html">2026-08-12</option><option value="../archive/2026-08-11.html">2026-08-11</option><option value="../archive/2026-08-10.html">2026-08-10</option><option value="../archive/2026-08-09.html">2026-08-09</option><option value="../archive/2026-08-08.html">2026-08-08</option><option value="../archive/2026-08-07.html">2026-08-07</option><option value="../archive/2026-08-06.html">2026-08-06</option><option value="../archive/2026-08-05.html">2026-08-05</option><option value="../archive/2026-08-04.html">2026-08-04</option><option value="../archive/2026-08-03.html">2026-08-03</option><option value="../archive/2026-08-02.html">2026-08-02</option><option value="../archive/2026-08-01.html">2026-08-01</option><option value="../archive/2026-07-31.html">2026-07-31</option><option value="../archive/2026-07-30.html">2026-07-30</option><option value="../archive/2026-07-29.html">2026-07-29</option><option value="../archive/2026-07-28.html">2026-07-28</option><option value="../archive/2026-07-27.html">2026-07-27</option><option value="../archive/2026-07-26.html">2026-07-26</option><option value="../archive/2026-07-25.html">2026-07-25</option><option value="../archive/2026-07-24.html">2026-07-24</option><option value="../archive/2026-07-23.html">2026-07-23</option><option value="../archive/2026-07-22.html">2026-07-22</option><option value="../archive/2026-07-21.html">2026-07-21</option><option value="../archive/2026-07-20.html">2026-07-20</option><option value="../archive/2026-07-19.html">2026-07-19</option><option value="../archive/2026-07-18.html">2026-07-18</option><option value="../archive/2026-07-17.html">2026-07-17</option><option value="../archive/2026-07-16.html">2026-07-16</option><option value="../archive/2026-07-15.html">2026-07-15</option><option value="../archive/2026-07-14.html">2026-07-14</option><option value="../archive/2026-07-13.html">2026-07-13</option><option value="../archive/2026-07-12.html">2026-07-12</option><option value="../archive/2026-07-11.html">2026-07-11</option><option value="../archive/2026-07-10.html">2026-07-10</option><option value="../archive/2026-07-09.html">2026-07-09</option><option value="../archive/2026-07-08.html">2026-07-08</option><option value="../archive/2026-07-07.html">2026-07-07</option><option value="../archive/2026-07-06.html">2026-07-06</option><option value="../archive/2026-07-05.html">2026-07-05</option><option value="../archive/2026-07-04.html">2026-07-04</option><option value="../archive/2026-07-03.html">2026-07-03</option><option value="../archive/2026-07-02.html">2026-07-02</option><option value="../archive/2026-07-01.html">2026-07-01</option><option value="../archive/2026-06-30.html">2026-06-30</option><option value="../archive/2026-06-29.html">2026-06-29</option><option value="../archive/2026-06-28.html">2026-06-28</option><option value="../archive/2026-06-27.html">2026-06-27</option><option value="../archive/2026-06-26.html">2026-06-26</option><option value="../archive/2026-06-25.html">2026-06-25</option><option value="../archive/2026-06-24.html">2026-06-24</option><option value="../archive/2026-06-23.html">2026-06-23</option><option value="../archive/2026-06-22.html">2026-06-22</option><option value="../archive/2026-06-21.html">2026-06-21</option><option value="../archive/2026-06-20.html">2026-06-20</option><option value="../archive/2026-06-19.html">2026-06-19</option><option value="../archive/2026-06-18.html">2026-06-18</option><option value="../archive/2026-06-17.html">2026-06-17</option><option value="../archive/2026-06-16.html">2026-06-16</option><option value="../archive/2026-06-15.html">2026-06-15</option><option value="../archive/2026-06-14.html">2026-06-14</option><option value="../archive/2026-06-13.html">2026-06-13</option><option value="../archive/2026-06-12.html">2026-06-12</option><option value="../archive/2026-06-11.html">2026-06-11</option><option value="../archive/2026-06-10.html">2026-06-10</option><option value="../archive/2026-06-09.html">2026-06-09</option><option value="../archive/2026-06-08.html">2026-06-08</option><option value="../archive/2026-06-07.html">2026-06-07</option><option value="../archive/2026-06-06.html">2026-06-06</option><option value="../archive/2026-06-05.html">2026-06-05</option><option value="../archive/2026-06-04.html">2026-06-04</option><option value="../archive/2026-06-03.html">2026-06-03</option><option value="../archive/2026-06-02.html">2026-06-02</option><option value="../archive/2026-06-01.html">2026-06-01</option><option value="../archive/2026-05-31.html">2026-05-31</option><option value="../archive/2026-05-30.html">2026-05-30</option><option value="../archive/2026-05-29.html">2026-05-29</option><option value="../archive/2026-05-28.html">2026-05-28</option><option value="../archive/2026-05-27.html">2026-05-27</option><option value="../archive/2026-05-26.html">2026-05-26</option><option value="../archive/2026-05-25.html">2026-05-25</option><option value="../archive/2026-05-24.html">2026-05-24</option><option value="../archive/2026-05-23.html">2026-05-23</option><option value="../archive/2026-05-22.html">2026-05-22</option><option value="../archive/2026-05-21.html">2026-05-21</option><option value="../archive/2026-05-20.html">2026-05-20</option><option value="../archive/2026-05-19.html">2026-05-19</option><option value="../archive/2026-05-18.html">2026-05-18</option><option value="../archive/2026-05-17.html">2026-05-17</option><option value="../archive/2026-05-16.html">2026-05-16</option><option value="../archive/2026-05-15.html">2026-05-15</option><option value="../archive/2026-05-14.html">2026-05-14</option><option value="../archive/2026-05-13.html">2026-05-13</option><option value="../archive/2026-05-12.html">2026-05-12</option><option value="../archive/2026-05-11.html">2026-05-11</option><option value="../archive/2026-05-09.html">2026-05-09</option><option value="../archive/2026-05-08.html">2026-05-08</option><option value="../archive/2026-05-07.html">2026-05-07</option><option value="../archive/2026-05-06.html">2026-05-06</option><option value="../archive/2026-05-05.html">2026-05-05</option><option value="../archive/2026-05-04.html">2026-05-04</option><option value="../archive/2026-05-03.html">2026-05-03</option><option value="../archive/2026-05-02.html">2026-05-02</option><option value="../archive/2026-05-01.html">2026-05-01</option><option value="../archive/2026-04-30.html">2026-04-30</option><option value="../archive/2026-04-29.html">2026-04-29</option><option value="../archive/2026-04-28.html">2026-04-28</option><option value="../archive/2026-04-27.html">2026-04-27</option><option value="../archive/2026-04-26.html">2026-04-26</option><option value="../archive/2026-04-25.html">2026-04-25</option><option value="../archive/2026-04-24.html">2026-04-24</option><option value="../archive/2026-04-23.html">2026-04-23</option><option value="../archive/2026-04-01.html">2026-04-01</option></select></label></div></nav>
 </header>
 <div class="container">
 <h1><span data-i18n-ko>호주 비자 심사기간 기록 (2026-11-04)</span><span data-i18n-en>Australian Visa Global Processing Times (2026-11-04)</span></h1>
 <div class="archived">Archived report: data as it stood on <b>2026-11-04</b>. <a href="../index.html">View the latest report &amp; Personal Calculator</a>.</div>
-<div class="history"><a href="2026-11-03.html">&larr; 2026-11-03</a><span class="sep">|</span><a href="../index.html">Latest report &middot; 최신 계산기</a></div>
+<div class="history"><a href="2026-11-03.html">&larr; 2026-11-03</a><span class="sep">|</span><a href="2026-11-05.html">2026-11-05 &rarr;</a><span class="sep">|</span><a href="../index.html"><span data-i18n-en>Latest report</span><span data-i18n-ko>최신 계산기</span></a></div>
 
 
 <h2><span data-i18n-ko>심사기간 추세 그래프</span><span data-i18n-en>Trend — Priority Visas</span></h2>
@@ -553,7 +570,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   <span data-i18n-ko>호주 이민성(Home Affairs)이 공개한 전체 비자·스폰서십·노미네이션 스트림의 50% 중앙값 및 90% 표준 상한입니다. 추세 비교를 위해 개월 단위는 30일 기준으로 환산했으며, <b>공식 발표 원문(개월/일)</b>을 나란히 표기했습니다. 행을 누르면 상단 내 비자 계산기로 불러옵니다.</span>
   <span data-i18n-en>Median (50th pct) and 90th percentile processing times across published Home Affairs visa &amp; sponsorship/nomination streams. Months are normalised to 30-day equivalents alongside the visible official wording. Click any row to load it in the calculator above.</span>
 </p>
-<input class="table-filter" data-target="snap-table" type="search" placeholder="비자 번호·한글·영문 검색 (예: 482, 파트너, 학생, 189, Sponsorship) / Filter snapshot" style="width:100%;max-width:460px;padding:8px 11px;margin:6px 0 10px;font-size:0.9rem"><div class="table-wrap"><table id="snap-table"><thead><tr><th>Subclass</th><th><span data-i18n-ko>비자 종류 (Visa type)</span><span data-i18n-en>Visa type</span></th><th><span data-i18n-ko>세부 스트림 (Stream)</span><span data-i18n-en>Stream</span></th><th><span data-i18n-ko>50% 중앙값 (일)</span><span data-i18n-en>Median (days)</span></th><th><span data-i18n-ko>90% 상한 (일)</span><span data-i18n-en>90th pct (days)</span></th><th><span data-i18n-ko>공식 발표 원문 (50% / 90%)</span><span data-i18n-en>Official (50% / 90%)</span></th><th><span data-i18n-ko>전일 대비</span><span data-i18n-en>Δ vs prev day</span></th></tr></thead><tbody><tr><td><b>100</b></td><td>Partner<span class='ko-sub'>파트너 영주비자 (국외 신청 2단계)</span></td><td>100<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num' title="Official: 9 Months">270</td><td class='num' title="Official: 18 Months">540</td><td class='raw-official'><span data-i18n-ko>9개월 / 18개월</span><span data-i18n-en>9 Months / 18 Months</span></td><td class='num'><span class="neutral">–</span></td></tr>
+<input class="table-filter" data-target="snap-table" type="search" placeholder="비자 번호·한글·영문 검색 (예: 482, 파트너, 학생, 189, Sponsorship)" data-ko-placeholder="비자 번호·한글·영문 검색 (예: 482, 파트너, 학생, 189, Sponsorship)" data-en-placeholder="Filter snapshot (e.g. 482, Partner, Student, 189, Sponsorship)" style="width:100%;max-width:460px;padding:8px 11px;margin:6px 0 10px;font-size:0.9rem"><div class="table-wrap"><table id="snap-table"><thead><tr><th>Subclass</th><th><span data-i18n-ko>비자 종류 (Visa type)</span><span data-i18n-en>Visa type</span></th><th><span data-i18n-ko>세부 스트림 (Stream)</span><span data-i18n-en>Stream</span></th><th><span data-i18n-ko>50% 중앙값 (일)</span><span data-i18n-en>Median (days)</span></th><th><span data-i18n-ko>90% 상한 (일)</span><span data-i18n-en>90th pct (days)</span></th><th><span data-i18n-ko>공식 발표 원문 (50% / 90%)</span><span data-i18n-en>Official (50% / 90%)</span></th><th><span data-i18n-ko>전일 대비</span><span data-i18n-en>Δ vs prev day</span></th></tr></thead><tbody><tr><td><b>100</b></td><td>Partner<span class='ko-sub'>파트너 영주비자 (국외 신청 2단계)</span></td><td>100<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num' title="Official: 9 Months">270</td><td class='num' title="Official: 18 Months">540</td><td class='raw-official'><span data-i18n-ko>9개월 / 18개월</span><span data-i18n-en>9 Months / 18 Months</span></td><td class='num'><span class="neutral">–</span></td></tr>
 <tr><td><b>101</b></td><td>Child<span class='ko-sub'>자녀 영주비자 (국외)</span></td><td>101<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num' title="Official: 29 Months">870</td><td class='num' title="Official: 33 Months">990</td><td class='raw-official'><span data-i18n-ko>29개월 / 33개월</span><span data-i18n-en>29 Months / 33 Months</span></td><td class='num'><span class="neutral">–</span></td></tr>
 <tr><td><b>102</b></td><td>Adoption<span class='ko-sub'>입양비자</span></td><td>102<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num' title="Official: 10 Months">300</td><td class='num' title="Official: 19 Months">570</td><td class='raw-official'><span data-i18n-ko>10개월 / 19개월</span><span data-i18n-en>10 Months / 19 Months</span></td><td class='num'><span class="neutral">–</span></td></tr>
 <tr><td><b>117</b></td><td>Orphan Relative<span class='ko-sub'>고아 친척비자 (국외)</span></td><td>117<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num' title="Official: 75 Months">2250</td><td class='num' title="Official: 96 Months">2880</td><td class='raw-official'><span data-i18n-ko>75개월 / 96개월</span><span data-i18n-en>75 Months / 96 Months</span></td><td class='num'><span class="neutral">–</span></td></tr>
@@ -679,13 +696,12 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 <tr><td>2026-11-02</td><td>Student<span class='ko-sub'>학생비자</span></td><td>Non-Award Sector<span class='ko-sub'>교환학생·비학위 과정</span></td><td class='num'><span class='down'>-2 days</span></td><td class='num'><span class='down'>-66.7%</span></td></tr></tbody></table></div>
 
 <footer>
-<div class="visit-counter" id="visit-counter" data-seed-total="1062" data-seed-visitors="345" hidden>
-<span><span data-i18n-en>Total visits &middot; </span>누적 방문<b id="vc-total">-</b></span>
-<span><span data-i18n-en>Today &middot; </span>오늘 방문<b id="vc-today">-</b></span>
-<span><span data-i18n-en>Visitors &middot; </span>방문자<b id="vc-visitors">-</b></span>
+<div class="visit-counter" id="visit-counter" data-seed-total="1237" data-seed-visitors="455" hidden>
+<span><span data-i18n-ko>누적 방문</span><span data-i18n-en>Total visits</span><b id="vc-total">-</b></span>
+<span><span data-i18n-ko>오늘 방문</span><span data-i18n-en>Today</span><b id="vc-today">-</b></span>
+<span><span data-i18n-ko>방문자</span><span data-i18n-en>Visitors</span><b id="vc-visitors">-</b></span>
 </div>
-<p><span data-i18n-ko>무료 질문:</span><span data-i18n-en>Free questions:</span> <a href="https://cafe.naver.com/immispecialist" target="_blank" rel="noopener">무료 상담 게시판 (Naver Cafe)</a> &middot;
-<span data-i18n-ko>상담 문의:</span><span data-i18n-en>Contact:</span> <a href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener">박앤코 문의하기</a></p>
+<p><span data-i18n-ko>무료 질문: <a href="https://cafe.naver.com/immispecialist" target="_blank" rel="noopener">무료 상담 게시판 (Naver Cafe)</a> &middot; 상담 문의: <a href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener">박앤코 문의하기</a> &middot; 관련 도구: <a href="https://changa9090.github.io/">박앤코 법률·비자 통합 허브</a> &middot; <a href="https://changa9090.github.io/parkco-visa-solution-guide/?lang=ko#module-pathways">호주 비자 솔루션 가이드</a> &middot; <a href="https://faq.immispecialist.com/?lang=ko" target="_blank" rel="noopener">호주이민 실전 FAQ</a></span><span data-i18n-en>Free questions: <a href="https://cafe.naver.com/immispecialist" target="_blank" rel="noopener">Naver Cafe Q&amp;A Board</a> &middot; Contact: <a href="https://parklawyers.com.au/links/" target="_blank" rel="noopener">Contact Park &amp; Co Lawyers</a> &middot; Ecosystem: <a href="https://changa9090.github.io/">Park &amp; Co Legal &amp; Visa Hub</a> &middot; <a href="https://changa9090.github.io/parkco-visa-solution-guide/?lang=en#module-pathways">Visa Solution Guide</a> &middot; <a href="https://faq.immispecialist.com/?lang=en" target="_blank" rel="noopener">Australian Immigration FAQ</a></span></p>
 <p>Data source: Australian Government Department of Home Affairs,
 <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/global-visa-processing-times">Global visa processing times</a>.
 Source material licensed under
@@ -707,6 +723,12 @@ Australian Government or the Department of Home Affairs.</p>
     document.documentElement.setAttribute('lang', clean);
     if (langKoBtn) langKoBtn.classList.toggle('active', clean === 'ko');
     if (langEnBtn) langEnBtn.classList.toggle('active', clean === 'en');
+    document.querySelectorAll('[data-ko-text][data-en-text]').forEach(function (el) {
+      el.textContent = el.getAttribute(clean === 'en' ? 'data-en-text' : 'data-ko-text');
+    });
+    document.querySelectorAll('[data-ko-placeholder][data-en-placeholder]').forEach(function (el) {
+      el.setAttribute('placeholder', el.getAttribute(clean === 'en' ? 'data-en-placeholder' : 'data-ko-placeholder'));
+    });
     try { localStorage.setItem('vgpt-ui-lang', clean); } catch (e) {}
     document.dispatchEvent(new CustomEvent('vgpt:langchange', { detail: { lang: clean } }));
   }
@@ -1310,8 +1332,8 @@ Australian Government or the Department of Home Affairs.</p>
             : ('Lodged on ' + esc(lodged) + ' — within normal Home Affairs processing timeframes. Expected dates update automatically with each monthly DHA release.'));
       if (p90 != null && waited >= Math.ceil(0.85 * p90)) {
         detailHtml += lang === 'ko'
-          ? (' <span style="display:inline-block;margin-top:4px;font-weight:700;"><a href="https://changa9090.github.io/visa-crisis-navigator/" target="_blank" rel="noopener">s 56·장기지연 대응 가이드(Visa Crisis Navigator) &rarr;</a> &middot; <a href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener">법무법인 박앤코 사건 점검 문의</a></span>')
-          : (' <span style="display:inline-block;margin-top:4px;font-weight:700;"><a href="https://changa9090.github.io/visa-crisis-navigator/" target="_blank" rel="noopener">Visa Crisis &amp; s 56 Navigator &rarr;</a> &middot; <a href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener">Contact Park &amp; Co Lawyers</a></span>');
+          ? (' <span style="display:inline-block;margin-top:4px;font-weight:700;"><a href="https://changa9090.github.io/parkco-visa-crisis-navigator/" target="_blank" rel="noopener">s 56·장기지연 대응 가이드(Visa Crisis Navigator) &rarr;</a> &middot; <a href="https://changa9090.github.io/parkco-visa-solution-guide/?lang=ko#module-pathways" target="_blank" rel="noopener">대체 비자 경로 진단 &rarr;</a> &middot; <a href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener">법무법인 박앤코 사건 점검 문의</a></span>')
+          : (' <span style="display:inline-block;margin-top:4px;font-weight:700;"><a href="https://changa9090.github.io/parkco-visa-crisis-navigator/" target="_blank" rel="noopener">Visa Crisis &amp; s 56 Navigator &rarr;</a> &middot; <a href="https://changa9090.github.io/parkco-visa-solution-guide/?lang=en#module-pathways" target="_blank" rel="noopener">Alternative Visa Pathways &rarr;</a> &middot; <a href="https://parklawyers.com.au/links/" target="_blank" rel="noopener">Contact Park &amp; Co Lawyers</a></span>');
       }
     }
 
@@ -2050,29 +2072,97 @@ Australian Government or the Department of Home Affairs.</p>
   }
 })();
 </script>
-<script>/* Resilient Visit Counters + Rate-Limit-Safe Daily Chart.
+<script>/* Resilient Visit Counters + Rate-Limit-Safe Daily Chart + Privacy-Safe Referral Buckets.
  * Backed by Abacus (https://abacus.jasoncameron.dev) with:
  *   1. Post-success localStorage commit (never marks seen/day on failed fetch)
- *   2. AbortController timeout + exponential retry + keepalive on hits
+ *   2. AbortController timeout + exponential retry + keepalive on hits (instant 0 on GET 404)
  *   3. Promise.allSettled + localStorage last-known-good fallback cache
  *   4. Immutable past-day cache (vgpt-hist-v1) + 6-request chunked modal loading
+ *   5. Coarse daily referral bucket tracking (vgpt-ref-<bucket>-YYYYMMDD, zero PII/raw URLs)
  */
 (function () {
   var NS = 'changa9090.github.io', API = 'https://abacus.jasoncameron.dev/', START = '2026-10-15';
   var P = 'vgpt' + (location.hostname === 'changa9090.github.io' ? '' : '-dev');
   var CACHE_KEY = P + '-counts-cache-v1';
   var HIST_KEY = P + '-hist-v1';
+  var REF_BUCKETS = [
+    { id: 'naver-search', ko: '네이버 통합·웹검색', en: 'Naver Search' },
+    { id: 'naver-cafe', ko: '네이버 카페 (호주이민 사랑방 등)', en: 'Naver Cafe' },
+    { id: 'kakaotalk', ko: '카카오톡 공유·오픈채팅', en: 'KakaoTalk In-App / Share' },
+    { id: 'google', ko: '구글 검색 (Google)', en: 'Google Search' },
+    { id: 'threads-ig', ko: '스레드 · 인스타그램', en: 'Threads & Instagram' },
+    { id: 'youtube', ko: '유튜브 (@immispecialist 등)', en: 'YouTube' },
+    { id: 'faq-portal', ko: '박앤코 이민 FAQ 포털', en: 'Park & Co FAQ Portal' },
+    { id: 'parkco-hub', ko: '박앤코 비자·법률 허브/가이드', en: 'Park & Co Visa Hub / Navigators' },
+    { id: 'parkco-sites', ko: '박앤코 홈페이지 · 블로그', en: 'Park & Co Website / Blog' },
+    { id: 'other-web', ko: '기타 외부 웹사이트·커뮤니티', en: 'Other External Referrers' },
+    { id: 'direct', ko: '직접 접속 · 북마크 · 다크소셜', en: 'Direct / Bookmark / Private Link' }
+  ];
   var box = document.getElementById('visit-counter');
   if (!box) return;
 
+  function uiLang() { return (document.body && document.body.getAttribute('data-ui-lang')) === 'en' ? 'en' : 'ko'; }
   function bne(d) { return new Intl.DateTimeFormat('en-CA', { timeZone: 'Australia/Brisbane' }).format(d); }
   var today = bne(new Date()), day = today.replace(/-/g, '');
-  var seen = false, lastDay = null, cached = {};
+  var seen = false, lastDay = null, lastRefDay = null, cached = {};
   try {
     seen = !!localStorage.getItem(P + '-seen');
     lastDay = localStorage.getItem(P + '-day');
+    lastRefDay = localStorage.getItem(P + '-ref-day');
     cached = JSON.parse(localStorage.getItem(CACHE_KEY) || '{}') || {};
   } catch (e) {}
+
+  function classifyReferralBucket() {
+    try {
+      var qs = new URLSearchParams(location.search || '');
+      var utm = (qs.get('utm_source') || qs.get('ref') || '').toLowerCase().trim();
+      if (utm) {
+        if (utm.indexOf('cafe') >= 0) return 'naver-cafe';
+        if (utm.indexOf('naver') >= 0) return 'naver-search';
+        if (utm.indexOf('kakao') >= 0) return 'kakaotalk';
+        if (utm.indexOf('google') >= 0) return 'google';
+        if (utm.indexOf('thread') >= 0 || utm.indexOf('insta') >= 0 || utm === 'ig') return 'threads-ig';
+        if (utm.indexOf('youtube') >= 0 || utm === 'yt') return 'youtube';
+        if (utm.indexOf('faq') >= 0) return 'faq-portal';
+        if (utm.indexOf('hub') >= 0 || utm.indexOf('guide') >= 0 || utm.indexOf('parkco') >= 0) return 'parkco-hub';
+      }
+      var ref = String(document.referrer || '').trim();
+      var ua = String((navigator && navigator.userAgent) || '');
+      if (ref) {
+        if (ref.indexOf('android-app://com.google') === 0) return 'google';
+        var u = new URL(ref);
+        var h = (u.hostname || '').toLowerCase();
+        var p = (u.pathname || '').toLowerCase();
+        if (h === location.hostname && p.indexOf('/visa-global-processing-time') === 0) {
+          /* Internal tab navigation; fall through to UA / direct check */
+        } else if (h.indexOf('cafe.naver.') >= 0) {
+          return 'naver-cafe';
+        } else if (h.indexOf('naver.') >= 0) {
+          return 'naver-search';
+        } else if (h.indexOf('kakao.') >= 0 || h.indexOf('daum.') >= 0) {
+          return 'kakaotalk';
+        } else if (h.indexOf('google.') >= 0) {
+          return 'google';
+        } else if (h.indexOf('threads.') >= 0 || h.indexOf('instagram.') >= 0) {
+          return 'threads-ig';
+        } else if (h.indexOf('youtube.') >= 0 || h === 'youtu.be') {
+          return 'youtube';
+        } else if (h.indexOf('immispecialist.com') >= 0) {
+          return 'faq-portal';
+        } else if (h === 'changa9090.github.io') {
+          return 'parkco-hub';
+        } else if (h.indexOf('aussielife.org') >= 0 || h.indexOf('parklawyers.com.au') >= 0 || h.indexOf('parkcolawyers.com') >= 0 || h.indexOf('hojuro.net') >= 0) {
+          return 'parkco-sites';
+        } else {
+          return 'other-web';
+        }
+      }
+      if (/KAKAOTALK/i.test(ua)) return 'kakaotalk';
+      if (/NAVER\(inapp/i.test(ua)) return 'naver-search';
+      if (/Barcelona|Threads|Instagram/i.test(ua)) return 'threads-ig';
+    } catch (e) {}
+    return 'direct';
+  }
 
   function fmt(n) { return typeof n === 'number' && !isNaN(n) ? Number(n).toLocaleString('en-AU') : '-'; }
 
@@ -2101,6 +2191,7 @@ Australian Government or the Department of Home Affairs.</p>
     return fetch(url, opts)
       .then(function (r) {
         if (timer) clearTimeout(timer);
+        if (!isHit && r.status === 404) return { value: 0 };
         if (!r.ok) throw new Error('HTTP ' + r.status);
         return r.json();
       })
@@ -2126,6 +2217,18 @@ Australian Government or the Department of Home Affairs.</p>
   if (lastDay !== day) {
     call('hit', 'vday-' + day).then(function () {
       try { localStorage.setItem(P + '-day', day); } catch (e) {}
+    }).catch(function () {});
+  }
+
+  if (lastRefDay !== day) {
+    var refBucket = classifyReferralBucket();
+    delay(280).then(function () {
+      return call('hit', 'ref-' + refBucket + '-' + day);
+    }).then(function () {
+      try {
+        localStorage.setItem(P + '-ref-day', day);
+        localStorage.setItem(P + '-ref-bucket', refBucket);
+      } catch (e) {}
     }).catch(function () {});
   }
 
@@ -2166,9 +2269,10 @@ Australian Government or the Department of Home Affairs.</p>
 
   var modal = document.createElement('div');
   modal.id = 'vc-modal';
-  modal.innerHTML = '<div class="vc-dialog" role="dialog" aria-label="Daily visits / 일별 방문">' +
+  modal.innerHTML = '<div class="vc-dialog" role="dialog" aria-label="Daily visits">' +
     '<button type="button" class="vc-close" aria-label="Close">&times;</button>' +
-    '<h3>Daily visits &middot; 일별 방문 <small>(last 30 days &middot; 최근 30일, Brisbane time)</small></h3>' +
+    '<h3><span data-i18n-ko>일별 방문 및 유입 경로 <small>(최근 30일, 브리즈번 시간 기준)</small></span>' +
+    '<span data-i18n-en>Daily Visits &amp; Referral Sources <small>(last 30 days, Brisbane time)</small></span></h3>' +
     '<div class="vc-body">Loading&hellip;</div></div>';
   document.body.appendChild(modal);
   function close() { modal.classList.remove('open'); }
@@ -2177,6 +2281,7 @@ Australian Government or the Department of Home Affairs.</p>
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
 
   function render(days, rows) {
+    var isEn = uiLang() === 'en';
     var W = 640, H = 260, L = 40, R = 12, T = 14, B = 40;
     var max = Math.max(1, Math.max.apply(null, rows.map(function (r) { return Math.max(r[0], r[1]); })));
     var step = (W - L - R) / days.length, bw = Math.min(36, Math.max(4, step * 0.6));
@@ -2191,7 +2296,7 @@ Australian Government or the Department of Home Affairs.</p>
     days.forEach(function (d, i) {
       var cx = L + step * i + step / 2, views = rows[i][0], vis = rows[i][1];
       svg += '<rect x="' + (cx - bw / 2) + '" y="' + y(views) + '" width="' + bw + '" height="' +
-        (H - B - y(views)) + '" class="vc-bar"><title>' + d + ': ' + fmt(views) + ' page views / 방문</title></rect>';
+        (H - B - y(views)) + '" class="vc-bar"><title>' + d + ': ' + fmt(views) + (isEn ? ' page views' : '회 조회') + '</title></rect>';
       pts.push(cx + ',' + y(vis));
       if (days.length <= 10 || i % Math.ceil(days.length / 8) === 0 || i === days.length - 1)
         svg += '<text x="' + cx + '" y="' + (H - B + 16) + '" class="vc-xlab">' + d.slice(5) + '</text>';
@@ -2200,14 +2305,65 @@ Australian Government or the Department of Home Affairs.</p>
     pts.forEach(function (p, i) {
       var xy = p.split(',');
       svg += '<circle cx="' + xy[0] + '" cy="' + xy[1] + '" r="3.5" class="vc-dot"><title>' + days[i] + ': ' +
-        fmt(rows[i][1]) + ' visitors / 방문자</title></circle>';
+        fmt(rows[i][1]) + (isEn ? ' visitors' : '명 방문자') + '</title></circle>';
     });
     svg += '</svg>';
     var sum = rows.reduce(function (a, r) { return [a[0] + r[0], a[1] + r[1]]; }, [0, 0]);
-    return svg + '<div class="vc-legend"><span><i class="vc-k-bar"></i>Page views &middot; 방문</span>' +
-      '<span><i class="vc-k-line"></i>Visitors &middot; 방문자</span></div>' +
-      '<p class="vc-sum">' + days.length + ' days &middot; ' + fmt(sum[0]) + ' page views &middot; ' +
-      fmt(sum[1]) + ' daily visitors. Counting started ' + START + '. 방문자는 하루 단위로 브라우저당 1회 집계됩니다.</p>';
+    var summaryLine = isEn
+      ? (days.length + ' days &middot; ' + fmt(sum[0]) + ' page views &middot; ' + fmt(sum[1]) + ' daily visitors (started ' + START + '; 1 daily visitor per browser).')
+      : ('최근 ' + days.length + '일 합계 &middot; 페이지 조회 ' + fmt(sum[0]) + '회 &middot; 일별 순방문자 ' + fmt(sum[1]) + '명 (' + START + ' 집계 시작, 하루 브라우저당 1회).');
+    var refLoading = isEn ? 'Loading today&rsquo;s referral channels&hellip;' : '오늘 유입 채널 집계를 불러오는 중입니다&hellip;';
+    return svg + '<div class="vc-legend"><span><i class="vc-k-bar"></i>' + (isEn ? 'Page views' : '페이지 조회') + '</span>' +
+      '<span><i class="vc-k-line"></i>' + (isEn ? 'Daily visitors' : '순방문자') + '</span></div>' +
+      '<p class="vc-sum">' + summaryLine + '</p>' +
+      '<div id="vc-ref-box" class="vc-ref-box"><div class="vc-ref-note">' + refLoading + '</div></div>';
+  }
+
+  function loadTodayReferrers(dayKey) {
+    var firstSlice = REF_BUCKETS.slice(0, 6);
+    var secondSlice = REF_BUCKETS.slice(6);
+    var out = {};
+    return Promise.all(firstSlice.map(function (b) {
+      return call('get', 'ref-' + b.id + '-' + dayKey).catch(function () { return 0; }).then(function (v) { out[b.id] = v || 0; });
+    })).then(function () {
+      return delay(320);
+    }).then(function () {
+      return Promise.all(secondSlice.map(function (b) {
+        return call('get', 'ref-' + b.id + '-' + dayKey).catch(function () { return 0; }).then(function (v) { out[b.id] = v || 0; });
+      }));
+    }).then(function () {
+      return out;
+    });
+  }
+
+  function renderReferrerBox(countsMap) {
+    var isEn = uiLang() === 'en';
+    var items = REF_BUCKETS.map(function (b) {
+      return { id: b.id, label: isEn ? b.en : b.ko, count: countsMap[b.id] || 0 };
+    }).filter(function (x) { return x.count > 0; }).sort(function (a, b) { return b.count - a.count; });
+    var totalRef = items.reduce(function (acc, x) { return acc + x.count; }, 0);
+    var head = '<div class="vc-ref-title"><span>' +
+      (isEn ? ('Today&rsquo;s Referral Channels (' + today + ')') : ('오늘 유입 채널 분포 (' + today + ')')) +
+      '</span><small>' + (isEn ? ('Tracked visitors: ' + fmt(totalRef)) : ('채널 집계 방문자: ' + fmt(totalRef) + '명')) + '</small></div>';
+    if (!items.length) {
+      return head + '<p class="vc-ref-note">' +
+        (isEn
+          ? 'Channel-level anonymous bucket counting started on 2026-11-05 (1st visit per browser/day; zero personal or URL path data stored).'
+          : '익명 유입 채널(검색·카페·카카오톡·직접접속 등) 버킷 집계는 2026-11-05 배포 시점부터 신규 방문자 기준으로 기록됩니다 (세부 URL·개인정보 미수집).') +
+        '</p>';
+    }
+    var rowsHtml = items.map(function (item) {
+      var pct = totalRef > 0 ? Math.round((item.count / totalRef) * 100) : 0;
+      return '<div class="vc-ref-row">' +
+        '<span class="vc-ref-name" title="' + item.label + '">' + item.label + '</span>' +
+        '<div class="vc-ref-track"><div class="vc-ref-fill" style="width:' + Math.max(4, pct) + '%"></div></div>' +
+        '<span class="vc-ref-val">' + fmt(item.count) + ' (' + pct + '%)</span>' +
+        '</div>';
+    }).join('');
+    var note = isEn
+      ? 'Privacy-safe coarse channel buckets only (1 per browser/day from 2026-11-05; no IP, query string, or full referrer URL stored).'
+      : '개인정보 보호형 채널 그룹 집계 (2026-11-05 배포 이후 일 1회/브라우저 기준 · 검색어·세부 URL·IP 일체 미수집).';
+    return head + '<div class="vc-ref-list">' + rowsHtml + '</div><p class="vc-ref-note">' + note + '</p>';
   }
 
   function loadHistoryRows(days) {
@@ -2252,15 +2408,26 @@ Australian Government or the Department of Home Affairs.</p>
   function open() {
     modal.classList.add('open');
     var body = modal.querySelector('.vc-body');
-    body.innerHTML = 'Loading&hellip; 일별 통계를 불러오는 중입니다&hellip;';
+    body.innerHTML = uiLang() === 'en' ? 'Loading daily statistics&hellip;' : '일별 통계를 불러오는 중입니다&hellip;';
     var days = lastDays(30);
     loadHistoryRows(days)
-      .then(function (rows) { body.innerHTML = render(days, rows); })
-      .catch(function () { body.textContent = 'Could not load the chart. 그래프를 불러오지 못했습니다.'; });
+      .then(function (rows) {
+        body.innerHTML = render(days, rows);
+        return delay(350).then(function () { return loadTodayReferrers(day); });
+      })
+      .then(function (refMap) {
+        var refBox = document.getElementById('vc-ref-box');
+        if (refBox && refMap) refBox.innerHTML = renderReferrerBox(refMap);
+      })
+      .catch(function () {
+        if (!body.querySelector('svg')) {
+          body.textContent = uiLang() === 'en' ? 'Could not load the chart.' : '그래프를 불러오지 못했습니다.';
+        }
+      });
   }
   box.setAttribute('role', 'button');
   box.setAttribute('tabindex', '0');
-  box.title = 'Click for the daily chart / 클릭하면 일별 그래프';
+  box.title = 'Click for daily visits & referral sources / 클릭 시 일별 방문 및 유입 경로 확인';
   box.addEventListener('click', open);
   box.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
 })();

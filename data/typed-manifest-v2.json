@@ -1,6 +1,6 @@
 {
   "schema_version": "visa-processing-typed-manifest-2.1",
-  "generated_at_utc": "2026-11-04 20:55 UTC",
+  "generated_at_utc": "2026-11-05 04:29 UTC",
   "latest_date": "2026-11-05",
   "snapshot_sha256": "c71e4161e29262160bc8f7235303b1a6cce9b3f2aa26940a249149352a5b41e2",
   "total_dates_archived": 197,
@@ -643,11 +643,11 @@
         "pressure_level": "moderate",
         "inflow_ratio": null,
         "onhand_total": 4557,
-        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026) & SkillSelect (4 June 2026)",
+        "source_ref": "FOI DA26/06/00275 (as at 31 May 2026) & SkillSelect (15 October 2026)",
         "headline_ko": "활성 대기(On-hand) 4,557명 · 최근 라운드 10,000건 초청",
         "headline_en": "Active On-hand 4,557 · Latest Round 10,000 invited",
-        "detail_ko": "31 May 2026 기준 미결 재고는 4,557명(주신청 3,527·동반 1,030)이며, 최근 SkillSelect 라운드(4 June 2026, 10,000건 초청) 본신청 유입분이 순차 반영됩니다.",
-        "detail_en": "Active on-hand stood at 4,557 (31 May 2026), ahead of post-invitation lodgements from the 4 June 2026 SkillSelect round (10,000 invited)."
+        "detail_ko": "31 May 2026 기준 미결 재고는 4,557명(주신청 3,527·동반 1,030)이며, 최근 SkillSelect 라운드(15 October 2026, 10,000건 초청) 본신청 유입분이 순차 반영됩니다.",
+        "detail_en": "Active on-hand stood at 4,557 (31 May 2026), ahead of post-invitation lodgements from the 15 October 2026 SkillSelect round (10,000 invited)."
       }
     },
     {
