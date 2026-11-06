@@ -1,6 +1,6 @@
 {
   "schema_version": "vgpt-community-cohorts-1.0",
-  "as_of": "2026-11-06",
+  "as_of": "2026-11-07",
   "k_anonymity_floor": 5,
   "curve_floor": 10,
   "total_verified_cases": 1,
@@ -8,7 +8,7 @@
   "streams": {
     "100|Partner|100": {
       "stream_key": "100|Partner|100",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -25,7 +25,7 @@
     },
     "101|Child|101": {
       "stream_key": "101|Child|101",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -42,7 +42,7 @@
     },
     "102|Adoption|102": {
       "stream_key": "102|Adoption|102",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -59,7 +59,7 @@
     },
     "117|Orphan Relative|117": {
       "stream_key": "117|Orphan Relative|117",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -76,7 +76,7 @@
     },
     "132|Business Talent|Significant Business History": {
       "stream_key": "132|Business Talent|Significant Business History",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -93,7 +93,7 @@
     },
     "155|Resident Return|155": {
       "stream_key": "155|Resident Return|155",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -110,7 +110,7 @@
     },
     "157|Resident Return|157": {
       "stream_key": "157|Resident Return|157",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -127,7 +127,7 @@
     },
     "186|Employer Nomination|Agreement Pathway": {
       "stream_key": "186|Employer Nomination|Agreement Pathway",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -144,7 +144,7 @@
     },
     "186|Employer Nomination|Direct Entry Pathway": {
       "stream_key": "186|Employer Nomination|Direct Entry Pathway",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -161,7 +161,7 @@
     },
     "186|Employer Nomination|Transition Pathway": {
       "stream_key": "186|Employer Nomination|Transition Pathway",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 1,
@@ -178,7 +178,7 @@
     },
     "188|Business Innovation|Business Innovation Extension": {
       "stream_key": "188|Business Innovation|Business Innovation Extension",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -195,7 +195,7 @@
     },
     "189|Skilled Independent|New Zealand": {
       "stream_key": "189|Skilled Independent|New Zealand",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -212,7 +212,7 @@
     },
     "189|Skilled Independent|Points-Tested": {
       "stream_key": "189|Skilled Independent|Points-Tested",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -229,7 +229,7 @@
     },
     "190|Skilled Nominated|190": {
       "stream_key": "190|Skilled Nominated|190",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -246,7 +246,7 @@
     },
     "191|Skilled Regional|Regional Provisional Visa": {
       "stream_key": "191|Skilled Regional|Regional Provisional Visa",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -263,7 +263,7 @@
     },
     "300|Prospective Marriage|300": {
       "stream_key": "300|Prospective Marriage|300",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -280,7 +280,7 @@
     },
     "309|Partner|309": {
       "stream_key": "309|Partner|309",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -297,7 +297,7 @@
     },
     "400|Temporary Work|400": {
       "stream_key": "400|Temporary Work|400",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -314,7 +314,7 @@
     },
     "403|Diplomatic|Domestic Worker (Diplomatic or Consular)": {
       "stream_key": "403|Diplomatic|Domestic Worker (Diplomatic or Consular)",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -331,7 +331,7 @@
     },
     "403|Diplomatic|Foreign Government Agency": {
       "stream_key": "403|Diplomatic|Foreign Government Agency",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -348,7 +348,7 @@
     },
     "403|Diplomatic|Government Agreement": {
       "stream_key": "403|Diplomatic|Government Agreement",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -365,7 +365,7 @@
     },
     "403|Diplomatic|Mobility Arrangement for Talented Early-professionals Scheme (MATES)": {
       "stream_key": "403|Diplomatic|Mobility Arrangement for Talented Early-professionals Scheme (MATES)",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -382,7 +382,7 @@
     },
     "403|Diplomatic|Pacific Australia Labour Mobility Scheme": {
       "stream_key": "403|Diplomatic|Pacific Australia Labour Mobility Scheme",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -399,7 +399,7 @@
     },
     "407|Training|407": {
       "stream_key": "407|Training|407",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -416,7 +416,7 @@
     },
     "408|Temporary Activity|Entertainment Activities": {
       "stream_key": "408|Temporary Activity|Entertainment Activities",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -433,7 +433,7 @@
     },
     "408|Temporary Activity|Exchange Arrangements": {
       "stream_key": "408|Temporary Activity|Exchange Arrangements",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -450,7 +450,7 @@
     },
     "408|Temporary Activity|Invited for Other Social and Cultural Activity": {
       "stream_key": "408|Temporary Activity|Invited for Other Social and Cultural Activity",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -467,7 +467,7 @@
     },
     "408|Temporary Activity|Religious Work": {
       "stream_key": "408|Temporary Activity|Religious Work",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -484,7 +484,7 @@
     },
     "408|Temporary Activity|Research Activities": {
       "stream_key": "408|Temporary Activity|Research Activities",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -501,7 +501,7 @@
     },
     "408|Temporary Activity|Special Programs": {
       "stream_key": "408|Temporary Activity|Special Programs",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -518,7 +518,7 @@
     },
     "408|Temporary Activity|Sporting Activities": {
       "stream_key": "408|Temporary Activity|Sporting Activities",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -535,7 +535,7 @@
     },
     "408|Temporary Activity|Superyacht Crew": {
       "stream_key": "408|Temporary Activity|Superyacht Crew",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -552,7 +552,7 @@
     },
     "417|Working Holiday|417": {
       "stream_key": "417|Working Holiday|417",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -569,7 +569,7 @@
     },
     "445|Dependent Child|445": {
       "stream_key": "445|Dependent Child|445",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -586,7 +586,7 @@
     },
     "461|New Zealand Citizen Family Relationship|461": {
       "stream_key": "461|New Zealand Citizen Family Relationship|461",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -603,7 +603,7 @@
     },
     "462|Work and Holiday|462": {
       "stream_key": "462|Work and Holiday|462",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -620,7 +620,7 @@
     },
     "482|Skills In Demand|Core Skills": {
       "stream_key": "482|Skills In Demand|Core Skills",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -637,7 +637,7 @@
     },
     "482|Skills In Demand|Labour Agreement": {
       "stream_key": "482|Skills In Demand|Labour Agreement",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -654,7 +654,7 @@
     },
     "482|Skills In Demand|Nomination": {
       "stream_key": "482|Skills In Demand|Nomination",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -671,7 +671,7 @@
     },
     "482|Skills In Demand|Specialist Skills": {
       "stream_key": "482|Skills In Demand|Specialist Skills",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -688,7 +688,7 @@
     },
     "482|Skills In Demand|Sponsorship": {
       "stream_key": "482|Skills In Demand|Sponsorship",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -705,7 +705,7 @@
     },
     "485|Temporary Graduate|Post-Higher Education Work": {
       "stream_key": "485|Temporary Graduate|Post-Higher Education Work",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -722,7 +722,7 @@
     },
     "485|Temporary Graduate|Post-Vocational Education Work": {
       "stream_key": "485|Temporary Graduate|Post-Vocational Education Work",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -739,7 +739,7 @@
     },
     "491|Skilled Work Regional|Family Sponsored Regional": {
       "stream_key": "491|Skilled Work Regional|Family Sponsored Regional",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -756,7 +756,7 @@
     },
     "491|Skilled Work Regional|State/Territory Government Nominated Regional": {
       "stream_key": "491|Skilled Work Regional|State/Territory Government Nominated Regional",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -773,7 +773,7 @@
     },
     "494|Skilled Employer Sponsored Regional|Employer Sponsored": {
       "stream_key": "494|Skilled Employer Sponsored Regional|Employer Sponsored",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -790,7 +790,7 @@
     },
     "494|Skilled Employer Sponsored Regional|Labour Agreement": {
       "stream_key": "494|Skilled Employer Sponsored Regional|Labour Agreement",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -807,7 +807,7 @@
     },
     "500|Student|Foreign Affairs or Defence Sector": {
       "stream_key": "500|Student|Foreign Affairs or Defence Sector",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -824,7 +824,7 @@
     },
     "500|Student|Higher Education Sector": {
       "stream_key": "500|Student|Higher Education Sector",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -841,7 +841,7 @@
     },
     "500|Student|Independent ELICOS Sector": {
       "stream_key": "500|Student|Independent ELICOS Sector",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -858,7 +858,7 @@
     },
     "500|Student|Non-Award Sector": {
       "stream_key": "500|Student|Non-Award Sector",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -875,7 +875,7 @@
     },
     "500|Student|Postgraduate Research Sector": {
       "stream_key": "500|Student|Postgraduate Research Sector",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -892,7 +892,7 @@
     },
     "500|Student|Schools Sector": {
       "stream_key": "500|Student|Schools Sector",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -909,7 +909,7 @@
     },
     "500|Student|Vocational Education and Training Sector": {
       "stream_key": "500|Student|Vocational Education and Training Sector",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -926,7 +926,7 @@
     },
     "590|Student Guardian|590": {
       "stream_key": "590|Student Guardian|590",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -943,7 +943,7 @@
     },
     "600|Visitor|Business Visitor": {
       "stream_key": "600|Visitor|Business Visitor",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -960,7 +960,7 @@
     },
     "600|Visitor|Sponsored Family": {
       "stream_key": "600|Visitor|Sponsored Family",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -977,7 +977,7 @@
     },
     "600|Visitor|Tourist": {
       "stream_key": "600|Visitor|Tourist",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -994,7 +994,7 @@
     },
     "601|Electronic Travel Authority|601": {
       "stream_key": "601|Electronic Travel Authority|601",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1011,7 +1011,7 @@
     },
     "602|Medical Treatment|602": {
       "stream_key": "602|Medical Treatment|602",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1028,7 +1028,7 @@
     },
     "651|eVisitor|651": {
       "stream_key": "651|eVisitor|651",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1045,7 +1045,7 @@
     },
     "771|Transit|771": {
       "stream_key": "771|Transit|771",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1062,7 +1062,7 @@
     },
     "801|Partner|801": {
       "stream_key": "801|Partner|801",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1079,7 +1079,7 @@
     },
     "802|Child|802": {
       "stream_key": "802|Child|802",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1096,7 +1096,7 @@
     },
     "820|Partner|820": {
       "stream_key": "820|Partner|820",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1113,7 +1113,7 @@
     },
     "858|Global Talent|Distinguished Talent / Global Talent (Independent)": {
       "stream_key": "858|Global Talent|Distinguished Talent / Global Talent (Independent)",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1130,7 +1130,7 @@
     },
     "858|National Innovation|National Innovation": {
       "stream_key": "858|National Innovation|National Innovation",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1147,7 +1147,7 @@
     },
     "870|Sponsored Parent|Sponsorship": {
       "stream_key": "870|Sponsored Parent|Sponsorship",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1164,7 +1164,7 @@
     },
     "870|Sponsored Parent|Visa Application": {
       "stream_key": "870|Sponsored Parent|Visa Application",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1181,7 +1181,7 @@
     },
     "887|Skilled Regional|887": {
       "stream_key": "887|Skilled Regional|887",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1198,7 +1198,7 @@
     },
     "888|Business Innovation & Investment|Business Innovation": {
       "stream_key": "888|Business Innovation & Investment|Business Innovation",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1215,7 +1215,7 @@
     },
     "888|Business Innovation & Investment|Investor": {
       "stream_key": "888|Business Innovation & Investment|Investor",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1232,7 +1232,7 @@
     },
     "888|Business Innovation & Investment|Significant Investor": {
       "stream_key": "888|Business Innovation & Investment|Significant Investor",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
@@ -1249,7 +1249,7 @@
     },
     "988|Maritime Crew|988": {
       "stream_key": "988|Maritime Crew|988",
-      "as_of": "2026-11-06",
+      "as_of": "2026-11-07",
       "k_suppressed": true,
       "k_min_threshold": 5,
       "verified_n": 0,
