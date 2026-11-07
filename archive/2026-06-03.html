@@ -20,19 +20,25 @@
 <meta name="twitter:description" content="호주 비자 심사기간 대시보드 및 내 비자 대기일수 계산기 (482, 186, 500 학생, 485 졸업생, 189·190·491 기술이민, 820·801 파트너비자 등 공식 스트림 전체). 내 비자 접수일만 입력하면 경과 일수와 50%·90% 예상 완료일을 자동 계산합니다. Australian Visa Global Processing Times Tracker &amp; Personal Lodgement Calculator by Park &amp; Co Lawyers.">
 <meta name="twitter:image" content="https://changa9090.github.io/visa-global-processing-time/assets/og-card.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "호주 비자 심사기간 트래커 & 내 비자 대기 계산기 (Australian Visa Global Processing Times)", "url": "https://changa9090.github.io/visa-global-processing-time/", "applicationCategory": "GovernmentService", "operatingSystem": "All", "inLanguage": ["ko", "en"], "description": "호주 비자 심사기간 대시보드 및 내 비자 대기일수 계산기 (482, 186, 500 학생, 485 졸업생, 189·190·491 기술이민, 820·801 파트너비자 등 공식 스트림 전체). 내 비자 접수일만 입력하면 경과 일수와 50%·90% 예상 완료일을 자동 계산합니다. Australian Visa Global Processing Times Tracker & Personal Lodgement Calculator by Park & Co Lawyers.", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "AUD"}, "publisher": {"@type": "LegalService", "name": "Park & Co Lawyers (법무법인 박앤코)", "url": "https://parklawyers.com.au/", "contactPoint": {"@type": "ContactPoint", "url": "https://parklawyers.com.au/links/?lang=ko", "contactType": "customer support"}}}</script>
+<link rel="preload" href="../assets/brand/PretendardVariable.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="../assets/brand/Manrope-VF.ttf" as="font" type="font/ttf" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 <style>
+@font-face { font-family: 'Pretendard Variable'; src: url('../assets/brand/PretendardVariable.woff2') format('woff2-variations'),
+             url('../assets/brand/PretendardVariable.woff2') format('woff2');
+             font-weight: 45 920; font-style: normal; font-display: swap; }
 @font-face { font-family: 'Manrope'; src: url('../assets/brand/Manrope-VF.ttf') format('truetype');
              font-weight: 200 800; font-style: normal; font-display: swap; }
-:root { --burgundy: #7A1F2B; --oxblood: #530009; --burgundy-wash: #F2E4E5;
-        --navy: #1E3A8A; --navy-wash: #EFF6FF; --amber: #B45309; --amber-wash: #FEF3C7;
-        --charcoal: #2E2E2E; --charcoal-soft: #5A5654; --muted: #6E6A63;
-        --paper: #FCFAF6; --ivory: #F1EDE6; --stone: #E4E2DF; --white: #FFFFFF;
-        --line: #E7E0D3; --line-strong: #DED6C8;
-        --success: #2E6B4F; --success-wash: #ECFDF5; --error: #B23A2E; --error-wash: #FEF2F2;
-        --shadow-1: 0 1px 2px rgba(46,30,20,.08); --shadow-2: 0 6px 18px rgba(46,30,20,.10);
-        --shadow-3: 0 18px 44px rgba(46,30,20,.16); }
+:root { --bg: #FBF9F5; --surface: #FFFFFF; --surface-2: #F4EFE6;
+        --brand: #0E3A3E; --brand-2: #1F5A5E; --accent: #B68B40;
+        --ink: #14282A; --line: #E5DFD3;
+        --burgundy: var(--brand); --oxblood: #09272A; --burgundy-wash: #EAF1F1;
+        --navy: var(--brand-2); --navy-wash: #EDF4F4; --amber: #9A6B1F; --amber-wash: #FBF4E4;
+        --charcoal: var(--ink); --charcoal-soft: #3D5255; --muted: #627577;
+        --paper: var(--bg); --ivory: var(--surface-2); --stone: #E5DFD3; --white: var(--surface);
+        --line-strong: #D6CEBE;
+        --success: #1E6B52; --success-wash: #ECF8F3; --error: #A6362A; --error-wash: #FDF1F0;
+        --shadow-1: 0 1px 2px rgba(20,40,42,.06); --shadow-2: 0 6px 18px rgba(20,40,42,.08);
+        --shadow-3: 0 18px 44px rgba(20,40,42,.14); }
 *, *::before, *::after { box-sizing: border-box; }
 html { max-width: 100%; overflow-x: clip; }
 body { font-family: 'Pretendard Variable', Pretendard, 'Manrope', system-ui, -apple-system,
@@ -51,19 +57,25 @@ h2 { font-size: 1.22rem; font-weight: 800; margin-top: 38px; padding-bottom: 8px
 section, .tracker-card { scroll-margin-top: 132px; }
 .updated { color: var(--charcoal-soft); font-size: 0.88rem; margin: 0 0 12px; }
 
-/* Cadence transparency banner */
-.cadence-banner { background: var(--white); border: 1px solid var(--line-strong); border-left: 4px solid var(--burgundy);
-  border-radius: 8px; padding: 12px 16px; margin: 10px 0 20px; font-size: 0.88rem; color: var(--charcoal);
-  display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; box-shadow: var(--shadow-1); }
+/* Cadence transparency banner (compact 1-line summary + methodology toggle) */
+.cadence-banner { background: var(--white); border: 1px solid var(--line-strong); border-left: 4px solid var(--brand);
+  border-radius: 8px; padding: 9px 14px; margin: 8px 0 16px; font-size: 0.84rem; color: var(--charcoal);
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 14px; align-items: center; box-shadow: var(--shadow-1); }
+.cadence-summary-row { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; }
+.cadence-meta { color: var(--charcoal-soft); font-size: 0.82rem; }
+.cadence-meta b { color: var(--charcoal); }
 .cadence-pill { display: inline-flex; align-items: center; gap: 6px; background: var(--burgundy-wash);
-  color: var(--burgundy); font-weight: 800; font-size: 0.78rem; padding: 3px 10px; border-radius: 999px; }
+  color: var(--brand); font-weight: 800; font-size: 0.76rem; padding: 3px 10px; border-radius: 999px; }
 .release-forecast-pill { display: inline-flex; align-items: center; gap: 6px; font-weight: 800;
-  font-size: 0.78rem; padding: 3px 11px; border-radius: 999px; border: 1px solid var(--line-strong);
+  font-size: 0.76rem; padding: 3px 10px; border-radius: 999px; border: 1px solid var(--line-strong);
   background: var(--navy-wash); color: var(--navy); }
-.release-forecast-pill.status-imminent { background: var(--amber-wash); color: var(--amber); border-color: #F59E0B; }
+.release-forecast-pill.status-imminent { background: var(--amber-wash); color: var(--amber); border-color: var(--accent); }
 .release-forecast-pill.status-just_released { background: var(--success-wash); color: var(--success); border-color: #10B981; }
-.release-forecast-pill.status-overdue { background: var(--burgundy-wash); color: var(--burgundy); border-color: #D9A7AD; }
-.cadence-note { color: var(--charcoal-soft); font-size: 0.84rem; width: 100%; margin-top: 2px; }
+.release-forecast-pill.status-overdue { background: var(--burgundy-wash); color: var(--brand); border-color: var(--brand-2); }
+.cadence-details { font-size: 0.8rem; }
+.cadence-details summary { cursor: pointer; color: var(--brand-2); font-weight: 700; white-space: nowrap; user-select: none; }
+.cadence-details[open] { width: 100%; }
+.cadence-note { color: var(--charcoal-soft); font-size: 0.82rem; width: 100%; margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--line); line-height: 1.5; }
 
 /* Hero Personal Visa Wait Tracker */
 .tracker-card { background: var(--white); border: 1.5px solid var(--line-strong); border-top: 4px solid var(--burgundy);
@@ -88,6 +100,15 @@ section, .tracker-card { scroll-margin-top: 132px; }
 .tracker-controls select, .tracker-controls input[type="date"], .tracker-controls input[type="search"] {
   width: 100%; min-height: 42px; padding: 8px 11px; font-size: 0.94rem; border: 1.5px solid var(--line-strong);
   border-radius: 8px; background: var(--white); color: var(--charcoal); }
+.stream-filter-results { background: var(--paper); border: 1px solid var(--line-strong); border-radius: 8px; padding: 7px 9px; margin: 2px 0; }
+.stream-filter-results[hidden] { display: none; }
+.stream-filter-hint { font-size: 0.76rem; color: var(--charcoal-soft); font-weight: 700; margin-bottom: 5px; display: block; }
+.stream-filter-list { display: flex; flex-wrap: wrap; gap: 5px; }
+.stream-filter-item { background: var(--white); color: var(--charcoal); border: 1px solid var(--line-strong); border-radius: 6px;
+  padding: 5px 9px; font-size: 0.79rem; font-weight: 700; cursor: pointer; text-align: left; line-height: 1.3; }
+.stream-filter-item:hover { background: var(--burgundy-wash); border-color: var(--brand); color: var(--brand); }
+.stream-filter-item.is-current { border-color: var(--brand); background: var(--burgundy-wash); color: var(--brand); }
+.stream-filter-empty { font-size: 0.82rem; font-weight: 700; color: var(--amber); padding: 3px 2px; }
 
 .pinned-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 14px;
   padding: 8px 12px; background: var(--paper); border: 1px dashed var(--line-strong); border-radius: 8px; font-size: 0.82rem; }
@@ -173,6 +194,10 @@ section, .tracker-card { scroll-margin-top: 132px; }
 .nom-stage-lbl { font-size: 0.76rem; font-weight: 800; color: var(--navy); display: block; margin-bottom: 5px; }
 .prio-chip.nom-chip.active { background: var(--navy); border-color: var(--navy); color: var(--white); }
 .priority-note { font-size: 0.76rem; color: var(--charcoal-soft); margin: 4px 0 0; line-height: 1.48; }
+.priority-disclaimer { font-size: 0.77rem; font-weight: 700; color: var(--brand); background: var(--burgundy-wash);
+  border-radius: 6px; padding: 6px 9px; margin: 0 0 7px; line-height: 1.45; }
+.priority-context-note { font-size: 0.78rem; color: var(--charcoal); background: var(--white); border: 1px solid var(--accent);
+  border-left: 3px solid var(--accent); border-radius: 6px; padding: 6px 10px; margin: 6px 0 4px; line-height: 1.48; }
 
 /* Community Verified Cohort Panel (k-Anonymous n >= 5 + Empirical-Bayes) */
 .community-panel { margin-top: 14px; padding: 13px 15px; border-radius: 10px; background: var(--white);
@@ -445,7 +470,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 <div class="actions"><div class="lang-toggle" role="group" aria-label="Language / 언어 선택"><button id="lang-ko" type="button" class="active">한국어</button><button id="lang-en" type="button">EN</button></div><button id="help-btn" class="btn btn-secondary" type="button" aria-controls="help-panel" aria-expanded="false"><span data-i18n-ko>사용법</span><span data-i18n-en>How to use</span></button>
 <a class="btn btn-secondary btn-cafe" href="https://cafe.naver.com/immispecialist" target="_blank" rel="noopener" title="Free Q&amp;A board on Naver Cafe"><span data-i18n-ko>무료 상담 게시판</span><span data-i18n-en>Free Q&amp;A</span></a>
 <a class="btn btn-primary" data-i18n-ko href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener" title="Contact Park &amp; Co Lawyers">박앤코 문의하기 &rarr;</a>
-<a class="btn btn-primary" data-i18n-en href="https://parklawyers.com.au/links/" target="_blank" rel="noopener" title="Contact Park &amp; Co Lawyers">Contact Us &rarr;</a></div>
+<a class="btn btn-primary" data-i18n-en href="https://parklawyers.com.au/links/?lang=en" target="_blank" rel="noopener" title="Contact Park &amp; Co Lawyers">Contact Us &rarr;</a></div>
 <div aria-label="How to use / 사용법" id="help-panel" role="dialog">
 <button aria-label="Close" class="close" type="button">×</button>
 <div class="lang-tabs">
@@ -456,17 +481,17 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 <h3>이용 방법 안내</h3>
 <h4>1. 내 비자 대기 트래커 (최상단)</h4>
 <ul>
-<li><b>인기 비자 버튼</b> 또는 <b>비자 선택창</b>에서 본인이 신청한 비자(세부 스트림 포함)를 고르세요.</li>
-<li><b>내 비자 접수일</b>을 선택하면 오늘 기준 <b>경과 대기일수</b>, <b>조건부 완료 확률(+30·60·90일) 및 잔여 대기 구간</b>, <b>양봉형 이원화 절벽(Two-Tier) 경보</b>, <b>접수 시점 기준 심사속도 변화</b>가 즉시 계산됩니다.</li>
+<li><b>인기 비자 버튼</b> 또는 <b>비자 선택창</b>에서 본인이 신청한 비자(세부 스트림 포함)를 선택하십시오.</li>
+<li><b>내 비자 접수일</b>을 선택하면 오늘 기준 <b>경과 대기일수</b>, <b>경과일 반영 예상 구간 및 조건부 완료 확률(+30·60·90일)</b>, <b>양봉형 이원화 절벽(Two-Tier) 경보</b>, <b>접수 시점 기준 심사속도 변화</b>가 즉시 계산됩니다.</li>
 <li>선별 핵심 비자(482·186·500·485·189·190·491·820·309 등)는 이민성 정보공개(FOI) 및 data.gov.au 공식 데이터셋을 바탕으로 <b>활성 미결 건수(On-hand) 및 수급 압력 지표</b>를 함께 보여줍니다.</li>
-<li>선택 정보는 이 브라우저에 자동 저장되며 <b>트래커 고정(+핀)</b>으로 최대 10개(예: 482 노미네이션 + 비자 본신청 또는 HR 다중 케이스)를 동시에 관리하거나 <b>링크 복사</b>로 그대로 공유할 수 있습니다.</li>
+<li>선택 정보는 이 브라우저에 자동 저장되며 <b>트래커 고정(+핀)</b>으로 최대 10개(예: 482 노미네이션 + 비자 본신청 또는 HR 다중 케이스)를 동시에 관리하거나 <b>링크 복사</b>로 그대로 공유하실 수 있습니다.</li>
 </ul>
-<h4>2. 왜 매일 숫자가 안 바뀌나요? (월 1회 갱신)</h4>
-<p>박앤코 수집기는 매일 아침 이민성 서버를 점검하지만 <b>호주 이민성(DHA) 공식 심사기간 원천 통계는 매월 말 마감분 기준으로 월 1회 일괄 변경</b>됩니다. 따라서 평소 일간 변동이 <code>–</code>로 유지되는 것은 정상이며 새로 발표되는 날 <b>최근 월간 변동 요약</b>에 즉시 반영됩니다.</p>
-<h4>3. 추세 그래프 & 전체 비자 표</h4>
+<h4>2. 왜 매일 수치가 바뀌지 않습니까? (월 1회 갱신)</h4>
+<p>법무법인 박앤코 수집기는 매일 아침 이민성 서버를 점검하지만 <b>호주 이민성(DHA) 공식 심사기간 원천 통계는 매월 말 마감분 기준으로 월 1회 일괄 변경</b>됩니다. 따라서 평소 수치가 동일하게 유지되는 것은 정상이며 새로 발표되는 날 <b>최근 월간 변동 요약</b>에 즉시 반영됩니다.</p>
+<h4>3. 추세 그래프 &amp; 전체 비자 표</h4>
 <ul>
-<li>기본 모드는 <b>내가 선택한 비자 1개의 50%·90% 추세</b>만 보기 쉽게 확대해 보여줍니다.</li>
-<li>다른 비자들과 비교하려면 그래프 위의 분야별 버튼(취업·스폰서 / 기술이민 / 학생·졸업 / 가족·방문)을 눌러보세요.</li>
+<li>기본 모드는 <b>내가 선택한 비자 1개의 50%·90% 추세</b>만 보기 쉽게 확대하여 표시합니다.</li>
+<li>다른 비자들과 비교하려면 그래프 위의 분야별 버튼(취업·스폰서 / 기술이민 / 학생·졸업 / 가족·방문)을 선택해 비교하실 수 있습니다.</li>
 <li>아래 전체 비자 표에서 행을 클릭하면 해당 비자를 상단 트래커로 바로 불러옵니다.</li>
 </ul>
 <h4>유의 사항</h4>
@@ -500,7 +525,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 <a class="ext" data-i18n-en href="https://faq.immispecialist.com/?lang=en" target="_blank" rel="noopener">Immigration FAQ &rarr;</a>
 <a class="ext" href="https://changa9090.github.io/au-migration-law-tracker/"><span data-i18n-ko>이민법 개정 추적 &rarr;</span><span data-i18n-en>Migration law changes &rarr;</span></a>
 <label class="jump" for="history-select"><span data-i18n-ko>기준일 이동</span><span data-i18n-en>Go to date</span>
-<select id="history-select"><option value="../archive/2026-11-06.html">2026-11-06</option><option value="../archive/2026-11-05.html">2026-11-05</option><option value="../archive/2026-11-04.html">2026-11-04</option><option value="../archive/2026-11-03.html">2026-11-03</option><option value="../archive/2026-11-02.html">2026-11-02</option><option value="../archive/2026-11-01.html">2026-11-01</option><option value="../archive/2026-10-31.html">2026-10-31</option><option value="../archive/2026-10-30.html">2026-10-30</option><option value="../archive/2026-10-29.html">2026-10-29</option><option value="../archive/2026-10-28.html">2026-10-28</option><option value="../archive/2026-10-27.html">2026-10-27</option><option value="../archive/2026-10-26.html">2026-10-26</option><option value="../archive/2026-10-25.html">2026-10-25</option><option value="../archive/2026-10-24.html">2026-10-24</option><option value="../archive/2026-10-23.html">2026-10-23</option><option value="../archive/2026-10-22.html">2026-10-22</option><option value="../archive/2026-10-21.html">2026-10-21</option><option value="../archive/2026-10-20.html">2026-10-20</option><option value="../archive/2026-10-19.html">2026-10-19</option><option value="../archive/2026-10-18.html">2026-10-18</option><option value="../archive/2026-10-17.html">2026-10-17</option><option value="../archive/2026-10-16.html">2026-10-16</option><option value="../archive/2026-10-15.html">2026-10-15</option><option value="../archive/2026-10-14.html">2026-10-14</option><option value="../archive/2026-10-13.html">2026-10-13</option><option value="../archive/2026-10-12.html">2026-10-12</option><option value="../archive/2026-10-11.html">2026-10-11</option><option value="../archive/2026-10-10.html">2026-10-10</option><option value="../archive/2026-10-09.html">2026-10-09</option><option value="../archive/2026-10-08.html">2026-10-08</option><option value="../archive/2026-10-07.html">2026-10-07</option><option value="../archive/2026-10-06.html">2026-10-06</option><option value="../archive/2026-10-05.html">2026-10-05</option><option value="../archive/2026-10-04.html">2026-10-04</option><option value="../archive/2026-10-03.html">2026-10-03</option><option value="../archive/2026-10-02.html">2026-10-02</option><option value="../archive/2026-10-01.html">2026-10-01</option><option value="../archive/2026-09-30.html">2026-09-30</option><option value="../archive/2026-09-29.html">2026-09-29</option><option value="../archive/2026-09-28.html">2026-09-28</option><option value="../archive/2026-09-27.html">2026-09-27</option><option value="../archive/2026-09-26.html">2026-09-26</option><option value="../archive/2026-09-25.html">2026-09-25</option><option value="../archive/2026-09-24.html">2026-09-24</option><option value="../archive/2026-09-23.html">2026-09-23</option><option value="../archive/2026-09-22.html">2026-09-22</option><option value="../archive/2026-09-21.html">2026-09-21</option><option value="../archive/2026-09-20.html">2026-09-20</option><option value="../archive/2026-09-19.html">2026-09-19</option><option value="../archive/2026-09-18.html">2026-09-18</option><option value="../archive/2026-09-17.html">2026-09-17</option><option value="../archive/2026-09-16.html">2026-09-16</option><option value="../archive/2026-09-15.html">2026-09-15</option><option value="../archive/2026-09-14.html">2026-09-14</option><option value="../archive/2026-09-13.html">2026-09-13</option><option value="../archive/2026-09-12.html">2026-09-12</option><option value="../archive/2026-09-11.html">2026-09-11</option><option value="../archive/2026-09-10.html">2026-09-10</option><option value="../archive/2026-09-09.html">2026-09-09</option><option value="../archive/2026-09-08.html">2026-09-08</option><option value="../archive/2026-09-07.html">2026-09-07</option><option value="../archive/2026-09-06.html">2026-09-06</option><option value="../archive/2026-09-05.html">2026-09-05</option><option value="../archive/2026-09-04.html">2026-09-04</option><option value="../archive/2026-09-03.html">2026-09-03</option><option value="../archive/2026-09-02.html">2026-09-02</option><option value="../archive/2026-09-01.html">2026-09-01</option><option value="../archive/2026-08-31.html">2026-08-31</option><option value="../archive/2026-08-30.html">2026-08-30</option><option value="../archive/2026-08-29.html">2026-08-29</option><option value="../archive/2026-08-28.html">2026-08-28</option><option value="../archive/2026-08-27.html">2026-08-27</option><option value="../archive/2026-08-26.html">2026-08-26</option><option value="../archive/2026-08-25.html">2026-08-25</option><option value="../archive/2026-08-24.html">2026-08-24</option><option value="../archive/2026-08-23.html">2026-08-23</option><option value="../archive/2026-08-22.html">2026-08-22</option><option value="../archive/2026-08-21.html">2026-08-21</option><option value="../archive/2026-08-20.html">2026-08-20</option><option value="../archive/2026-08-19.html">2026-08-19</option><option value="../archive/2026-08-18.html">2026-08-18</option><option value="../archive/2026-08-17.html">2026-08-17</option><option value="../archive/2026-08-16.html">2026-08-16</option><option value="../archive/2026-08-15.html">2026-08-15</option><option value="../archive/2026-08-14.html">2026-08-14</option><option value="../archive/2026-08-13.html">2026-08-13</option><option value="../archive/2026-08-12.html">2026-08-12</option><option value="../archive/2026-08-11.html">2026-08-11</option><option value="../archive/2026-08-10.html">2026-08-10</option><option value="../archive/2026-08-09.html">2026-08-09</option><option value="../archive/2026-08-08.html">2026-08-08</option><option value="../archive/2026-08-07.html">2026-08-07</option><option value="../archive/2026-08-06.html">2026-08-06</option><option value="../archive/2026-08-05.html">2026-08-05</option><option value="../archive/2026-08-04.html">2026-08-04</option><option value="../archive/2026-08-03.html">2026-08-03</option><option value="../archive/2026-08-02.html">2026-08-02</option><option value="../archive/2026-08-01.html">2026-08-01</option><option value="../archive/2026-07-31.html">2026-07-31</option><option value="../archive/2026-07-30.html">2026-07-30</option><option value="../archive/2026-07-29.html">2026-07-29</option><option value="../archive/2026-07-28.html">2026-07-28</option><option value="../archive/2026-07-27.html">2026-07-27</option><option value="../archive/2026-07-26.html">2026-07-26</option><option value="../archive/2026-07-25.html">2026-07-25</option><option value="../archive/2026-07-24.html">2026-07-24</option><option value="../archive/2026-07-23.html">2026-07-23</option><option value="../archive/2026-07-22.html">2026-07-22</option><option value="../archive/2026-07-21.html">2026-07-21</option><option value="../archive/2026-07-20.html">2026-07-20</option><option value="../archive/2026-07-19.html">2026-07-19</option><option value="../archive/2026-07-18.html">2026-07-18</option><option value="../archive/2026-07-17.html">2026-07-17</option><option value="../archive/2026-07-16.html">2026-07-16</option><option value="../archive/2026-07-15.html">2026-07-15</option><option value="../archive/2026-07-14.html">2026-07-14</option><option value="../archive/2026-07-13.html">2026-07-13</option><option value="../archive/2026-07-12.html">2026-07-12</option><option value="../archive/2026-07-11.html">2026-07-11</option><option value="../archive/2026-07-10.html">2026-07-10</option><option value="../archive/2026-07-09.html">2026-07-09</option><option value="../archive/2026-07-08.html">2026-07-08</option><option value="../archive/2026-07-07.html">2026-07-07</option><option value="../archive/2026-07-06.html">2026-07-06</option><option value="../archive/2026-07-05.html">2026-07-05</option><option value="../archive/2026-07-04.html">2026-07-04</option><option value="../archive/2026-07-03.html">2026-07-03</option><option value="../archive/2026-07-02.html">2026-07-02</option><option value="../archive/2026-07-01.html">2026-07-01</option><option value="../archive/2026-06-30.html">2026-06-30</option><option value="../archive/2026-06-29.html">2026-06-29</option><option value="../archive/2026-06-28.html">2026-06-28</option><option value="../archive/2026-06-27.html">2026-06-27</option><option value="../archive/2026-06-26.html">2026-06-26</option><option value="../archive/2026-06-25.html">2026-06-25</option><option value="../archive/2026-06-24.html">2026-06-24</option><option value="../archive/2026-06-23.html">2026-06-23</option><option value="../archive/2026-06-22.html">2026-06-22</option><option value="../archive/2026-06-21.html">2026-06-21</option><option value="../archive/2026-06-20.html">2026-06-20</option><option value="../archive/2026-06-19.html">2026-06-19</option><option value="../archive/2026-06-18.html">2026-06-18</option><option value="../archive/2026-06-17.html">2026-06-17</option><option value="../archive/2026-06-16.html">2026-06-16</option><option value="../archive/2026-06-15.html">2026-06-15</option><option value="../archive/2026-06-14.html">2026-06-14</option><option value="../archive/2026-06-13.html">2026-06-13</option><option value="../archive/2026-06-12.html">2026-06-12</option><option value="../archive/2026-06-11.html">2026-06-11</option><option value="../archive/2026-06-10.html">2026-06-10</option><option value="../archive/2026-06-09.html">2026-06-09</option><option value="../archive/2026-06-08.html">2026-06-08</option><option value="../archive/2026-06-07.html">2026-06-07</option><option value="../archive/2026-06-06.html">2026-06-06</option><option value="../archive/2026-06-05.html">2026-06-05</option><option value="../archive/2026-06-04.html">2026-06-04</option><option value="../archive/2026-06-03.html" selected>2026-06-03</option><option value="../archive/2026-06-02.html">2026-06-02</option><option value="../archive/2026-06-01.html">2026-06-01</option><option value="../archive/2026-05-31.html">2026-05-31</option><option value="../archive/2026-05-30.html">2026-05-30</option><option value="../archive/2026-05-29.html">2026-05-29</option><option value="../archive/2026-05-28.html">2026-05-28</option><option value="../archive/2026-05-27.html">2026-05-27</option><option value="../archive/2026-05-26.html">2026-05-26</option><option value="../archive/2026-05-25.html">2026-05-25</option><option value="../archive/2026-05-24.html">2026-05-24</option><option value="../archive/2026-05-23.html">2026-05-23</option><option value="../archive/2026-05-22.html">2026-05-22</option><option value="../archive/2026-05-21.html">2026-05-21</option><option value="../archive/2026-05-20.html">2026-05-20</option><option value="../archive/2026-05-19.html">2026-05-19</option><option value="../archive/2026-05-18.html">2026-05-18</option><option value="../archive/2026-05-17.html">2026-05-17</option><option value="../archive/2026-05-16.html">2026-05-16</option><option value="../archive/2026-05-15.html">2026-05-15</option><option value="../archive/2026-05-14.html">2026-05-14</option><option value="../archive/2026-05-13.html">2026-05-13</option><option value="../archive/2026-05-12.html">2026-05-12</option><option value="../archive/2026-05-11.html">2026-05-11</option><option value="../archive/2026-05-09.html">2026-05-09</option><option value="../archive/2026-05-08.html">2026-05-08</option><option value="../archive/2026-05-07.html">2026-05-07</option><option value="../archive/2026-05-06.html">2026-05-06</option><option value="../archive/2026-05-05.html">2026-05-05</option><option value="../archive/2026-05-04.html">2026-05-04</option><option value="../archive/2026-05-03.html">2026-05-03</option><option value="../archive/2026-05-02.html">2026-05-02</option><option value="../archive/2026-05-01.html">2026-05-01</option><option value="../archive/2026-04-30.html">2026-04-30</option><option value="../archive/2026-04-29.html">2026-04-29</option><option value="../archive/2026-04-28.html">2026-04-28</option><option value="../archive/2026-04-27.html">2026-04-27</option><option value="../archive/2026-04-26.html">2026-04-26</option><option value="../archive/2026-04-25.html">2026-04-25</option><option value="../archive/2026-04-24.html">2026-04-24</option><option value="../archive/2026-04-23.html">2026-04-23</option><option value="../archive/2026-04-01.html">2026-04-01</option></select></label></div></nav>
+<select id="history-select"><option value="../archive/2026-11-07.html">2026-11-07</option><option value="../archive/2026-11-06.html">2026-11-06</option><option value="../archive/2026-11-05.html">2026-11-05</option><option value="../archive/2026-11-04.html">2026-11-04</option><option value="../archive/2026-11-03.html">2026-11-03</option><option value="../archive/2026-11-02.html">2026-11-02</option><option value="../archive/2026-11-01.html">2026-11-01</option><option value="../archive/2026-10-31.html">2026-10-31</option><option value="../archive/2026-10-30.html">2026-10-30</option><option value="../archive/2026-10-29.html">2026-10-29</option><option value="../archive/2026-10-28.html">2026-10-28</option><option value="../archive/2026-10-27.html">2026-10-27</option><option value="../archive/2026-10-26.html">2026-10-26</option><option value="../archive/2026-10-25.html">2026-10-25</option><option value="../archive/2026-10-24.html">2026-10-24</option><option value="../archive/2026-10-23.html">2026-10-23</option><option value="../archive/2026-10-22.html">2026-10-22</option><option value="../archive/2026-10-21.html">2026-10-21</option><option value="../archive/2026-10-20.html">2026-10-20</option><option value="../archive/2026-10-19.html">2026-10-19</option><option value="../archive/2026-10-18.html">2026-10-18</option><option value="../archive/2026-10-17.html">2026-10-17</option><option value="../archive/2026-10-16.html">2026-10-16</option><option value="../archive/2026-10-15.html">2026-10-15</option><option value="../archive/2026-10-14.html">2026-10-14</option><option value="../archive/2026-10-13.html">2026-10-13</option><option value="../archive/2026-10-12.html">2026-10-12</option><option value="../archive/2026-10-11.html">2026-10-11</option><option value="../archive/2026-10-10.html">2026-10-10</option><option value="../archive/2026-10-09.html">2026-10-09</option><option value="../archive/2026-10-08.html">2026-10-08</option><option value="../archive/2026-10-07.html">2026-10-07</option><option value="../archive/2026-10-06.html">2026-10-06</option><option value="../archive/2026-10-05.html">2026-10-05</option><option value="../archive/2026-10-04.html">2026-10-04</option><option value="../archive/2026-10-03.html">2026-10-03</option><option value="../archive/2026-10-02.html">2026-10-02</option><option value="../archive/2026-10-01.html">2026-10-01</option><option value="../archive/2026-09-30.html">2026-09-30</option><option value="../archive/2026-09-29.html">2026-09-29</option><option value="../archive/2026-09-28.html">2026-09-28</option><option value="../archive/2026-09-27.html">2026-09-27</option><option value="../archive/2026-09-26.html">2026-09-26</option><option value="../archive/2026-09-25.html">2026-09-25</option><option value="../archive/2026-09-24.html">2026-09-24</option><option value="../archive/2026-09-23.html">2026-09-23</option><option value="../archive/2026-09-22.html">2026-09-22</option><option value="../archive/2026-09-21.html">2026-09-21</option><option value="../archive/2026-09-20.html">2026-09-20</option><option value="../archive/2026-09-19.html">2026-09-19</option><option value="../archive/2026-09-18.html">2026-09-18</option><option value="../archive/2026-09-17.html">2026-09-17</option><option value="../archive/2026-09-16.html">2026-09-16</option><option value="../archive/2026-09-15.html">2026-09-15</option><option value="../archive/2026-09-14.html">2026-09-14</option><option value="../archive/2026-09-13.html">2026-09-13</option><option value="../archive/2026-09-12.html">2026-09-12</option><option value="../archive/2026-09-11.html">2026-09-11</option><option value="../archive/2026-09-10.html">2026-09-10</option><option value="../archive/2026-09-09.html">2026-09-09</option><option value="../archive/2026-09-08.html">2026-09-08</option><option value="../archive/2026-09-07.html">2026-09-07</option><option value="../archive/2026-09-06.html">2026-09-06</option><option value="../archive/2026-09-05.html">2026-09-05</option><option value="../archive/2026-09-04.html">2026-09-04</option><option value="../archive/2026-09-03.html">2026-09-03</option><option value="../archive/2026-09-02.html">2026-09-02</option><option value="../archive/2026-09-01.html">2026-09-01</option><option value="../archive/2026-08-31.html">2026-08-31</option><option value="../archive/2026-08-30.html">2026-08-30</option><option value="../archive/2026-08-29.html">2026-08-29</option><option value="../archive/2026-08-28.html">2026-08-28</option><option value="../archive/2026-08-27.html">2026-08-27</option><option value="../archive/2026-08-26.html">2026-08-26</option><option value="../archive/2026-08-25.html">2026-08-25</option><option value="../archive/2026-08-24.html">2026-08-24</option><option value="../archive/2026-08-23.html">2026-08-23</option><option value="../archive/2026-08-22.html">2026-08-22</option><option value="../archive/2026-08-21.html">2026-08-21</option><option value="../archive/2026-08-20.html">2026-08-20</option><option value="../archive/2026-08-19.html">2026-08-19</option><option value="../archive/2026-08-18.html">2026-08-18</option><option value="../archive/2026-08-17.html">2026-08-17</option><option value="../archive/2026-08-16.html">2026-08-16</option><option value="../archive/2026-08-15.html">2026-08-15</option><option value="../archive/2026-08-14.html">2026-08-14</option><option value="../archive/2026-08-13.html">2026-08-13</option><option value="../archive/2026-08-12.html">2026-08-12</option><option value="../archive/2026-08-11.html">2026-08-11</option><option value="../archive/2026-08-10.html">2026-08-10</option><option value="../archive/2026-08-09.html">2026-08-09</option><option value="../archive/2026-08-08.html">2026-08-08</option><option value="../archive/2026-08-07.html">2026-08-07</option><option value="../archive/2026-08-06.html">2026-08-06</option><option value="../archive/2026-08-05.html">2026-08-05</option><option value="../archive/2026-08-04.html">2026-08-04</option><option value="../archive/2026-08-03.html">2026-08-03</option><option value="../archive/2026-08-02.html">2026-08-02</option><option value="../archive/2026-08-01.html">2026-08-01</option><option value="../archive/2026-07-31.html">2026-07-31</option><option value="../archive/2026-07-30.html">2026-07-30</option><option value="../archive/2026-07-29.html">2026-07-29</option><option value="../archive/2026-07-28.html">2026-07-28</option><option value="../archive/2026-07-27.html">2026-07-27</option><option value="../archive/2026-07-26.html">2026-07-26</option><option value="../archive/2026-07-25.html">2026-07-25</option><option value="../archive/2026-07-24.html">2026-07-24</option><option value="../archive/2026-07-23.html">2026-07-23</option><option value="../archive/2026-07-22.html">2026-07-22</option><option value="../archive/2026-07-21.html">2026-07-21</option><option value="../archive/2026-07-20.html">2026-07-20</option><option value="../archive/2026-07-19.html">2026-07-19</option><option value="../archive/2026-07-18.html">2026-07-18</option><option value="../archive/2026-07-17.html">2026-07-17</option><option value="../archive/2026-07-16.html">2026-07-16</option><option value="../archive/2026-07-15.html">2026-07-15</option><option value="../archive/2026-07-14.html">2026-07-14</option><option value="../archive/2026-07-13.html">2026-07-13</option><option value="../archive/2026-07-12.html">2026-07-12</option><option value="../archive/2026-07-11.html">2026-07-11</option><option value="../archive/2026-07-10.html">2026-07-10</option><option value="../archive/2026-07-09.html">2026-07-09</option><option value="../archive/2026-07-08.html">2026-07-08</option><option value="../archive/2026-07-07.html">2026-07-07</option><option value="../archive/2026-07-06.html">2026-07-06</option><option value="../archive/2026-07-05.html">2026-07-05</option><option value="../archive/2026-07-04.html">2026-07-04</option><option value="../archive/2026-07-03.html">2026-07-03</option><option value="../archive/2026-07-02.html">2026-07-02</option><option value="../archive/2026-07-01.html">2026-07-01</option><option value="../archive/2026-06-30.html">2026-06-30</option><option value="../archive/2026-06-29.html">2026-06-29</option><option value="../archive/2026-06-28.html">2026-06-28</option><option value="../archive/2026-06-27.html">2026-06-27</option><option value="../archive/2026-06-26.html">2026-06-26</option><option value="../archive/2026-06-25.html">2026-06-25</option><option value="../archive/2026-06-24.html">2026-06-24</option><option value="../archive/2026-06-23.html">2026-06-23</option><option value="../archive/2026-06-22.html">2026-06-22</option><option value="../archive/2026-06-21.html">2026-06-21</option><option value="../archive/2026-06-20.html">2026-06-20</option><option value="../archive/2026-06-19.html">2026-06-19</option><option value="../archive/2026-06-18.html">2026-06-18</option><option value="../archive/2026-06-17.html">2026-06-17</option><option value="../archive/2026-06-16.html">2026-06-16</option><option value="../archive/2026-06-15.html">2026-06-15</option><option value="../archive/2026-06-14.html">2026-06-14</option><option value="../archive/2026-06-13.html">2026-06-13</option><option value="../archive/2026-06-12.html">2026-06-12</option><option value="../archive/2026-06-11.html">2026-06-11</option><option value="../archive/2026-06-10.html">2026-06-10</option><option value="../archive/2026-06-09.html">2026-06-09</option><option value="../archive/2026-06-08.html">2026-06-08</option><option value="../archive/2026-06-07.html">2026-06-07</option><option value="../archive/2026-06-06.html">2026-06-06</option><option value="../archive/2026-06-05.html">2026-06-05</option><option value="../archive/2026-06-04.html">2026-06-04</option><option value="../archive/2026-06-03.html" selected>2026-06-03</option><option value="../archive/2026-06-02.html">2026-06-02</option><option value="../archive/2026-06-01.html">2026-06-01</option><option value="../archive/2026-05-31.html">2026-05-31</option><option value="../archive/2026-05-30.html">2026-05-30</option><option value="../archive/2026-05-29.html">2026-05-29</option><option value="../archive/2026-05-28.html">2026-05-28</option><option value="../archive/2026-05-27.html">2026-05-27</option><option value="../archive/2026-05-26.html">2026-05-26</option><option value="../archive/2026-05-25.html">2026-05-25</option><option value="../archive/2026-05-24.html">2026-05-24</option><option value="../archive/2026-05-23.html">2026-05-23</option><option value="../archive/2026-05-22.html">2026-05-22</option><option value="../archive/2026-05-21.html">2026-05-21</option><option value="../archive/2026-05-20.html">2026-05-20</option><option value="../archive/2026-05-19.html">2026-05-19</option><option value="../archive/2026-05-18.html">2026-05-18</option><option value="../archive/2026-05-17.html">2026-05-17</option><option value="../archive/2026-05-16.html">2026-05-16</option><option value="../archive/2026-05-15.html">2026-05-15</option><option value="../archive/2026-05-14.html">2026-05-14</option><option value="../archive/2026-05-13.html">2026-05-13</option><option value="../archive/2026-05-12.html">2026-05-12</option><option value="../archive/2026-05-11.html">2026-05-11</option><option value="../archive/2026-05-09.html">2026-05-09</option><option value="../archive/2026-05-08.html">2026-05-08</option><option value="../archive/2026-05-07.html">2026-05-07</option><option value="../archive/2026-05-06.html">2026-05-06</option><option value="../archive/2026-05-05.html">2026-05-05</option><option value="../archive/2026-05-04.html">2026-05-04</option><option value="../archive/2026-05-03.html">2026-05-03</option><option value="../archive/2026-05-02.html">2026-05-02</option><option value="../archive/2026-05-01.html">2026-05-01</option><option value="../archive/2026-04-30.html">2026-04-30</option><option value="../archive/2026-04-29.html">2026-04-29</option><option value="../archive/2026-04-28.html">2026-04-28</option><option value="../archive/2026-04-27.html">2026-04-27</option><option value="../archive/2026-04-26.html">2026-04-26</option><option value="../archive/2026-04-25.html">2026-04-25</option><option value="../archive/2026-04-24.html">2026-04-24</option><option value="../archive/2026-04-23.html">2026-04-23</option><option value="../archive/2026-04-01.html">2026-04-01</option></select></label></div></nav>
 </header>
 <div class="container">
 <h1><span data-i18n-ko>호주 비자 심사기간 기록 (2026-06-03)</span><span data-i18n-en>Australian Visa Global Processing Times (2026-06-03)</span></h1>
@@ -553,7 +578,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
       margin: { t: 52, b: 120, l: 54, r: 20 },
       height: 480,
       paper_bgcolor: '#FFFFFF', plot_bgcolor: '#FFFFFF',
-      font: { family: "'Pretendard Variable', Manrope, system-ui, sans-serif", color: '#2E2E2E' }
+      font: { family: "'Pretendard Variable', Pretendard, Manrope, system-ui, sans-serif", color: '#14282A' }
     }, { responsive: true, displaylogo: false });
     document.querySelectorAll('[data-chart-cat]').forEach(function(b){
       b.className = b.getAttribute('data-chart-cat') === curCat ? 'btn btn-primary' : 'btn btn-secondary';
@@ -581,126 +606,126 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   <span data-i18n-ko>호주 이민성(Home Affairs)이 공개한 전체 비자·스폰서십·노미네이션 스트림의 50% 중앙값 및 90% 표준 상한입니다. 추세 비교를 위해 개월 단위는 30일 기준으로 환산했고 <b>공식 발표 원문(개월/일)</b>을 나란히 표기했습니다. 행을 누르면 상단 내 비자 계산기로 불러옵니다.</span>
   <span data-i18n-en>Median (50th pct) and 90th percentile processing times across published Home Affairs visa &amp; sponsorship/nomination streams. Months are normalised to 30-day equivalents alongside the visible official wording. Click any row to load it in the calculator above.</span>
 </p>
-<input class="table-filter" data-target="snap-table" type="search" placeholder="비자 번호·한글·영문 검색 (예: 482, 파트너, 학생, 189, Sponsorship)" data-ko-placeholder="비자 번호·한글·영문 검색 (예: 482, 파트너, 학생, 189, Sponsorship)" data-en-placeholder="Filter snapshot (e.g. 482, Partner, Student, 189, Sponsorship)" style="width:100%;max-width:460px;padding:8px 11px;margin:6px 0 10px;font-size:0.9rem"><div class="table-wrap"><table id="snap-table"><thead><tr><th>Subclass</th><th><span data-i18n-ko>비자 종류 (Visa type)</span><span data-i18n-en>Visa type</span></th><th><span data-i18n-ko>세부 스트림 (Stream)</span><span data-i18n-en>Stream</span></th><th><span data-i18n-ko>50% 중앙값 (일)</span><span data-i18n-en>Median (days)</span></th><th><span data-i18n-ko>90% 상한 (일)</span><span data-i18n-en>90th pct (days)</span></th><th><span data-i18n-ko>공식 발표 원문 (50% / 90%)</span><span data-i18n-en>Official (50% / 90%)</span></th><th><span data-i18n-ko>전일 대비</span><span data-i18n-en>Δ vs prev day</span></th></tr></thead><tbody><tr><td><b>100</b></td><td>Partner<span class='ko-sub'>파트너 영주비자 (국외 신청 2단계)</span></td><td>100<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>300</td><td class='num'>510</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>101</b></td><td>Child<span class='ko-sub'>자녀 영주비자 (국외)</span></td><td>101<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>690</td><td class='num'>900</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>102</b></td><td>Adoption<span class='ko-sub'>입양비자</span></td><td>102<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>150</td><td class='num'>420</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>117</b></td><td>Orphan Relative<span class='ko-sub'>고아 친척비자 (국외)</span></td><td>117<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>2430</td><td class='num'>2910</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>132</b></td><td>Business Talent<span class='ko-sub'>비즈니스 탤런트 영주비자</span></td><td>Significant Business History<span class='ko-sub'>우수 사업 경력</span></td><td class='num'>2010</td><td class='num'>2100</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>155</b></td><td>Resident Return<span class='ko-sub'>영주권자 재입국 비자 (RRV 5년/1년)</span></td><td>155<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>1</td><td class='num'>7</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>157</b></td><td>Resident Return<span class='ko-sub'>영주권자 재입국 비자 (단기 RRV)</span></td><td>157<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>30</td><td class='num'>68</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>186</b></td><td>Employer Nomination<span class='ko-sub'>고용주 지명 영주비자 (ENS)</span></td><td>Agreement Pathway<span class='ko-sub'>노동협약 스트림 (Labour Agreement)</span></td><td class='num'>270</td><td class='num'>300</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>186</b></td><td>Employer Nomination<span class='ko-sub'>고용주 지명 영주비자 (ENS)</span></td><td>Direct Entry Pathway<span class='ko-sub'>다이렉트 엔트리 (DE · 직접 영주권)</span></td><td class='num'>300</td><td class='num'>600</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>186</b></td><td>Employer Nomination<span class='ko-sub'>고용주 지명 영주비자 (ENS)</span></td><td>Transition Pathway<span class='ko-sub'>트랜지션 스트림 (TRT · 임시비자 전환)</span></td><td class='num'>300</td><td class='num'>420</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>187</b></td><td>Regional Migration<span class='ko-sub'>지방 고용주 스폰서 영주비자 (RSMS)</span></td><td>Transition Pathway<span class='ko-sub'>트랜지션 스트림 (TRT · 임시비자 전환)</span></td><td class='num'>73</td><td class='num'>150</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>188</b></td><td>Business Innovation<span class='ko-sub'>사업·투자 혁신 임시비자</span></td><td>Business Innovation<span class='ko-sub'>사업 혁신</span></td><td class='num'>1560</td><td class='num'>1740</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>188</b></td><td>Business Innovation<span class='ko-sub'>사업·투자 혁신 임시비자</span></td><td>Business Innovation Extension<span class='ko-sub'>사업 혁신 연장</span></td><td class='num'>150</td><td class='num'>210</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>189</b></td><td>Skilled Independent<span class='ko-sub'>독립기술이민 영주비자</span></td><td>Points-Tested<span class='ko-sub'>점수제 독립기술이민</span></td><td class='num'>180</td><td class='num'>210</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>190</b></td><td>Skilled Nominated<span class='ko-sub'>주정부 후원 기술이민 영주비자</span></td><td>190<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>420</td><td class='num'>510</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>191</b></td><td>Skilled Regional<span class='ko-sub'>지방 거주 후 영주비자</span></td><td>Regional Provisional Visa<span class='ko-sub'>지방 임시비자(491·494) 보유자 영주 전환</span></td><td class='num'>240</td><td class='num'>270</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>300</b></td><td>Prospective Marriage<span class='ko-sub'>약혼자 비자 (예비 배우자)</span></td><td>300<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>420</td><td class='num'>810</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>309</b></td><td>Partner<span class='ko-sub'>파트너 임시비자 (국외 신청 1단계)</span></td><td>309<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>450</td><td class='num'>750</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>400</b></td><td>Temporary Work<span class='ko-sub'>단기 전문직 임시취업 비자</span></td><td>400<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>7</td><td class='num'>23</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>403</b></td><td>Diplomatic<span class='ko-sub'>국제관계·정부협정 임시비자</span></td><td>Domestic Worker (Diplomatic or Consular)<span class='ko-sub'>외교관 가사보조 인력</span></td><td class='num'>57</td><td class='num'>82</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>403</b></td><td>Diplomatic<span class='ko-sub'>국제관계·정부협정 임시비자</span></td><td>Foreign Government Agency<span class='ko-sub'>외국 정부기관 파견</span></td><td class='num'>5</td><td class='num'>14</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>403</b></td><td>Diplomatic<span class='ko-sub'>국제관계·정부협정 임시비자</span></td><td>Government Agreement<span class='ko-sub'>정부 간 협정</span></td><td class='num'>11</td><td class='num'>37</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>403</b></td><td>Diplomatic<span class='ko-sub'>국제관계·정부협정 임시비자</span></td><td>Mobility Arrangement for Talented Early-professionals Scheme (MATES)<span class='ko-sub'>인도 청년 전문인력 교류 (MATES)</span></td><td class='num'>90</td><td class='num'>120</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>403</b></td><td>Diplomatic<span class='ko-sub'>국제관계·정부협정 임시비자</span></td><td>Pacific Australia Labour Mobility Scheme<span class='ko-sub'>태평양 노동이동 제도 (PALM)</span></td><td class='num'>10</td><td class='num'>21</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>407</b></td><td>Training<span class='ko-sub'>직무연수(트레이닝) 비자</span></td><td>407<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>120</td><td class='num'>420</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Entertainment Activities<span class='ko-sub'>공연·엔터테인먼트</span></td><td class='num'>7</td><td class='num'>25</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Exchange Arrangements<span class='ko-sub'>상호 파견·교환 근무</span></td><td class='num'>25</td><td class='num'>210</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Invited for Other Social and Cultural Activity<span class='ko-sub'>초청 사회·문화 행사</span></td><td class='num'>9</td><td class='num'>29</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Religious Work<span class='ko-sub'>종교 활동</span></td><td class='num'>42</td><td class='num'>150</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Research Activities<span class='ko-sub'>연구 활동</span></td><td class='num'>15</td><td class='num'>450</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Special Programs<span class='ko-sub'>특별 교류 프로그램</span></td><td class='num'>21</td><td class='num'>77</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Sporting Activities<span class='ko-sub'>스포츠 활동</span></td><td class='num'>12</td><td class='num'>59</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Superyacht Crew<span class='ko-sub'>슈퍼요트 승무원</span></td><td class='num'>13</td><td class='num'>31</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>417</b></td><td>Working Holiday<span class='ko-sub'>워킹홀리데이 비자 (한국 국적 등)</span></td><td>417<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>1</td><td class='num'>65</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>445</b></td><td>Dependent Child<span class='ko-sub'>부양자녀 임시비자</span></td><td>445<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>720</td><td class='num'>870</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>461</b></td><td>New Zealand Citizen Family Relationship<span class='ko-sub'>뉴질랜드 시민 가족관계 비자</span></td><td>461<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>77</td><td class='num'>120</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>462</b></td><td>Work and Holiday<span class='ko-sub'>워크 앤 홀리데이 비자</span></td><td>462<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>34</td><td class='num'>86</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>482</b></td><td>Skills In Demand<span class='ko-sub'>고용주 스폰서 취업비자 (SID)</span></td><td>Core Skills<span class='ko-sub'>코어 스킬 (일반 전문직 비자 본신청)</span></td><td class='num'>63</td><td class='num'>270</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>482</b></td><td>Skills In Demand<span class='ko-sub'>고용주 스폰서 취업비자 (SID)</span></td><td>Nomination<span class='ko-sub'>고용주 노미네이션 (직위 지명 승인 단계)</span></td><td class='num'>29</td><td class='num'>270</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>482</b></td><td>Skills In Demand<span class='ko-sub'>고용주 스폰서 취업비자 (SID)</span></td><td>Specialist Skills<span class='ko-sub'>스페셜리스트 스킬 (고소득 직군 비자 본신청)</span></td><td class='num'>15</td><td class='num'>55</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>485</b></td><td>Temporary Graduate<span class='ko-sub'>졸업생 임시비자 (TGV)</span></td><td>Post-Higher Education Work<span class='ko-sub'>학사·석사·박사 학위후 과정 (PHEW)</span></td><td class='num'>30</td><td class='num'>68</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>485</b></td><td>Temporary Graduate<span class='ko-sub'>졸업생 임시비자 (TGV)</span></td><td>Post-Vocational Education Work<span class='ko-sub'>전문대·기술직 과정 (PVEW)</span></td><td class='num'>37</td><td class='num'>120</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>491</b></td><td>Skilled Work Regional<span class='ko-sub'>지방 주정부·친척 후원 기술비자</span></td><td>Family Sponsored Regional<span class='ko-sub'>가족 후원 지방이민</span></td><td class='num'>90</td><td class='num'>180</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>491</b></td><td>Skilled Work Regional<span class='ko-sub'>지방 주정부·친척 후원 기술비자</span></td><td>State/Territory Government Nominated Regional<span class='ko-sub'>주·준주 정부 지명 지방이민</span></td><td class='num'>480</td><td class='num'>720</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>494</b></td><td>Skilled Employer Sponsored Regional<span class='ko-sub'>지방 고용주 스폰서 임시비자 (SESR)</span></td><td>Employer Sponsored<span class='ko-sub'>고용주 스폰서 스트림</span></td><td class='num'>210</td><td class='num'>300</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>494</b></td><td>Skilled Employer Sponsored Regional<span class='ko-sub'>지방 고용주 스폰서 임시비자 (SESR)</span></td><td>Labour Agreement<span class='ko-sub'>노동협약 스트림 (Labour Agreement)</span></td><td class='num'>210</td><td class='num'>330</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>500</b></td><td>Student<span class='ko-sub'>학생비자</span></td><td>Foreign Affairs or Defence Sector<span class='ko-sub'>외교·국방부 장학 과정</span></td><td class='num'>3</td><td class='num'>15</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>500</b></td><td>Student<span class='ko-sub'>학생비자</span></td><td>Higher Education Sector<span class='ko-sub'>대학교·석사(코스워크) 과정</span></td><td class='num'>28</td><td class='num'>90</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>500</b></td><td>Student<span class='ko-sub'>학생비자</span></td><td>Independent ELICOS Sector<span class='ko-sub'>단독 어학연수(ELICOS) 과정</span></td><td class='num'>19</td><td class='num'>50</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>500</b></td><td>Student<span class='ko-sub'>학생비자</span></td><td>Non-Award Sector<span class='ko-sub'>교환학생·비학위 과정</span></td><td class='num'>1</td><td class='num'>10</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>500</b></td><td>Student<span class='ko-sub'>학생비자</span></td><td>Postgraduate Research Sector<span class='ko-sub'>석사(연구)·박사 과정</span></td><td class='num'>31</td><td class='num'>83</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>500</b></td><td>Student<span class='ko-sub'>학생비자</span></td><td>Schools Sector<span class='ko-sub'>초·중·고등학교 조기유학</span></td><td class='num'>28</td><td class='num'>77</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>500</b></td><td>Student<span class='ko-sub'>학생비자</span></td><td>Vocational Education and Training Sector<span class='ko-sub'>전문대·기술교육(VET/TAFE) 과정</span></td><td class='num'>50</td><td class='num'>240</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>590</b></td><td>Student Guardian<span class='ko-sub'>학생 가디언(보호자) 비자</span></td><td>590<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>29</td><td class='num'>180</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>600</b></td><td>Visitor<span class='ko-sub'>방문·관광비자</span></td><td>Business Visitor<span class='ko-sub'>단기 출장·상용 방문</span></td><td class='num'>6</td><td class='num'>23</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>600</b></td><td>Visitor<span class='ko-sub'>방문·관광비자</span></td><td>Sponsored Family<span class='ko-sub'>가족 초청 담보 방문</span></td><td class='num'>40</td><td class='num'>78</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>600</b></td><td>Visitor<span class='ko-sub'>방문·관광비자</span></td><td>Tourist<span class='ko-sub'>일반 관광·친지방문 (호주 내 연장/국외)</span></td><td class='num'>18</td><td class='num'>31</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>601</b></td><td>Electronic Travel Authority<span class='ko-sub'>전자여행허가 (ETA · 한국 여권 단기방문)</span></td><td>601<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>1</td><td class='num'>1</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>602</b></td><td>Medical Treatment<span class='ko-sub'>의료치료 방문비자</span></td><td>602<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>18</td><td class='num'>90</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>651</b></td><td>eVisitor<span class='ko-sub'>유럽 전자방문비자 (eVisitor)</span></td><td>651<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>1</td><td class='num'>1</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>771</b></td><td>Transit<span class='ko-sub'>경유(트랜짓) 비자</span></td><td>771<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>3</td><td class='num'>19</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>801</b></td><td>Partner<span class='ko-sub'>파트너 영주비자 (호주 내 2단계)</span></td><td>801<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>150</td><td class='num'>480</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>802</b></td><td>Child<span class='ko-sub'>자녀 영주비자 (호주 내)</span></td><td>802<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>600</td><td class='num'>870</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>820</b></td><td>Partner<span class='ko-sub'>파트너 임시비자 (호주 내 1단계)</span></td><td>820<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>570</td><td class='num'>720</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>858</b></td><td>Global Talent<span class='ko-sub'>글로벌 탤런트 영주비자</span></td><td>Distinguished Talent / Global Talent (Independent)<span class='ko-sub'>글로벌 탤런트 (독립 우수인재)</span></td><td class='num'>390</td><td class='num'>720</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>870</b></td><td>Sponsored Parent<span class='ko-sub'>장기 부모초청 임시비자 (3년/5년)</span></td><td>Sponsorship<span class='ko-sub'>부모 스폰서십 승인 단계 (가족 보증인 심사)</span></td><td class='num'>120</td><td class='num'>150</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>870</b></td><td>Sponsored Parent<span class='ko-sub'>장기 부모초청 임시비자 (3년/5년)</span></td><td>Visa Application<span class='ko-sub'>비자 본신청 단계 (스폰서 승인 후)</span></td><td class='num'>240</td><td class='num'>300</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>887</b></td><td>Skilled Regional<span class='ko-sub'>지방 기술이민 영주비자 (구)</span></td><td>887<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>210</td><td class='num'>540</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>888</b></td><td>Business Innovation &amp; Investment<span class='ko-sub'>사업·투자 혁신 영주비자</span></td><td>Business Innovation<span class='ko-sub'>사업 혁신</span></td><td class='num'>210</td><td class='num'>270</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>888</b></td><td>Business Innovation &amp; Investment<span class='ko-sub'>사업·투자 혁신 영주비자</span></td><td>Investor<span class='ko-sub'>일반 투자자</span></td><td class='num'>120</td><td class='num'>150</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>888</b></td><td>Business Innovation &amp; Investment<span class='ko-sub'>사업·투자 혁신 영주비자</span></td><td>Significant Investor<span class='ko-sub'>고액 투자자 (SIV)</span></td><td class='num'>120</td><td class='num'>210</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr>
-<tr><td><b>988</b></td><td>Maritime Crew<span class='ko-sub'>해양 승무원 비자</span></td><td>988<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>1</td><td class='num'>2</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td><td class='num'><span class="neutral">–</span></td></tr></tbody></table></div>
+<input class="table-filter" data-target="snap-table" type="search" placeholder="비자 번호·한글·영문 검색 (예: 482, 파트너, 학생, 189, Sponsorship)" data-ko-placeholder="비자 번호·한글·영문 검색 (예: 482, 파트너, 학생, 189, Sponsorship)" data-en-placeholder="Filter snapshot (e.g. 482, Partner, Student, 189, Sponsorship)" style="width:100%;max-width:460px;padding:8px 11px;margin:6px 0 10px;font-size:0.9rem"><div class="table-wrap"><table id="snap-table"><thead><tr><th><span data-i18n-ko>비자 번호</span><span data-i18n-en>Subclass</span></th><th><span data-i18n-ko>비자 종류</span><span data-i18n-en>Visa type</span></th><th><span data-i18n-ko>세부 스트림</span><span data-i18n-en>Stream</span></th><th><span data-i18n-ko>50% 중앙값 (일)</span><span data-i18n-en>Median (days)</span></th><th><span data-i18n-ko>90% 상한 (일)</span><span data-i18n-en>90th pct (days)</span></th><th><span data-i18n-ko>공식 발표 원문 (50% / 90%)</span><span data-i18n-en>Official (50% / 90%)</span></th></tr></thead><tbody><tr><td><b>100</b></td><td>Partner<span class='ko-sub'>파트너 영주비자 (국외 신청 2단계)</span></td><td>100<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>300</td><td class='num'>510</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>101</b></td><td>Child<span class='ko-sub'>자녀 영주비자 (국외)</span></td><td>101<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>690</td><td class='num'>900</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>102</b></td><td>Adoption<span class='ko-sub'>입양비자</span></td><td>102<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>150</td><td class='num'>420</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>117</b></td><td>Orphan Relative<span class='ko-sub'>고아 친척비자 (국외)</span></td><td>117<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>2430</td><td class='num'>2910</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>132</b></td><td>Business Talent<span class='ko-sub'>비즈니스 탤런트 영주비자</span></td><td>Significant Business History<span class='ko-sub'>우수 사업 경력</span></td><td class='num'>2010</td><td class='num'>2100</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>155</b></td><td>Resident Return<span class='ko-sub'>영주권자 재입국 비자 (RRV 5년/1년)</span></td><td>155<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>1</td><td class='num'>7</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>157</b></td><td>Resident Return<span class='ko-sub'>영주권자 재입국 비자 (단기 RRV)</span></td><td>157<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>30</td><td class='num'>68</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>186</b></td><td>Employer Nomination<span class='ko-sub'>고용주 지명 영주비자 (ENS)</span></td><td>Agreement Pathway<span class='ko-sub'>노동협약 스트림 (Labour Agreement)</span></td><td class='num'>270</td><td class='num'>300</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>186</b></td><td>Employer Nomination<span class='ko-sub'>고용주 지명 영주비자 (ENS)</span></td><td>Direct Entry Pathway<span class='ko-sub'>다이렉트 엔트리 (DE · 직접 영주권)</span></td><td class='num'>300</td><td class='num'>600</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>186</b></td><td>Employer Nomination<span class='ko-sub'>고용주 지명 영주비자 (ENS)</span></td><td>Transition Pathway<span class='ko-sub'>트랜지션 스트림 (TRT · 임시비자 전환)</span></td><td class='num'>300</td><td class='num'>420</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>187</b></td><td>Regional Migration<span class='ko-sub'>지방 고용주 스폰서 영주비자 (RSMS)</span></td><td>Transition Pathway<span class='ko-sub'>트랜지션 스트림 (TRT · 임시비자 전환)</span></td><td class='num'>73</td><td class='num'>150</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>188</b></td><td>Business Innovation<span class='ko-sub'>사업·투자 혁신 임시비자</span></td><td>Business Innovation<span class='ko-sub'>사업 혁신</span></td><td class='num'>1560</td><td class='num'>1740</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>188</b></td><td>Business Innovation<span class='ko-sub'>사업·투자 혁신 임시비자</span></td><td>Business Innovation Extension<span class='ko-sub'>사업 혁신 연장</span></td><td class='num'>150</td><td class='num'>210</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>189</b></td><td>Skilled Independent<span class='ko-sub'>독립기술이민 영주비자</span></td><td>Points-Tested<span class='ko-sub'>점수제 독립기술이민</span></td><td class='num'>180</td><td class='num'>210</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>190</b></td><td>Skilled Nominated<span class='ko-sub'>주정부 후원 기술이민 영주비자</span></td><td>190<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>420</td><td class='num'>510</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>191</b></td><td>Skilled Regional<span class='ko-sub'>지방 거주 후 영주비자</span></td><td>Regional Provisional Visa<span class='ko-sub'>지방 임시비자(491·494) 보유자 영주 전환</span></td><td class='num'>240</td><td class='num'>270</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>300</b></td><td>Prospective Marriage<span class='ko-sub'>약혼자 비자 (예비 배우자)</span></td><td>300<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>420</td><td class='num'>810</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>309</b></td><td>Partner<span class='ko-sub'>파트너 임시비자 (국외 신청 1단계)</span></td><td>309<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>450</td><td class='num'>750</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>400</b></td><td>Temporary Work<span class='ko-sub'>단기 전문직 임시취업 비자</span></td><td>400<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>7</td><td class='num'>23</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>403</b></td><td>Diplomatic<span class='ko-sub'>국제관계·정부협정 임시비자</span></td><td>Domestic Worker (Diplomatic or Consular)<span class='ko-sub'>외교관 가사보조 인력</span></td><td class='num'>57</td><td class='num'>82</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>403</b></td><td>Diplomatic<span class='ko-sub'>국제관계·정부협정 임시비자</span></td><td>Foreign Government Agency<span class='ko-sub'>외국 정부기관 파견</span></td><td class='num'>5</td><td class='num'>14</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>403</b></td><td>Diplomatic<span class='ko-sub'>국제관계·정부협정 임시비자</span></td><td>Government Agreement<span class='ko-sub'>정부 간 협정</span></td><td class='num'>11</td><td class='num'>37</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>403</b></td><td>Diplomatic<span class='ko-sub'>국제관계·정부협정 임시비자</span></td><td>Mobility Arrangement for Talented Early-professionals Scheme (MATES)<span class='ko-sub'>인도 청년 전문인력 교류 (MATES)</span></td><td class='num'>90</td><td class='num'>120</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>403</b></td><td>Diplomatic<span class='ko-sub'>국제관계·정부협정 임시비자</span></td><td>Pacific Australia Labour Mobility Scheme<span class='ko-sub'>태평양 노동이동 제도 (PALM)</span></td><td class='num'>10</td><td class='num'>21</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>407</b></td><td>Training<span class='ko-sub'>직무연수(트레이닝) 비자</span></td><td>407<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>120</td><td class='num'>420</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Entertainment Activities<span class='ko-sub'>공연·엔터테인먼트</span></td><td class='num'>7</td><td class='num'>25</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Exchange Arrangements<span class='ko-sub'>상호 파견·교환 근무</span></td><td class='num'>25</td><td class='num'>210</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Invited for Other Social and Cultural Activity<span class='ko-sub'>초청 사회·문화 행사</span></td><td class='num'>9</td><td class='num'>29</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Religious Work<span class='ko-sub'>종교 활동</span></td><td class='num'>42</td><td class='num'>150</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Research Activities<span class='ko-sub'>연구 활동</span></td><td class='num'>15</td><td class='num'>450</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Special Programs<span class='ko-sub'>특별 교류 프로그램</span></td><td class='num'>21</td><td class='num'>77</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Sporting Activities<span class='ko-sub'>스포츠 활동</span></td><td class='num'>12</td><td class='num'>59</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>408</b></td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Superyacht Crew<span class='ko-sub'>슈퍼요트 승무원</span></td><td class='num'>13</td><td class='num'>31</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>417</b></td><td>Working Holiday<span class='ko-sub'>워킹홀리데이 비자 (한국 국적 등)</span></td><td>417<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>1</td><td class='num'>65</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>445</b></td><td>Dependent Child<span class='ko-sub'>부양자녀 임시비자</span></td><td>445<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>720</td><td class='num'>870</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>461</b></td><td>New Zealand Citizen Family Relationship<span class='ko-sub'>뉴질랜드 시민 가족관계 비자</span></td><td>461<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>77</td><td class='num'>120</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>462</b></td><td>Work and Holiday<span class='ko-sub'>워크 앤 홀리데이 비자</span></td><td>462<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>34</td><td class='num'>86</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>482</b></td><td>Skills In Demand<span class='ko-sub'>고용주 스폰서 취업비자 (SID)</span></td><td>Core Skills<span class='ko-sub'>코어 스킬 (일반 전문직 비자 본신청)</span></td><td class='num'>63</td><td class='num'>270</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>482</b></td><td>Skills In Demand<span class='ko-sub'>고용주 스폰서 취업비자 (SID)</span></td><td>Nomination<span class='ko-sub'>고용주 노미네이션 (직위 지명 승인 단계)</span></td><td class='num'>29</td><td class='num'>270</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>482</b></td><td>Skills In Demand<span class='ko-sub'>고용주 스폰서 취업비자 (SID)</span></td><td>Specialist Skills<span class='ko-sub'>스페셜리스트 스킬 (고소득 직군 비자 본신청)</span></td><td class='num'>15</td><td class='num'>55</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>485</b></td><td>Temporary Graduate<span class='ko-sub'>졸업생 임시비자 (TGV)</span></td><td>Post-Higher Education Work<span class='ko-sub'>학사·석사·박사 학위후 과정 (PHEW)</span></td><td class='num'>30</td><td class='num'>68</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>485</b></td><td>Temporary Graduate<span class='ko-sub'>졸업생 임시비자 (TGV)</span></td><td>Post-Vocational Education Work<span class='ko-sub'>전문대·기술직 과정 (PVEW)</span></td><td class='num'>37</td><td class='num'>120</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>491</b></td><td>Skilled Work Regional<span class='ko-sub'>지방 주정부·친척 후원 기술비자</span></td><td>Family Sponsored Regional<span class='ko-sub'>가족 후원 지방이민</span></td><td class='num'>90</td><td class='num'>180</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>491</b></td><td>Skilled Work Regional<span class='ko-sub'>지방 주정부·친척 후원 기술비자</span></td><td>State/Territory Government Nominated Regional<span class='ko-sub'>주·준주 정부 지명 지방이민</span></td><td class='num'>480</td><td class='num'>720</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>494</b></td><td>Skilled Employer Sponsored Regional<span class='ko-sub'>지방 고용주 스폰서 임시비자 (SESR)</span></td><td>Employer Sponsored<span class='ko-sub'>고용주 스폰서 스트림</span></td><td class='num'>210</td><td class='num'>300</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>494</b></td><td>Skilled Employer Sponsored Regional<span class='ko-sub'>지방 고용주 스폰서 임시비자 (SESR)</span></td><td>Labour Agreement<span class='ko-sub'>노동협약 스트림 (Labour Agreement)</span></td><td class='num'>210</td><td class='num'>330</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>500</b></td><td>Student<span class='ko-sub'>학생비자</span></td><td>Foreign Affairs or Defence Sector<span class='ko-sub'>외교·국방부 장학 과정</span></td><td class='num'>3</td><td class='num'>15</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>500</b></td><td>Student<span class='ko-sub'>학생비자</span></td><td>Higher Education Sector<span class='ko-sub'>대학교·석사(코스워크) 과정</span></td><td class='num'>28</td><td class='num'>90</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>500</b></td><td>Student<span class='ko-sub'>학생비자</span></td><td>Independent ELICOS Sector<span class='ko-sub'>단독 어학연수(ELICOS) 과정</span></td><td class='num'>19</td><td class='num'>50</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>500</b></td><td>Student<span class='ko-sub'>학생비자</span></td><td>Non-Award Sector<span class='ko-sub'>교환학생·비학위 과정</span></td><td class='num'>1</td><td class='num'>10</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>500</b></td><td>Student<span class='ko-sub'>학생비자</span></td><td>Postgraduate Research Sector<span class='ko-sub'>석사(연구)·박사 과정</span></td><td class='num'>31</td><td class='num'>83</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>500</b></td><td>Student<span class='ko-sub'>학생비자</span></td><td>Schools Sector<span class='ko-sub'>초·중·고등학교 조기유학</span></td><td class='num'>28</td><td class='num'>77</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>500</b></td><td>Student<span class='ko-sub'>학생비자</span></td><td>Vocational Education and Training Sector<span class='ko-sub'>전문대·기술교육(VET/TAFE) 과정</span></td><td class='num'>50</td><td class='num'>240</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>590</b></td><td>Student Guardian<span class='ko-sub'>학생 가디언(보호자) 비자</span></td><td>590<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>29</td><td class='num'>180</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>600</b></td><td>Visitor<span class='ko-sub'>방문·관광비자</span></td><td>Business Visitor<span class='ko-sub'>단기 출장·상용 방문</span></td><td class='num'>6</td><td class='num'>23</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>600</b></td><td>Visitor<span class='ko-sub'>방문·관광비자</span></td><td>Sponsored Family<span class='ko-sub'>가족 초청 담보 방문</span></td><td class='num'>40</td><td class='num'>78</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>600</b></td><td>Visitor<span class='ko-sub'>방문·관광비자</span></td><td>Tourist<span class='ko-sub'>일반 관광·친지방문 (호주 내 연장/국외)</span></td><td class='num'>18</td><td class='num'>31</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>601</b></td><td>Electronic Travel Authority<span class='ko-sub'>전자여행허가 (ETA · 한국 여권 단기방문)</span></td><td>601<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>1</td><td class='num'>1</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>602</b></td><td>Medical Treatment<span class='ko-sub'>의료치료 방문비자</span></td><td>602<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>18</td><td class='num'>90</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>651</b></td><td>eVisitor<span class='ko-sub'>유럽 전자방문비자 (eVisitor)</span></td><td>651<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>1</td><td class='num'>1</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>771</b></td><td>Transit<span class='ko-sub'>경유(트랜짓) 비자</span></td><td>771<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>3</td><td class='num'>19</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>801</b></td><td>Partner<span class='ko-sub'>파트너 영주비자 (호주 내 2단계)</span></td><td>801<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>150</td><td class='num'>480</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>802</b></td><td>Child<span class='ko-sub'>자녀 영주비자 (호주 내)</span></td><td>802<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>600</td><td class='num'>870</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>820</b></td><td>Partner<span class='ko-sub'>파트너 임시비자 (호주 내 1단계)</span></td><td>820<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>570</td><td class='num'>720</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>858</b></td><td>Global Talent<span class='ko-sub'>글로벌 탤런트 영주비자</span></td><td>Distinguished Talent / Global Talent (Independent)<span class='ko-sub'>글로벌 탤런트 (독립 우수인재)</span></td><td class='num'>390</td><td class='num'>720</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>870</b></td><td>Sponsored Parent<span class='ko-sub'>장기 부모초청 임시비자 (3년/5년)</span></td><td>Sponsorship<span class='ko-sub'>부모 스폰서십 승인 단계 (가족 보증인 심사)</span></td><td class='num'>120</td><td class='num'>150</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>870</b></td><td>Sponsored Parent<span class='ko-sub'>장기 부모초청 임시비자 (3년/5년)</span></td><td>Visa Application<span class='ko-sub'>비자 본신청 단계 (스폰서 승인 후)</span></td><td class='num'>240</td><td class='num'>300</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>887</b></td><td>Skilled Regional<span class='ko-sub'>지방 기술이민 영주비자 (구)</span></td><td>887<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>210</td><td class='num'>540</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>888</b></td><td>Business Innovation &amp; Investment<span class='ko-sub'>사업·투자 혁신 영주비자</span></td><td>Business Innovation<span class='ko-sub'>사업 혁신</span></td><td class='num'>210</td><td class='num'>270</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>888</b></td><td>Business Innovation &amp; Investment<span class='ko-sub'>사업·투자 혁신 영주비자</span></td><td>Investor<span class='ko-sub'>일반 투자자</span></td><td class='num'>120</td><td class='num'>150</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>888</b></td><td>Business Innovation &amp; Investment<span class='ko-sub'>사업·투자 혁신 영주비자</span></td><td>Significant Investor<span class='ko-sub'>고액 투자자 (SIV)</span></td><td class='num'>120</td><td class='num'>210</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr>
+<tr><td><b>988</b></td><td>Maritime Crew<span class='ko-sub'>해양 승무원 비자</span></td><td>988<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'>1</td><td class='num'>2</td><td class='raw-official'><span data-i18n-ko>– / –</span><span data-i18n-en>– / –</span></td></tr></tbody></table></div>
 
 
 
 <h2><span data-i18n-ko>최근 14일 일간 급변동 감지 (2026-06-03 기준)</span><span data-i18n-en>Anomalies · 14 Days to 2026-06-03</span></h2>
 <p class="note"><span data-i18n-ko>연속된 수집일 사이(최대 14일 간격 이내)에서 50% 중앙값이 20% 이상 또는 7일 이상 변동한 항목만 표시합니다.</span><span data-i18n-en>Genuine snapshot-to-snapshot changes (within 14 days) of 20% or more, or 7 days or more.</span></p>
-<div class="table-wrap"><table><thead><tr><th>Date</th><th>Visa type</th><th>Stream</th><th>Change (median)</th><th>Change %</th></tr></thead><tbody><tr><td>2026-05-26</td><td>Orphan Relative<span class='ko-sub'>고아 친척비자 (국외)</span></td><td>117<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='up'>+150 days</span></td><td class='num'><span class='up'>+6.6%</span></td></tr>
-<tr><td>2026-05-26</td><td>Global Talent<span class='ko-sub'>글로벌 탤런트 영주비자</span></td><td>Distinguished Talent / Global Talent (Independent)<span class='ko-sub'>글로벌 탤런트 (독립 우수인재)</span></td><td class='num'><span class='down'>-120 days</span></td><td class='num'><span class='down'>-23.5%</span></td></tr>
-<tr><td>2026-05-26</td><td>Student<span class='ko-sub'>학생비자</span></td><td>Vocational Education and Training Sector<span class='ko-sub'>전문대·기술교육(VET/TAFE) 과정</span></td><td class='num'><span class='down'>-70 days</span></td><td class='num'><span class='down'>-58.3%</span></td></tr>
-<tr><td>2026-05-26</td><td>Partner<span class='ko-sub'>파트너 영주비자 (호주 내 2단계)</span></td><td>801<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'>-60 days</span></td><td class='num'><span class='down'>-28.6%</span></td></tr>
-<tr><td>2026-05-26</td><td>Partner<span class='ko-sub'>파트너 임시비자 (호주 내 1단계)</span></td><td>820<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='up'>+60 days</span></td><td class='num'><span class='up'>+11.8%</span></td></tr>
-<tr><td>2026-05-26</td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Religious Work<span class='ko-sub'>종교 활동</span></td><td class='num'><span class='down'>-41 days</span></td><td class='num'><span class='down'>-49.4%</span></td></tr>
-<tr><td>2026-05-26</td><td>Child<span class='ko-sub'>자녀 영주비자 (국외)</span></td><td>101<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'>-30 days</span></td><td class='num'><span class='down'>-4.2%</span></td></tr>
-<tr><td>2026-05-26</td><td>Business Talent<span class='ko-sub'>비즈니스 탤런트 영주비자</span></td><td>Significant Business History<span class='ko-sub'>우수 사업 경력</span></td><td class='num'><span class='up'>+30 days</span></td><td class='num'><span class='up'>+1.5%</span></td></tr>
-<tr><td>2026-05-26</td><td>Employer Nomination<span class='ko-sub'>고용주 지명 영주비자 (ENS)</span></td><td>Agreement Pathway<span class='ko-sub'>노동협약 스트림 (Labour Agreement)</span></td><td class='num'><span class='up'>+30 days</span></td><td class='num'><span class='up'>+12.5%</span></td></tr>
-<tr><td>2026-05-26</td><td>Employer Nomination<span class='ko-sub'>고용주 지명 영주비자 (ENS)</span></td><td>Direct Entry Pathway<span class='ko-sub'>다이렉트 엔트리 (DE · 직접 영주권)</span></td><td class='num'><span class='up'>+30 days</span></td><td class='num'><span class='up'>+11.1%</span></td></tr>
-<tr><td>2026-05-26</td><td>Skilled Regional<span class='ko-sub'>지방 거주 후 영주비자</span></td><td>Regional Provisional Visa<span class='ko-sub'>지방 임시비자(491·494) 보유자 영주 전환</span></td><td class='num'><span class='up'>+30 days</span></td><td class='num'><span class='up'>+14.3%</span></td></tr>
-<tr><td>2026-05-26</td><td>Prospective Marriage<span class='ko-sub'>약혼자 비자 (예비 배우자)</span></td><td>300<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'>-30 days</span></td><td class='num'><span class='down'>-6.7%</span></td></tr>
-<tr><td>2026-05-26</td><td>Partner<span class='ko-sub'>파트너 임시비자 (국외 신청 1단계)</span></td><td>309<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='up'>+30 days</span></td><td class='num'><span class='up'>+7.1%</span></td></tr>
-<tr><td>2026-05-26</td><td>Training<span class='ko-sub'>직무연수(트레이닝) 비자</span></td><td>407<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'>-30 days</span></td><td class='num'><span class='down'>-20.0%</span></td></tr>
-<tr><td>2026-05-26</td><td>Skilled Employer Sponsored Regional<span class='ko-sub'>지방 고용주 스폰서 임시비자 (SESR)</span></td><td>Employer Sponsored<span class='ko-sub'>고용주 스폰서 스트림</span></td><td class='num'><span class='down'>-30 days</span></td><td class='num'><span class='down'>-12.5%</span></td></tr>
-<tr><td>2026-05-26</td><td>Skilled Employer Sponsored Regional<span class='ko-sub'>지방 고용주 스폰서 임시비자 (SESR)</span></td><td>Labour Agreement<span class='ko-sub'>노동협약 스트림 (Labour Agreement)</span></td><td class='num'><span class='down'>-30 days</span></td><td class='num'><span class='down'>-12.5%</span></td></tr>
-<tr><td>2026-05-26</td><td>Child<span class='ko-sub'>자녀 영주비자 (호주 내)</span></td><td>802<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'>-30 days</span></td><td class='num'><span class='down'>-4.8%</span></td></tr>
-<tr><td>2026-05-26</td><td>Sponsored Parent<span class='ko-sub'>장기 부모초청 임시비자 (3년/5년)</span></td><td>Sponsorship<span class='ko-sub'>부모 스폰서십 승인 단계 (가족 보증인 심사)</span></td><td class='num'><span class='down'>-30 days</span></td><td class='num'><span class='down'>-20.0%</span></td></tr>
-<tr><td>2026-05-26</td><td>Sponsored Parent<span class='ko-sub'>장기 부모초청 임시비자 (3년/5년)</span></td><td>Visa Application<span class='ko-sub'>비자 본신청 단계 (스폰서 승인 후)</span></td><td class='num'><span class='up'>+30 days</span></td><td class='num'><span class='up'>+14.3%</span></td></tr>
-<tr><td>2026-05-26</td><td>Business Innovation &amp; Investment<span class='ko-sub'>사업·투자 혁신 영주비자</span></td><td>Business Innovation<span class='ko-sub'>사업 혁신</span></td><td class='num'><span class='up'>+30 days</span></td><td class='num'><span class='up'>+16.7%</span></td></tr>
-<tr><td>2026-05-26</td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Special Programs<span class='ko-sub'>특별 교류 프로그램</span></td><td class='num'><span class='down'>-28 days</span></td><td class='num'><span class='down'>-57.1%</span></td></tr>
-<tr><td>2026-05-26</td><td>Skills In Demand<span class='ko-sub'>고용주 스폰서 취업비자 (SID)</span></td><td>Nomination<span class='ko-sub'>고용주 노미네이션 (직위 지명 승인 단계)</span></td><td class='num'><span class='up'>+23 days</span></td><td class='num'><span class='up'>+383.3%</span></td></tr>
-<tr><td>2026-05-26</td><td>Temporary Graduate<span class='ko-sub'>졸업생 임시비자 (TGV)</span></td><td>Post-Higher Education Work<span class='ko-sub'>학사·석사·박사 학위후 과정 (PHEW)</span></td><td class='num'><span class='up'>+21 days</span></td><td class='num'><span class='up'>+233.3%</span></td></tr>
-<tr><td>2026-05-26</td><td>Temporary Graduate<span class='ko-sub'>졸업생 임시비자 (TGV)</span></td><td>Post-Vocational Education Work<span class='ko-sub'>전문대·기술직 과정 (PVEW)</span></td><td class='num'><span class='up'>+16 days</span></td><td class='num'><span class='up'>+76.2%</span></td></tr>
-<tr><td>2026-05-26</td><td>Medical Treatment<span class='ko-sub'>의료치료 방문비자</span></td><td>602<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='up'>+16 days</span></td><td class='num'><span class='up'>+800.0%</span></td></tr>
-<tr><td>2026-05-26</td><td>New Zealand Citizen Family Relationship<span class='ko-sub'>뉴질랜드 시민 가족관계 비자</span></td><td>461<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'>-12 days</span></td><td class='num'><span class='down'>-13.5%</span></td></tr>
-<tr><td>2026-05-26</td><td>Work and Holiday<span class='ko-sub'>워크 앤 홀리데이 비자</span></td><td>462<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'>-11 days</span></td><td class='num'><span class='down'>-24.4%</span></td></tr>
-<tr><td>2026-05-26</td><td>Skills In Demand<span class='ko-sub'>고용주 스폰서 취업비자 (SID)</span></td><td>Specialist Skills<span class='ko-sub'>스페셜리스트 스킬 (고소득 직군 비자 본신청)</span></td><td class='num'><span class='up'>+8 days</span></td><td class='num'><span class='up'>+114.3%</span></td></tr>
-<tr><td>2026-05-26</td><td>Student<span class='ko-sub'>학생비자</span></td><td>Postgraduate Research Sector<span class='ko-sub'>석사(연구)·박사 과정</span></td><td class='num'><span class='up'>+6 days</span></td><td class='num'><span class='up'>+24.0%</span></td></tr>
-<tr><td>2026-05-26</td><td>Visitor<span class='ko-sub'>방문·관광비자</span></td><td>Tourist<span class='ko-sub'>일반 관광·친지방문 (호주 내 연장/국외)</span></td><td class='num'><span class='up'>+5 days</span></td><td class='num'><span class='up'>+38.5%</span></td></tr>
-<tr><td>2026-05-26</td><td>Diplomatic<span class='ko-sub'>국제관계·정부협정 임시비자</span></td><td>Foreign Government Agency<span class='ko-sub'>외국 정부기관 파견</span></td><td class='num'><span class='down'>-3 days</span></td><td class='num'><span class='down'>-37.5%</span></td></tr>
-<tr><td>2026-05-26</td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Invited for Other Social and Cultural Activity<span class='ko-sub'>초청 사회·문화 행사</span></td><td class='num'><span class='up'>+3 days</span></td><td class='num'><span class='up'>+50.0%</span></td></tr>
-<tr><td>2026-05-26</td><td>Diplomatic<span class='ko-sub'>국제관계·정부협정 임시비자</span></td><td>Government Agreement<span class='ko-sub'>정부 간 협정</span></td><td class='num'><span class='up'>+2 days</span></td><td class='num'><span class='up'>+22.2%</span></td></tr>
-<tr><td>2026-05-26</td><td>Transit<span class='ko-sub'>경유(트랜짓) 비자</span></td><td>771<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'>-2 days</span></td><td class='num'><span class='down'>-40.0%</span></td></tr>
-<tr><td>2026-05-26</td><td>Student<span class='ko-sub'>학생비자</span></td><td>Foreign Affairs or Defence Sector<span class='ko-sub'>외교·국방부 장학 과정</span></td><td class='num'><span class='down'>-1 days</span></td><td class='num'><span class='down'>-25.0%</span></td></tr></tbody></table></div>
+<div class="table-wrap"><table id="anomaly-table"><thead><tr><th><span data-i18n-ko>기준일</span><span data-i18n-en>Date</span></th><th><span data-i18n-ko>비자 종류</span><span data-i18n-en>Visa type</span></th><th><span data-i18n-ko>세부 스트림</span><span data-i18n-en>Stream</span></th><th><span data-i18n-ko>변동폭 (50% 중앙값)</span><span data-i18n-en>Change (median)</span></th><th><span data-i18n-ko>변동률 (%)</span><span data-i18n-en>Change %</span></th></tr></thead><tbody><tr><td>2026-05-26</td><td>Orphan Relative<span class='ko-sub'>고아 친척비자 (국외)</span></td><td>117<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='up'><span data-i18n-ko>+150일</span><span data-i18n-en>+150 days</span></span></td><td class='num'><span class='up'>+6.6%</span></td></tr>
+<tr><td>2026-05-26</td><td>Global Talent<span class='ko-sub'>글로벌 탤런트 영주비자</span></td><td>Distinguished Talent / Global Talent (Independent)<span class='ko-sub'>글로벌 탤런트 (독립 우수인재)</span></td><td class='num'><span class='down'><span data-i18n-ko>-120일</span><span data-i18n-en>-120 days</span></span></td><td class='num'><span class='down'>-23.5%</span></td></tr>
+<tr><td>2026-05-26</td><td>Student<span class='ko-sub'>학생비자</span></td><td>Vocational Education and Training Sector<span class='ko-sub'>전문대·기술교육(VET/TAFE) 과정</span></td><td class='num'><span class='down'><span data-i18n-ko>-70일</span><span data-i18n-en>-70 days</span></span></td><td class='num'><span class='down'>-58.3%</span></td></tr>
+<tr><td>2026-05-26</td><td>Partner<span class='ko-sub'>파트너 영주비자 (호주 내 2단계)</span></td><td>801<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'><span data-i18n-ko>-60일</span><span data-i18n-en>-60 days</span></span></td><td class='num'><span class='down'>-28.6%</span></td></tr>
+<tr><td>2026-05-26</td><td>Partner<span class='ko-sub'>파트너 임시비자 (호주 내 1단계)</span></td><td>820<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='up'><span data-i18n-ko>+60일</span><span data-i18n-en>+60 days</span></span></td><td class='num'><span class='up'>+11.8%</span></td></tr>
+<tr><td>2026-05-26</td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Religious Work<span class='ko-sub'>종교 활동</span></td><td class='num'><span class='down'><span data-i18n-ko>-41일</span><span data-i18n-en>-41 days</span></span></td><td class='num'><span class='down'>-49.4%</span></td></tr>
+<tr><td>2026-05-26</td><td>Child<span class='ko-sub'>자녀 영주비자 (국외)</span></td><td>101<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'><span data-i18n-ko>-30일</span><span data-i18n-en>-30 days</span></span></td><td class='num'><span class='down'>-4.2%</span></td></tr>
+<tr><td>2026-05-26</td><td>Business Talent<span class='ko-sub'>비즈니스 탤런트 영주비자</span></td><td>Significant Business History<span class='ko-sub'>우수 사업 경력</span></td><td class='num'><span class='up'><span data-i18n-ko>+30일</span><span data-i18n-en>+30 days</span></span></td><td class='num'><span class='up'>+1.5%</span></td></tr>
+<tr><td>2026-05-26</td><td>Employer Nomination<span class='ko-sub'>고용주 지명 영주비자 (ENS)</span></td><td>Agreement Pathway<span class='ko-sub'>노동협약 스트림 (Labour Agreement)</span></td><td class='num'><span class='up'><span data-i18n-ko>+30일</span><span data-i18n-en>+30 days</span></span></td><td class='num'><span class='up'>+12.5%</span></td></tr>
+<tr><td>2026-05-26</td><td>Employer Nomination<span class='ko-sub'>고용주 지명 영주비자 (ENS)</span></td><td>Direct Entry Pathway<span class='ko-sub'>다이렉트 엔트리 (DE · 직접 영주권)</span></td><td class='num'><span class='up'><span data-i18n-ko>+30일</span><span data-i18n-en>+30 days</span></span></td><td class='num'><span class='up'>+11.1%</span></td></tr>
+<tr><td>2026-05-26</td><td>Skilled Regional<span class='ko-sub'>지방 거주 후 영주비자</span></td><td>Regional Provisional Visa<span class='ko-sub'>지방 임시비자(491·494) 보유자 영주 전환</span></td><td class='num'><span class='up'><span data-i18n-ko>+30일</span><span data-i18n-en>+30 days</span></span></td><td class='num'><span class='up'>+14.3%</span></td></tr>
+<tr><td>2026-05-26</td><td>Prospective Marriage<span class='ko-sub'>약혼자 비자 (예비 배우자)</span></td><td>300<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'><span data-i18n-ko>-30일</span><span data-i18n-en>-30 days</span></span></td><td class='num'><span class='down'>-6.7%</span></td></tr>
+<tr><td>2026-05-26</td><td>Partner<span class='ko-sub'>파트너 임시비자 (국외 신청 1단계)</span></td><td>309<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='up'><span data-i18n-ko>+30일</span><span data-i18n-en>+30 days</span></span></td><td class='num'><span class='up'>+7.1%</span></td></tr>
+<tr><td>2026-05-26</td><td>Training<span class='ko-sub'>직무연수(트레이닝) 비자</span></td><td>407<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'><span data-i18n-ko>-30일</span><span data-i18n-en>-30 days</span></span></td><td class='num'><span class='down'>-20.0%</span></td></tr>
+<tr><td>2026-05-26</td><td>Skilled Employer Sponsored Regional<span class='ko-sub'>지방 고용주 스폰서 임시비자 (SESR)</span></td><td>Employer Sponsored<span class='ko-sub'>고용주 스폰서 스트림</span></td><td class='num'><span class='down'><span data-i18n-ko>-30일</span><span data-i18n-en>-30 days</span></span></td><td class='num'><span class='down'>-12.5%</span></td></tr>
+<tr><td>2026-05-26</td><td>Skilled Employer Sponsored Regional<span class='ko-sub'>지방 고용주 스폰서 임시비자 (SESR)</span></td><td>Labour Agreement<span class='ko-sub'>노동협약 스트림 (Labour Agreement)</span></td><td class='num'><span class='down'><span data-i18n-ko>-30일</span><span data-i18n-en>-30 days</span></span></td><td class='num'><span class='down'>-12.5%</span></td></tr>
+<tr><td>2026-05-26</td><td>Child<span class='ko-sub'>자녀 영주비자 (호주 내)</span></td><td>802<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'><span data-i18n-ko>-30일</span><span data-i18n-en>-30 days</span></span></td><td class='num'><span class='down'>-4.8%</span></td></tr>
+<tr><td>2026-05-26</td><td>Sponsored Parent<span class='ko-sub'>장기 부모초청 임시비자 (3년/5년)</span></td><td>Sponsorship<span class='ko-sub'>부모 스폰서십 승인 단계 (가족 보증인 심사)</span></td><td class='num'><span class='down'><span data-i18n-ko>-30일</span><span data-i18n-en>-30 days</span></span></td><td class='num'><span class='down'>-20.0%</span></td></tr>
+<tr><td>2026-05-26</td><td>Sponsored Parent<span class='ko-sub'>장기 부모초청 임시비자 (3년/5년)</span></td><td>Visa Application<span class='ko-sub'>비자 본신청 단계 (스폰서 승인 후)</span></td><td class='num'><span class='up'><span data-i18n-ko>+30일</span><span data-i18n-en>+30 days</span></span></td><td class='num'><span class='up'>+14.3%</span></td></tr>
+<tr><td>2026-05-26</td><td>Business Innovation &amp; Investment<span class='ko-sub'>사업·투자 혁신 영주비자</span></td><td>Business Innovation<span class='ko-sub'>사업 혁신</span></td><td class='num'><span class='up'><span data-i18n-ko>+30일</span><span data-i18n-en>+30 days</span></span></td><td class='num'><span class='up'>+16.7%</span></td></tr>
+<tr><td>2026-05-26</td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Special Programs<span class='ko-sub'>특별 교류 프로그램</span></td><td class='num'><span class='down'><span data-i18n-ko>-28일</span><span data-i18n-en>-28 days</span></span></td><td class='num'><span class='down'>-57.1%</span></td></tr>
+<tr><td>2026-05-26</td><td>Skills In Demand<span class='ko-sub'>고용주 스폰서 취업비자 (SID)</span></td><td>Nomination<span class='ko-sub'>고용주 노미네이션 (직위 지명 승인 단계)</span></td><td class='num'><span class='up'><span data-i18n-ko>+23일</span><span data-i18n-en>+23 days</span></span></td><td class='num'><span class='up'>+383.3%</span></td></tr>
+<tr><td>2026-05-26</td><td>Temporary Graduate<span class='ko-sub'>졸업생 임시비자 (TGV)</span></td><td>Post-Higher Education Work<span class='ko-sub'>학사·석사·박사 학위후 과정 (PHEW)</span></td><td class='num'><span class='up'><span data-i18n-ko>+21일</span><span data-i18n-en>+21 days</span></span></td><td class='num'><span class='up'>+233.3%</span></td></tr>
+<tr><td>2026-05-26</td><td>Temporary Graduate<span class='ko-sub'>졸업생 임시비자 (TGV)</span></td><td>Post-Vocational Education Work<span class='ko-sub'>전문대·기술직 과정 (PVEW)</span></td><td class='num'><span class='up'><span data-i18n-ko>+16일</span><span data-i18n-en>+16 days</span></span></td><td class='num'><span class='up'>+76.2%</span></td></tr>
+<tr><td>2026-05-26</td><td>Medical Treatment<span class='ko-sub'>의료치료 방문비자</span></td><td>602<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='up'><span data-i18n-ko>+16일</span><span data-i18n-en>+16 days</span></span></td><td class='num'><span class='up'>+800.0%</span></td></tr>
+<tr><td>2026-05-26</td><td>New Zealand Citizen Family Relationship<span class='ko-sub'>뉴질랜드 시민 가족관계 비자</span></td><td>461<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'><span data-i18n-ko>-12일</span><span data-i18n-en>-12 days</span></span></td><td class='num'><span class='down'>-13.5%</span></td></tr>
+<tr><td>2026-05-26</td><td>Work and Holiday<span class='ko-sub'>워크 앤 홀리데이 비자</span></td><td>462<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'><span data-i18n-ko>-11일</span><span data-i18n-en>-11 days</span></span></td><td class='num'><span class='down'>-24.4%</span></td></tr>
+<tr><td>2026-05-26</td><td>Skills In Demand<span class='ko-sub'>고용주 스폰서 취업비자 (SID)</span></td><td>Specialist Skills<span class='ko-sub'>스페셜리스트 스킬 (고소득 직군 비자 본신청)</span></td><td class='num'><span class='up'><span data-i18n-ko>+8일</span><span data-i18n-en>+8 days</span></span></td><td class='num'><span class='up'>+114.3%</span></td></tr>
+<tr><td>2026-05-26</td><td>Student<span class='ko-sub'>학생비자</span></td><td>Postgraduate Research Sector<span class='ko-sub'>석사(연구)·박사 과정</span></td><td class='num'><span class='up'><span data-i18n-ko>+6일</span><span data-i18n-en>+6 days</span></span></td><td class='num'><span class='up'>+24.0%</span></td></tr>
+<tr><td>2026-05-26</td><td>Visitor<span class='ko-sub'>방문·관광비자</span></td><td>Tourist<span class='ko-sub'>일반 관광·친지방문 (호주 내 연장/국외)</span></td><td class='num'><span class='up'><span data-i18n-ko>+5일</span><span data-i18n-en>+5 days</span></span></td><td class='num'><span class='up'>+38.5%</span></td></tr>
+<tr><td>2026-05-26</td><td>Diplomatic<span class='ko-sub'>국제관계·정부협정 임시비자</span></td><td>Foreign Government Agency<span class='ko-sub'>외국 정부기관 파견</span></td><td class='num'><span class='down'><span data-i18n-ko>-3일</span><span data-i18n-en>-3 days</span></span></td><td class='num'><span class='down'>-37.5%</span></td></tr>
+<tr><td>2026-05-26</td><td>Temporary Activity<span class='ko-sub'>임시활동 비자 (연구·문화·스포츠 등)</span></td><td>Invited for Other Social and Cultural Activity<span class='ko-sub'>초청 사회·문화 행사</span></td><td class='num'><span class='up'><span data-i18n-ko>+3일</span><span data-i18n-en>+3 days</span></span></td><td class='num'><span class='up'>+50.0%</span></td></tr>
+<tr><td>2026-05-26</td><td>Diplomatic<span class='ko-sub'>국제관계·정부협정 임시비자</span></td><td>Government Agreement<span class='ko-sub'>정부 간 협정</span></td><td class='num'><span class='up'><span data-i18n-ko>+2일</span><span data-i18n-en>+2 days</span></span></td><td class='num'><span class='up'>+22.2%</span></td></tr>
+<tr><td>2026-05-26</td><td>Transit<span class='ko-sub'>경유(트랜짓) 비자</span></td><td>771<span class='ko-sub'>단일 스트림 (전체)</span></td><td class='num'><span class='down'><span data-i18n-ko>-2일</span><span data-i18n-en>-2 days</span></span></td><td class='num'><span class='down'>-40.0%</span></td></tr>
+<tr><td>2026-05-26</td><td>Student<span class='ko-sub'>학생비자</span></td><td>Foreign Affairs or Defence Sector<span class='ko-sub'>외교·국방부 장학 과정</span></td><td class='num'><span class='down'><span data-i18n-ko>-1일</span><span data-i18n-en>-1 days</span></span></td><td class='num'><span class='down'>-25.0%</span></td></tr></tbody></table></div>
 
 <footer>
-<div class="visit-counter" id="visit-counter" data-seed-total="1363" data-seed-visitors="532" hidden>
+<div class="visit-counter" id="visit-counter" data-seed-total="1563" data-seed-visitors="673" hidden>
 <span><span data-i18n-ko>누적 방문</span><span data-i18n-en>Total visits</span><b id="vc-total">-</b></span>
 <span><span data-i18n-ko>오늘 방문</span><span data-i18n-en>Today</span><b id="vc-today">-</b></span>
 <span><span data-i18n-ko>방문자</span><span data-i18n-en>Visitors</span><b id="vc-visitors">-</b></span>
 </div>
-<p><span data-i18n-ko>무료 질문: <a href="https://cafe.naver.com/immispecialist" target="_blank" rel="noopener">무료 상담 게시판 (Naver Cafe)</a> &middot; 상담 문의: <a href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener">박앤코 문의하기</a> &middot; 관련 도구: <a href="https://changa9090.github.io/">박앤코 법률·비자 통합 허브</a> &middot; <a href="https://changa9090.github.io/parkco-visa-solution-guide/?lang=ko#module-pathways">호주 비자 솔루션 가이드</a> &middot; <a href="https://faq.immispecialist.com/?lang=ko" target="_blank" rel="noopener">호주이민 실전 FAQ</a></span><span data-i18n-en>Free questions: <a href="https://cafe.naver.com/immispecialist" target="_blank" rel="noopener">Naver Cafe Q&amp;A Board</a> &middot; Contact: <a href="https://parklawyers.com.au/links/" target="_blank" rel="noopener">Contact Park &amp; Co Lawyers</a> &middot; Ecosystem: <a href="https://changa9090.github.io/">Park &amp; Co Legal &amp; Visa Hub</a> &middot; <a href="https://changa9090.github.io/parkco-visa-solution-guide/?lang=en#module-pathways">Visa Solution Guide</a> &middot; <a href="https://faq.immispecialist.com/?lang=en" target="_blank" rel="noopener">Australian Immigration FAQ</a></span></p>
+<p><span data-i18n-ko>무료 질문: <a href="https://cafe.naver.com/immispecialist" target="_blank" rel="noopener">무료 상담 게시판 (Naver Cafe)</a> &middot; 상담 문의: <a href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener">박앤코 문의하기</a> &middot; 관련 도구: <a href="https://changa9090.github.io/">박앤코 법률·비자 통합 허브</a> &middot; <a href="https://changa9090.github.io/parkco-visa-solution-guide/?lang=ko#module-pathways">호주 비자 솔루션 가이드</a> &middot; <a href="https://faq.immispecialist.com/?lang=ko" target="_blank" rel="noopener">호주이민 실전 FAQ</a></span><span data-i18n-en>Free questions: <a href="https://cafe.naver.com/immispecialist" target="_blank" rel="noopener">Naver Cafe Q&amp;A Board</a> &middot; Contact: <a href="https://parklawyers.com.au/links/?lang=en" target="_blank" rel="noopener">Contact Park &amp; Co Lawyers</a> &middot; Ecosystem: <a href="https://changa9090.github.io/">Park &amp; Co Legal &amp; Visa Hub</a> &middot; <a href="https://changa9090.github.io/parkco-visa-solution-guide/?lang=en#module-pathways">Visa Solution Guide</a> &middot; <a href="https://faq.immispecialist.com/?lang=en" target="_blank" rel="noopener">Australian Immigration FAQ</a></span></p>
 <p>Data source: Australian Government Department of Home Affairs,
 <a href="https://immi.homeaffairs.gov.au/visas/getting-a-visa/visa-processing-times/global-visa-processing-times">Global visa processing times</a>.
 Source material licensed under
@@ -774,16 +799,35 @@ Australian Government or the Department of Home Affairs.</p>
     });
   }
 
-  /* 3. Instant Table Search Filter */
+  /* 3. Instant Table Search Filter (with empty-state message) */
   document.querySelectorAll('.table-filter').forEach(function (input) {
     var table = document.getElementById(input.getAttribute('data-target'));
     if (!table) return;
+    var tbody = table.querySelector('tbody');
+    var colCount = table.querySelectorAll('thead th').length || 6;
     input.addEventListener('input', function () {
       var terms = input.value.toLowerCase().split(/\s+/).filter(Boolean);
-      table.querySelectorAll('tbody tr').forEach(function (tr) {
+      var visible = 0;
+      table.querySelectorAll('tbody tr:not(.empty-filter-row)').forEach(function (tr) {
         var text = tr.textContent.toLowerCase();
-        tr.style.display = terms.every(function (t) { return text.indexOf(t) >= 0; }) ? '' : 'none';
+        var show = terms.every(function (t) { return text.indexOf(t) >= 0; });
+        tr.style.display = show ? '' : 'none';
+        if (show) visible += 1;
       });
+      if (!tbody) return;
+      var emptyRow = tbody.querySelector('tr.empty-filter-row');
+      if (visible === 0) {
+        if (!emptyRow) {
+          emptyRow = document.createElement('tr');
+          emptyRow.className = 'empty-filter-row';
+          emptyRow.innerHTML = '<td colspan="' + colCount + '" style="text-align:center;padding:18px;color:var(--muted);font-weight:600;">' +
+            '<span data-i18n-ko>검색 결과가 없습니다</span><span data-i18n-en>No matching results found</span></td>';
+          tbody.appendChild(emptyRow);
+        }
+        emptyRow.style.display = '';
+      } else if (emptyRow) {
+        emptyRow.style.display = 'none';
+      }
     });
   });
 
@@ -1073,6 +1117,7 @@ Australian Government or the Department of Home Affairs.</p>
 
   var selectEl = document.getElementById('my-visa-select');
   var searchEl = document.getElementById('my-visa-filter');
+  var filterResEl = document.getElementById('my-visa-filter-results');
   var lodgedEl = document.getElementById('my-lodged-date');
   var clearDateBtn = document.getElementById('my-clear-date');
   var pinBtn = document.getElementById('my-pin-btn');
@@ -1169,26 +1214,97 @@ Australian Government or the Department of Home Affairs.</p>
     try { history.replaceState(null, '', '?' + u.toString()); } catch (e) {}
   }
 
+  function formatStreamOptionLabel(s, lang) {
+    return lang === 'ko'
+      ? (s.subclass + ' · ' + s.visa_ko + ' · ' + s.stream_ko + ' (' + s.visa_stream + ')')
+      : (s.subclass + ' · ' + s.visa_type + ' · ' + s.visa_stream);
+  }
+
   function populateSelect(filterText) {
     var lang = uiLang();
     var terms = (filterText || '').toLowerCase().split(/\s+/).filter(Boolean);
     var current = state.visaKey;
+    var curStream = BY_KEY[current] || STREAMS[0];
     var matched = STREAMS.filter(function (s) {
       if (!terms.length) return true;
       var hay = (s.subclass + ' ' + s.visa_type + ' ' + s.visa_stream + ' ' + s.visa_ko + ' ' + s.stream_ko).toLowerCase();
       return terms.every(function (t) { return hay.indexOf(t) >= 0; });
     });
-    if (!matched.length) matched = STREAMS;
-    selectEl.innerHTML = matched.map(function (s) {
-      var label = lang === 'ko'
-        ? (s.subclass + ' · ' + s.visa_ko + ' · ' + s.stream_ko + ' (' + s.visa_stream + ')')
-        : (s.subclass + ' · ' + s.visa_type + ' · ' + s.visa_stream);
-      var sel = s.key === current ? ' selected' : '';
-      return '<option value="' + esc(s.key) + '"' + sel + '>' + esc(label) + '</option>';
+
+    /* CRITICAL P0 INVARIANT: Typing in the filter NEVER mutates state.visaKey or localStorage! */
+    if (!terms.length) {
+      if (filterResEl) {
+        filterResEl.hidden = true;
+        filterResEl.innerHTML = '';
+      }
+      selectEl.innerHTML = STREAMS.map(function (s) {
+        var sel = s.key === current ? ' selected' : '';
+        return '<option value="' + esc(s.key) + '"' + sel + '>' + esc(formatStreamOptionLabel(s, lang)) + '</option>';
+      }).join('');
+      selectEl.value = current;
+      return;
+    }
+
+    if (!matched.length) {
+      var emptyMsg = lang === 'ko' ? '일치하는 비자 스트림이 없습니다' : 'No matching visa streams found';
+      var keepHtml = curStream
+        ? ('<option value="' + esc(curStream.key) + '">' + esc((lang === 'ko' ? '[현재 선택 유지] ' : '[Active] ') + formatStreamOptionLabel(curStream, lang)) + '</option>')
+        : '';
+      selectEl.innerHTML = '<option value="" disabled selected>' + esc(emptyMsg) + '</option>' + keepHtml;
+      if (filterResEl) {
+        filterResEl.hidden = false;
+        filterResEl.innerHTML = '<div class="stream-filter-empty">' +
+          esc(lang === 'ko'
+            ? '일치하는 비자 스트림이 없습니다. 현재 선택된 비자 설정은 그대로 유지됩니다.'
+            : 'No matching visa streams found. Your active stream selection remains unchanged.') +
+          '</div>';
+      }
+      return;
+    }
+
+    var currentInMatched = matched.some(function (s) { return s.key === current; });
+    var headerOpt = '';
+    if (!currentInMatched) {
+      var promptTxt = lang === 'ko'
+        ? ('검색 결과 ' + matched.length + '건 — 변경하려면 아래에서 비자 스트림을 선택하십시오')
+        : (matched.length + ' match(es) — select a stream below to switch');
+      headerOpt = '<option value="" disabled selected>' + esc(promptTxt) + '</option>';
+    }
+    selectEl.innerHTML = headerOpt + matched.map(function (s) {
+      var sel = (currentInMatched && s.key === current) ? ' selected' : '';
+      return '<option value="' + esc(s.key) + '"' + sel + '>' + esc(formatStreamOptionLabel(s, lang)) + '</option>';
     }).join('');
-    if (!matched.some(function (s) { return s.key === current; }) && matched[0]) {
-      state.visaKey = matched[0].key;
-      selectEl.value = state.visaKey;
+    if (currentInMatched) {
+      selectEl.value = current;
+    }
+
+    if (filterResEl) {
+      filterResEl.hidden = false;
+      var hintTxt = lang === 'ko'
+        ? ('검색 일치 스트림 ' + matched.length + '건 (항목을 클릭하면 내 비자로 선택됩니다):')
+        : (matched.length + ' matching stream(s) (click an item to select):');
+      var previewItems = matched.slice(0, 8).map(function (s) {
+        var isCur = s.key === current ? ' is-current' : '';
+        var shortLbl = lang === 'ko'
+          ? (s.subclass + ' · ' + s.visa_ko + ' — ' + s.stream_ko)
+          : (s.subclass + ' · ' + s.visa_type + ' — ' + s.visa_stream);
+        return '<button type="button" class="stream-filter-item' + isCur + '" data-pick-stream="' + esc(s.key) + '">' + esc(shortLbl) + '</button>';
+      }).join('');
+      filterResEl.innerHTML = '<span class="stream-filter-hint">' + esc(hintTxt) + '</span><div class="stream-filter-list">' + previewItems + '</div>';
+      if (filterResEl.querySelectorAll) {
+        filterResEl.querySelectorAll('[data-pick-stream]').forEach(function (btnEl) {
+          btnEl.addEventListener('click', function () {
+            var picked = btnEl.getAttribute('data-pick-stream');
+            if (picked && BY_KEY[picked]) {
+              state.visaKey = picked;
+              if (searchEl) searchEl.value = '';
+              populateSelect('');
+              saveState();
+              renderAll();
+            }
+          });
+        });
+      }
     }
   }
 
@@ -1229,7 +1345,7 @@ Australian Government or the Department of Home Affairs.</p>
       var lbl = lang === 'ko'
         ? (s.subclass + ' ' + s.stream_ko.split(' (')[0])
         : (s.subclass + ' ' + s.visa_stream);
-      if (p.lodged) lbl += ' · ' + p.lodged.slice(5);
+      if (p.lodged) lbl += ' · ' + p.lodged.slice(0, 10);
       return '<span class="pin-item' + active + '" data-pin-idx="' + idx + '">' + esc(lbl) +
         '<button type="button" class="pin-remove" data-rm-idx="' + idx + '" aria-label="Remove">&times;</button></span>';
     }).join('');
@@ -1298,41 +1414,49 @@ Australian Government or the Department of Home Affairs.</p>
         : ('Based on planned lodgement, 50% median falls around <b>' + addDaysIso(lodged, p50) + '</b> and 90th percentile around <b>' + addDaysIso(lodged, p90) + '</b>.');
     } else {
       scaleMax = Math.max(scaleMax, Math.min(waited, (p90 || p50 || 30) * 1.25));
+      var condEst = (Array.isArray(s.knots) && s.knots.length >= 5) ? evalConditionalWait(s.knots, waited) : null;
+      var remBandHeadline = condEst
+        ? (addDaysIso(todayIso, condEst.rem_p50_days) + ' ~ ' + addDaysIso(todayIso, condEst.rem_p80_days))
+        : null;
       if (p25 != null && waited < p25) {
         zoneCls = 'zone-early';
         headHtml = lang === 'ko'
-          ? ('현재 대기 ' + waited + '일째 · 초기 심사 구간 (상위 25% 기준 ' + p25 + '일 이내)')
-          : ('Day ' + waited + ' of wait · Early processing stage (within 25th pct: ' + p25 + 'd)');
+          ? ('현재 대기 ' + waited + '일째 · 경과일 반영 예상 구간: ' + (remBandHeadline || (addDaysIso(lodged, p50) + ' 전후')))
+          : ('Day ' + waited + ' · Projected completion window: ' + (remBandHeadline || addDaysIso(lodged, p50)));
       } else if (p50 != null && waited <= p50) {
         zoneCls = 'zone-mid';
-        var rem50 = p50 - waited;
         headHtml = lang === 'ko'
-          ? ('현재 대기 ' + waited + '일째 · 50% 중앙값 도달까지 D-' + rem50 + '일 (' + addDaysIso(lodged, p50) + ')')
-          : ('Day ' + waited + ' of wait · ' + rem50 + ' days to 50% median (' + addDaysIso(lodged, p50) + ')');
+          ? ('현재 대기 ' + waited + '일째 · 경과일 반영 예상 구간: ' + (remBandHeadline || addDaysIso(lodged, p50)))
+          : ('Day ' + waited + ' · Projected completion window: ' + (remBandHeadline || addDaysIso(lodged, p50)));
       } else if (p90 != null && waited <= p90) {
         zoneCls = 'zone-tail';
-        var rem90 = p90 - waited;
         headHtml = lang === 'ko'
-          ? ('현재 대기 ' + waited + '일째 · 50% 경과 · 90% 표준 상한까지 D-' + rem90 + '일 (' + addDaysIso(lodged, p90) + ')')
-          : ('Day ' + waited + ' of wait · Past median, within 90% standard window (' + rem90 + 'd to p90)');
+          ? ('현재 대기 ' + waited + '일째 (50% 중앙값 경과) · 경과일 반영 예상 구간: ' + (remBandHeadline || addDaysIso(lodged, p90)))
+          : ('Day ' + waited + ' (Past 50% median) · Projected window: ' + (remBandHeadline || addDaysIso(lodged, p90)));
       } else {
         zoneCls = 'zone-over';
         var overDays = p90 != null ? (waited - p90) : (waited - (p50 || 0));
         headHtml = lang === 'ko'
           ? ('현재 대기 ' + waited + '일째 · 이민성 90% 표준 기간(+' + overDays + '일) 경과')
-          : ('Day ' + waited + ' of wait · Outside 90% standard processing time (+' + overDays + 'd)');
+          : ('Day ' + waited + ' · Outside 90% standard processing time (+' + overDays + 'd)');
       }
+      var staticVsCondKo = (p50 != null && p90 != null)
+        ? ('최초 접수일(' + esc(lodged) + ') 기준 전체 신청자의 <b>50% 중앙값 도달일은 ' + addDaysIso(lodged, p50) + '</b> 및 <b>90% 표준 상한일은 ' + addDaysIso(lodged, p90) + '</b>이며 이미 ' + waited + '일을 대기한 미결 사건의 <b>경과일 반영 예상 완료 구간은 ' + (remBandHeadline || addDaysIso(lodged, p90)) + '</b>입니다.')
+        : ('접수일(' + esc(lodged) + ') 기준 공개 심사기간 범위를 표시하고 있습니다.');
+      var staticVsCondEn = (p50 != null && p90 != null)
+        ? ('For all applications lodged on ' + esc(lodged) + ', the static <b>50% median date is ' + addDaysIso(lodged, p50) + '</b> (90% window end: <b>' + addDaysIso(lodged, p90) + '</b>), whereas the <b>elapsed-time adjusted window for still-pending cases at Day ' + waited + ' is ' + (remBandHeadline || addDaysIso(lodged, p90)) + '</b>.')
+        : ('Showing published Home Affairs processing benchmarks for lodgement on ' + esc(lodged) + '.');
       detailHtml = lang === 'ko'
         ? (zoneCls === 'zone-over'
-            ? '신청 건의 90%가 완료되는 기간을 지났습니다. ImmiAccount 내 추가 서류 요청(s56)·신체검사·신원조회 상태를 확인해 보시고 장기간 정체 시 전문가 점검을 권합니다.'
-            : ('접수일(' + esc(lodged) + ') 기준 정상 심사 범위 내에 있습니다. 이민성 월간 통계가 갱신될 때마다 아래 예상 완료일이 자동으로 재계산됩니다.'))
+            ? (staticVsCondKo + ' 신청 건의 90%가 완료되는 기간을 지났으므로 ImmiAccount 내 추가 서류 요청(s 56)·신체검사·신원조회 상태를 확인하시고 장기간 정체 시 법률 점검을 권장합니다.')
+            : (staticVsCondKo + ' 이민성 월간 통계가 갱신될 때마다 예상 구간이 자동으로 재계산됩니다.'))
         : (zoneCls === 'zone-over'
-            ? 'Your wait exceeds the published 90th percentile. Check ImmiAccount for outstanding s56 requests, health or character checks, or seek legal review if stalled.'
-            : ('Lodged on ' + esc(lodged) + ' · within normal Home Affairs processing timeframes. Expected dates update automatically with each monthly DHA release.'));
+            ? (staticVsCondEn + ' Your wait exceeds the published 90th percentile. Check ImmiAccount for outstanding s 56 requests, health or character checks, or seek legal review if stalled.')
+            : (staticVsCondEn + ' Expected windows update automatically with each monthly DHA release.'));
       if (p90 != null && waited >= Math.ceil(0.85 * p90)) {
         detailHtml += lang === 'ko'
           ? (' <span style="display:inline-block;margin-top:4px;font-weight:700;"><a href="https://changa9090.github.io/parkco-visa-crisis-navigator/" target="_blank" rel="noopener">s 56·장기지연 대응 가이드(Visa Crisis Navigator) &rarr;</a> &middot; <a href="https://changa9090.github.io/parkco-visa-solution-guide/?lang=ko#module-pathways" target="_blank" rel="noopener">대체 비자 경로 진단 &rarr;</a> &middot; <a href="https://parklawyers.com.au/links/?lang=ko" target="_blank" rel="noopener">법무법인 박앤코 사건 점검 문의</a></span>')
-          : (' <span style="display:inline-block;margin-top:4px;font-weight:700;"><a href="https://changa9090.github.io/parkco-visa-crisis-navigator/" target="_blank" rel="noopener">Visa Crisis &amp; s 56 Navigator &rarr;</a> &middot; <a href="https://changa9090.github.io/parkco-visa-solution-guide/?lang=en#module-pathways" target="_blank" rel="noopener">Alternative Visa Pathways &rarr;</a> &middot; <a href="https://parklawyers.com.au/links/" target="_blank" rel="noopener">Contact Park &amp; Co Lawyers</a></span>');
+          : (' <span style="display:inline-block;margin-top:4px;font-weight:700;"><a href="https://changa9090.github.io/parkco-visa-crisis-navigator/" target="_blank" rel="noopener">Visa Crisis &amp; s 56 Navigator &rarr;</a> &middot; <a href="https://changa9090.github.io/parkco-visa-solution-guide/?lang=en#module-pathways" target="_blank" rel="noopener">Alternative Visa Pathways &rarr;</a> &middot; <a href="https://parklawyers.com.au/links/?lang=en" target="_blank" rel="noopener">Contact Park &amp; Co Lawyers</a></span>');
       }
     }
 
@@ -1391,6 +1515,19 @@ Australian Government or the Department of Home Affairs.</p>
       : (lang === 'ko' ? ('75% 기준: ' + (p75 != null ? fmtDur(p75, s.raw_p75, s.raw_p75_ko, 'ko') : '–'))
                        : ('75th pct: ' + (p75 != null ? fmtDur(p75, s.raw_p75, s.raw_p75_ko, 'en') : '–')));
 
+    var archiveBaseDate = (cohortRef && cohortRef.date) ? cohortRef.date : '2026-04-01';
+    var cohortKpiLbl = lang === 'ko'
+      ? (lodged
+          ? ((cohortRef && cohortRef.earliestFallback)
+              ? ('데이터 수집 시작일(' + archiveBaseDate + ') 대비')
+              : '내 접수일 대비 속도 변화')
+          : ('데이터 수집 시작일(' + archiveBaseDate + ') 대비'))
+      : (lodged
+          ? ((cohortRef && cohortRef.earliestFallback)
+              ? ('Speed vs Archive Start (' + archiveBaseDate + ')')
+              : 'Speed Shift Since Lodgement')
+          : ('Speed vs Archive Start (' + archiveBaseDate + ')'));
+
     resultBox.innerHTML =
       renderParentQueueBanner(lang) +
       '<div class="tracker-status-box ' + zoneCls + '">' +
@@ -1400,9 +1537,9 @@ Australian Government or the Department of Home Affairs.</p>
       '</div>' +
       '<div class="kpi-grid">' +
       '<div class="kpi-box"><div class="kpi-label">' + kpi1Lbl + '</div><div class="kpi-val">' + kpi1Val + '</div><div class="kpi-sub">' + esc(kpi1Sub) + '</div></div>' +
-      '<div class="kpi-box"><div class="kpi-label">' + (lang === 'ko' ? '50% 중앙값 (절반 완료)' : '50% Median Time') + '</div><div class="kpi-val">' + esc(kpi2Val) + '</div><div class="kpi-sub">' + esc(kpi2Sub) + '</div></div>' +
+      '<div class="kpi-box"><div class="kpi-label">' + (lang === 'ko' ? '최초 접수 기준 50% 중앙값' : '50% Median (From Lodgement)') + '</div><div class="kpi-val">' + esc(kpi2Val) + '</div><div class="kpi-sub">' + esc(kpi2Sub) + '</div></div>' +
       '<div class="kpi-box"><div class="kpi-label">' + (lang === 'ko' ? '90% 표준 심사 상한' : '90th Percentile') + '</div><div class="kpi-val">' + esc(kpi3Val) + '</div><div class="kpi-sub">' + esc(kpi3Sub) + '</div></div>' +
-      '<div class="kpi-box"><div class="kpi-label">' + (lang === 'ko' ? (lodged ? '내 접수일 대비 속도 변화' : '최초 기록 대비 속도 변화') : 'Speed Shift vs Past') + '</div><div class="kpi-val">' + cohortVal + '</div><div class="kpi-sub">' + esc(cohortSub) + '</div></div>' +
+      '<div class="kpi-box"><div class="kpi-label">' + esc(cohortKpiLbl) + '</div><div class="kpi-val">' + cohortVal + '</div><div class="kpi-sub">' + esc(cohortSub) + '</div></div>' +
       '</div>' +
       renderIntelligencePanels(s, waited, todayIso, lang);
 
@@ -1449,12 +1586,49 @@ Australian Government or the Department of Home Affairs.</p>
         '<div class="nom-stage-chips">' + nomChips + '</div></div>';
     }
 
+    var dirCode = p.direction_code || '';
+    var disclaimerKo = dirCode === 'MD121'
+      ? '참고: 이민성 우선심사(MD 121) 순위 안내용이며 공개 분위수 추정치에는 자동 가감되지 않습니다.'
+      : (dirCode === 'MD122'
+          ? '참고: 이민성 우선심사(MD 122) 순위 안내용이며 공개 분위수 추정치에는 자동 가감되지 않습니다.'
+          : (dirCode === 'MD115'
+              ? '참고: 학생비자 우선배정(MD 115) 순위 안내용이며 공개 분위수 추정치에는 자동 가감되지 않습니다.'
+              : '참고: 신청 위치 구분 안내용이며 공개 분위수 추정치에는 자동 가감되지 않습니다.'));
+    var disclaimerEn = dirCode
+      ? ('Note: Ministerial Direction (' + dirCode.replace('MD', 'MD ') + ') priority tiers indicate queue order only and do not automatically adjust published DHA percentiles.')
+      : 'Note: Location selection is for reference only and does not automatically adjust published DHA percentiles.';
+
+    var contextHtml = '';
+    if (state.priorityTier) {
+      var selTier = p.tiers.find(function (x) { return x.code === state.priorityTier; });
+      if (selTier) {
+        var tierMsgKo = '';
+        var tierMsgEn = '';
+        if (state.priorityTier.indexOf('critical_sector') >= 0 || state.priorityTier.indexOf('specialist_skills') >= 0 || state.priorityTier === 'md115_offshore_p1') {
+          tierMsgKo = '선택한 순위(' + selTier.rank + ')는 서류 완비(Decision-ready) 상태에서 우선 배정 대상에 해당하므로 공개 분포 중 25%~50% 중앙값 구간에 가까운 처리 흐름을 기대해 볼 수 있습니다.';
+          tierMsgEn = 'Selected tier (' + selTier.label_en + ') receives priority queue allocation when decision-ready, typically tracking closer to the 25th–50th percentile band.';
+        } else if (state.priorityTier.indexOf('onshore') >= 0) {
+          tierMsgKo = '선택한 순위(' + selTier.rank + ')는 핵심 직군 다음 순서로 국외 일반 대기열보다 먼저 배정되는 구간입니다. 공개 50% 중앙값 전후 흐름을 기준으로 참고하시기 바랍니다.';
+          tierMsgEn = 'Selected tier (' + selTier.label_en + ') is allocated ahead of general offshore applications; benchmark against the 50th percentile band.';
+        } else if (state.priorityTier === 'md115_offshore_p3') {
+          tierMsgKo = '선택한 순위(Offshore P3 · 정원 115% 이상 구간)는 MD 115 기준 후순위 배정 대상이므로 공개 75%~90% 상한 구간에 가까운 여유 일정을 잡으시는 것이 안전합니다.';
+          tierMsgEn = 'Offshore Priority 3 (>=115% NOSC) is allocated in a slower track under MD 115; plan around the 75th–90th percentile window.';
+        } else {
+          tierMsgKo = '선택한 순위(' + selTier.rank + ')는 일반 배정 대기열에 해당하므로 공개 50%~90% 표준 구간을 중심으로 일정을 점검하시기 바랍니다.';
+          tierMsgEn = 'Selected tier (' + selTier.label_en + ') follows general queue allocation; benchmark across the 50th–90th percentile window.';
+        }
+        contextHtml = '<div class="priority-context-note">' + esc(lang === 'ko' ? tierMsgKo : tierMsgEn) + '</div>';
+      }
+    }
+
     priorityBarEl.innerHTML =
       '<div class="priority-head">' +
       '<span class="priority-title">' + esc(lang === 'ko' ? p.headline_ko : p.headline_en) + '</span>' +
       '<span class="priority-sub">' + (lang === 'ko' ? '내 우선심사 순위 선택 (선택 사항)' : 'Select your priority tier (optional)') + '</span>' +
       '</div>' +
+      '<p class="priority-disclaimer">' + esc(lang === 'ko' ? disclaimerKo : disclaimerEn) + '</p>' +
       '<div class="priority-chips">' + chips + '</div>' +
+      contextHtml +
       nomHtml +
       '<p class="priority-note">' + esc(lang === 'ko' ? p.revoked_note_ko : p.revoked_note_en) + '</p>';
 
@@ -1624,11 +1798,11 @@ Australian Government or the Department of Home Affairs.</p>
       htmlOut += '<div class="intel-cond-panel">' +
         '<div class="intel-cond-head">' +
         '<span class="intel-cond-title">' + (lang === 'ko'
-          ? '조건부 완료 확률 &amp; 잔여 대기 밴드 (경과일 반영 생존분석)'
-          : 'Conditional Completion Probability &amp; Remaining Wait Band') + '</span>' +
+          ? '경과일 반영 예상 구간 &amp; 조건부 완료 확률'
+          : 'Elapsed-Time Adjusted Window &amp; Conditional Completion Probability') + '</span>' +
         '<span class="intel-cond-pct">' + (lang === 'ko'
-          ? ('완료 분포 상위 ' + pctReached + '% 지점 통과')
-          : ('Passed ' + pctReached + '% of finalised distribution')) + '</span>' +
+          ? ('같은 시기 신청자 중 약 ' + pctReached + '%가 이미 심사 결과를 받았습니다')
+          : ('Approx. ' + pctReached + '% of applicants from a similar period have received an outcome')) + '</span>' +
         '</div>' +
         '<div class="cond-prob-grid">' +
         '<div class="cond-prob-cell"><div class="cond-prob-lbl">' + (lang === 'ko' ? '향후 +30일 내 결정 확률' : 'Within +30 Days') + '</div><div class="cond-prob-val">' + p30 + '%</div></div>' +
@@ -1637,8 +1811,8 @@ Australian Government or the Department of Home Affairs.</p>
         '<div class="cond-prob-cell"><div class="cond-prob-lbl">' + (lang === 'ko' ? '잔여 대기 50%~80% 구간' : 'Est. Remaining (50%–80%)') + '</div><div class="cond-prob-val">+' + cond.rem_p50_days + '~' + cond.rem_p80_days + (lang === 'ko' ? '일' : 'd') + '</div></div>' +
         '</div>' +
         '<p class="intel-cond-foot">' + (lang === 'ko'
-          ? ('오늘 이후 미결 코호트 예상 완료 구간: <b>' + remBandDates + '</b> · 이민성 공개 4분위수(25·50·75·90%) 구간보간(Monotone PCHIP) 조건부 추정치이며 보완요청(s56)·우선순위에 따라 달라집니다.')
-          : ('Projected window for remaining cohort: <b>' + remBandDates + '</b> · Interval-monotone PCHIP conditional survival estimate from DHA quartiles; individual s56/priority factors apply.')) +
+          ? ('오늘 이후 미결 사건의 경과일 반영 예상 구간: <b>' + remBandDates + '</b> · 상단의 50% 중앙값 도달일은 최초 접수자 전체 기준이며 이 구간은 이미 대기한 일수를 반영해 산출한 조건부 추정치입니다. 보완요청(s 56) 및 우선심사 순위에 따라 실제 결과 시점은 달라질 수 있습니다.')
+          : ('Elapsed-time adjusted window for still-pending cohort: <b>' + remBandDates + '</b> · Interval-monotone PCHIP conditional survival estimate from DHA quartiles; individual s 56 and priority factors apply.')) +
         '</p></div>';
     }
 
@@ -1713,7 +1887,7 @@ Australian Government or the Department of Home Affairs.</p>
           name: lang === 'ko' ? '50% 중앙값 (일)' : '50th Percentile (Median days)',
           x: xs,
           y: y50,
-          line: { color: '#7A1F2B', width: 3 },
+          line: { color: '#0E3A3E', width: 3 },
           hovertemplate: '%{x}: <b>%{y}d</b> (50%)<extra></extra>'
         }
       ];
@@ -1725,8 +1899,8 @@ Australian Government or the Department of Home Affairs.</p>
           x: xs,
           y: y90,
           fill: 'tonexty',
-          fillcolor: 'rgba(122, 31, 43, 0.08)',
-          line: { color: '#1E3A8A', width: 2.2, dash: 'dot' },
+          fillcolor: 'rgba(14, 58, 62, 0.08)',
+          line: { color: '#B68B40', width: 2.2, dash: 'dot' },
           hovertemplate: '%{x}: <b>%{y}d</b> (90%)<extra></extra>'
         });
       }
@@ -1735,12 +1909,12 @@ Australian Government or the Department of Home Affairs.</p>
       if (state.lodged && state.lodged >= xs[0] && state.lodged <= xs[xs.length - 1]) {
         shapes.push({
           type: 'line', x0: state.lodged, x1: state.lodged, y0: 0, y1: 1, yref: 'paper',
-          line: { color: '#2E6B4F', width: 2, dash: 'dash' }
+          line: { color: '#1E6B52', width: 2, dash: 'dash' }
         });
         annotations.push({
           x: state.lodged, y: 1, yref: 'paper', yanchor: 'bottom',
           text: lang === 'ko' ? ('내 접수일 (' + state.lodged + ')') : ('Lodged (' + state.lodged + ')'),
-          showarrow: false, font: { size: 11, color: '#2E6B4F' }
+          showarrow: false, font: { size: 11, color: '#1E6B52' }
         });
       }
       var titleText = lang === 'ko'
@@ -1757,7 +1931,7 @@ Australian Government or the Department of Home Affairs.</p>
         annotations: annotations,
         paper_bgcolor: '#FFFFFF',
         plot_bgcolor: '#FFFFFF',
-        font: { family: "'Pretendard Variable', Pretendard, Manrope, system-ui, sans-serif", color: '#2E2E2E' }
+        font: { family: "'Pretendard Variable', Pretendard, Manrope, system-ui, sans-serif", color: '#14282A' }
       }, { responsive: true, displaylogo: false });
       return;
     }
@@ -1783,7 +1957,7 @@ Australian Government or the Department of Home Affairs.</p>
       height: 480,
       paper_bgcolor: '#FFFFFF',
       plot_bgcolor: '#FFFFFF',
-      font: { family: "'Pretendard Variable', Pretendard, Manrope, system-ui, sans-serif", color: '#2E2E2E' }
+      font: { family: "'Pretendard Variable', Pretendard, Manrope, system-ui, sans-serif", color: '#14282A' }
     }, { responsive: true, displaylogo: false });
   }
 
@@ -1793,21 +1967,30 @@ Australian Government or the Department of Home Affairs.</p>
     drawChart();
   }
 
+  if (typeof window !== 'undefined') {
+    window.__vgptGetState = function () { return JSON.parse(JSON.stringify(state)); };
+  }
+
   /* Wire up controls */
   populateSelect('');
   lodgedEl.value = state.lodged;
   renderAll();
 
   selectEl.addEventListener('change', function () {
+    if (!selectEl.value || !BY_KEY[selectEl.value]) return;
     state.visaKey = selectEl.value;
+    if (searchEl && searchEl.value) {
+      searchEl.value = '';
+      populateSelect('');
+    }
     saveState();
     renderAll();
   });
   if (searchEl) {
     searchEl.addEventListener('input', function () {
       populateSelect(searchEl.value);
-      saveState();
-      renderAll();
+      /* Do NOT call saveState() here: typing in the search filter must never overwrite active stream or localStorage */
+      renderTrackerCard();
     });
   }
   lodgedEl.addEventListener('change', function () {
@@ -2137,7 +2320,7 @@ Australian Government or the Department of Home Affairs.</p>
     if (lv) lv.textContent = en ? 'Visitors' : '방문자';
     box.title = en
       ? 'Click for daily visits & referral sources'
-      : '클릭하면 일별 방문 추이와 유입 경로를 볼 수 있어요';
+      : '클릭하면 일별 방문 추이와 유입 경로를 확인하실 수 있습니다';
     var mt = document.getElementById('vc-modal-title');
     if (mt) {
       mt.innerHTML = en
@@ -2534,7 +2717,7 @@ Australian Government or the Department of Home Affairs.</p>
       return head + '<p class="vc-ref-note">' +
         (isEn
           ? 'Anonymous referral channel buckets (Naver, Cafe, KakaoTalk, Threads, Hub, Direct) are recorded once per browser per day as new visits arrive (zero personal or URL path data stored).'
-          : '익명 유입 경로(검색·카페·카카오톡·스레드·허브 이동 등) 집계는 신규 방문부터 하루 브라우저당 1회씩 기록돼요 (세부 URL·개인정보 미수집).') +
+          : '익명 유입 경로(검색·카페·카카오톡·스레드·허브 이동 등) 집계는 신규 방문부터 하루 브라우저당 1회씩 기록됩니다 (세부 URL·개인정보 미수집).') +
         '</p>';
     }
     var rowsHtml = items.map(function (item) {
@@ -2608,8 +2791,8 @@ Australian Government or the Department of Home Affairs.</p>
     var fullDays = lastDays(30);
     var days = activeRange === 7 ? lastDays(7) : fullDays;
     var body = modal.querySelector('.vc-body');
-    var chartWaitMsg = isEn ? 'Loading daily statistics&hellip;' : '일별 통계를 불러오는 중이에요&hellip;';
-    var refWaitMsg = isEn ? 'Loading today&rsquo;s referral channels&hellip;' : '오늘 유입 채널 집계를 불러오는 중이에요&hellip;';
+    var chartWaitMsg = isEn ? 'Loading daily statistics&hellip;' : '일별 통계를 불러오는 중입니다&hellip;';
+    var refWaitMsg = isEn ? 'Loading today&rsquo;s referral channels&hellip;' : '오늘 유입 채널 집계를 불러오는 중입니다&hellip;';
     var existingRefHtml = (!refreshRefs && cachedRefMap) ? renderReferrerBox(cachedRefMap) : ('<div class="vc-ref-note">' + refWaitMsg + '</div>');
 
     /* Render toolbar, loading placeholder, referral box, and 1-click share bar IMMEDIATELY (0ms) */
@@ -2633,7 +2816,7 @@ Australian Government or the Department of Home Affairs.</p>
       .catch(function () {
         var slot = document.getElementById('vc-chart-slot');
         if (slot && !slot.querySelector('svg')) {
-          slot.textContent = uiLang() === 'en' ? 'Could not load the chart.' : '그래프를 불러오지 못했어요.';
+          slot.textContent = uiLang() === 'en' ? 'Could not load the chart.' : '그래프를 불러오지 못했습니다.';
         }
       });
   }
@@ -2647,6 +2830,7 @@ Australian Government or the Department of Home Affairs.</p>
   box.setAttribute('tabindex', '0');
   box.addEventListener('click', open);
   box.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
-})();</script>
+})();
+</script>
 </body>
 </html>
