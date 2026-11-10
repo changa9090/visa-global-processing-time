@@ -1,9 +1,9 @@
 {
   "schema_version": "visa-processing-typed-manifest-2.1",
-  "generated_at_utc": "2026-11-09 20:55 UTC",
-  "latest_date": "2026-11-10",
-  "snapshot_sha256": "c6ab7048aeeaf4e0142a12f6ef7c3924b2537b99139ec00e2a6661dd31c7a6fc",
-  "total_dates_archived": 202,
+  "generated_at_utc": "2026-11-10 20:55 UTC",
+  "latest_date": "2026-11-11",
+  "snapshot_sha256": "8b216de90fff33e725f11df5143c1f852bd85e56a33aacb0410e06fbfc34e115",
+  "total_dates_archived": 203,
   "latest_stream_count": 74,
   "official_cohort_end_dates": [
     "30 September 2026",
@@ -120,7 +120,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -30,
         "delta_p90_days": -30,
         "label_ko": "보합 · 안정 유지 국면",
@@ -160,7 +160,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 180,
         "delta_p90_days": 90,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -200,7 +200,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 180,
         "delta_p90_days": 210,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -240,7 +240,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -30,
         "delta_p90_days": 0,
         "label_ko": "보합 · 안정 유지 국면",
@@ -280,7 +280,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 30,
         "delta_p90_days": 30,
         "label_ko": "보합 · 안정 유지 국면",
@@ -320,7 +320,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 0,
         "delta_p90_days": -24,
         "label_ko": "보합 · 안정 유지 국면",
@@ -360,7 +360,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -22,
         "delta_p90_days": -6,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -406,7 +406,7 @@
       },
       "regime": {
         "code": "backlog_flush_tail",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -3,
         "delta_p90_days": 120,
         "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
@@ -455,7 +455,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 330,
         "delta_p90_days": 90,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -504,7 +504,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 330,
         "delta_p90_days": 120,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -553,7 +553,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 90,
         "delta_p90_days": 120,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -593,8 +593,8 @@
       },
       "regime": {
         "code": "accumulating_baseline",
-        "span_days": 223,
-        "obs_count": 16,
+        "span_days": 224,
+        "obs_count": 17,
         "label_ko": "신규 편입 · 추세 누적 중",
         "label_en": "Newly Added · Accumulating Baseline",
         "summary_ko": "수집 기간이 45일 미만인 신규 편입 스트림으로 최소 2회 이상 월간 발표 누적 후 추세를 판정합니다.",
@@ -632,7 +632,7 @@
       },
       "regime": {
         "code": "backlog_flush_tail",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -30,
         "delta_p90_days": 90,
         "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
@@ -681,7 +681,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -60,
         "delta_p90_days": 30,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -730,7 +730,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -30,
         "delta_p90_days": -120,
         "label_ko": "보합 · 안정 유지 국면",
@@ -779,7 +779,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 150,
         "delta_p90_days": 0,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -819,7 +819,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 150,
         "delta_p90_days": 300,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -868,7 +868,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 4,
         "delta_p90_days": 13,
         "label_ko": "보합 · 안정 유지 국면",
@@ -908,7 +908,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -41,
         "delta_p90_days": 8,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -948,7 +948,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -25,
         "delta_p90_days": 0,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -988,7 +988,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 8,
         "delta_p90_days": -25,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1028,7 +1028,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -17,
         "delta_p90_days": -30,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -1068,7 +1068,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 3,
         "delta_p90_days": 7,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1108,7 +1108,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 210,
         "delta_p90_days": 150,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -1148,7 +1148,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 10,
         "delta_p90_days": 18,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1188,7 +1188,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 1,
         "delta_p90_days": -100,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1228,7 +1228,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 3,
         "delta_p90_days": 20,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1268,7 +1268,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 0,
         "delta_p90_days": -300,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1308,7 +1308,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 59,
         "delta_p90_days": 210,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -1348,7 +1348,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -36,
         "delta_p90_days": -20,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -1388,7 +1388,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -1,
         "delta_p90_days": 17,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1428,7 +1428,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -6,
         "delta_p90_days": -16,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1468,7 +1468,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 57,
         "delta_p90_days": -3,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -1508,7 +1508,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 90,
         "delta_p90_days": 150,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1548,7 +1548,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 72,
         "delta_p90_days": 60,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -1588,7 +1588,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -39,
         "delta_p90_days": -46,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -1628,7 +1628,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 90,
         "delta_p90_days": 30,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -1677,8 +1677,8 @@
       },
       "regime": {
         "code": "accumulating_baseline",
-        "span_days": 223,
-        "obs_count": 16,
+        "span_days": 224,
+        "obs_count": 17,
         "label_ko": "신규 편입 · 추세 누적 중",
         "label_en": "Newly Added · Accumulating Baseline",
         "summary_ko": "수집 기간이 45일 미만인 신규 편입 스트림으로 최소 2회 이상 월간 발표 누적 후 추세를 판정합니다.",
@@ -1731,7 +1731,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -45,
         "delta_p90_days": 30,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -1780,7 +1780,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 51,
         "delta_p90_days": 22,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -1829,8 +1829,8 @@
       },
       "regime": {
         "code": "accumulating_baseline",
-        "span_days": 223,
-        "obs_count": 16,
+        "span_days": 224,
+        "obs_count": 17,
         "label_ko": "신규 편입 · 추세 누적 중",
         "label_en": "Newly Added · Accumulating Baseline",
         "summary_ko": "수집 기간이 45일 미만인 신규 편입 스트림으로 최소 2회 이상 월간 발표 누적 후 추세를 판정합니다.",
@@ -1877,7 +1877,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 10,
         "delta_p90_days": -19,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1928,7 +1928,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -6,
         "delta_p90_days": -30,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1979,7 +1979,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 42,
         "delta_p90_days": -690,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -2028,7 +2028,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 150,
         "delta_p90_days": 60,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -2077,7 +2077,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 90,
         "delta_p90_days": 270,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -2126,7 +2126,7 @@
       },
       "regime": {
         "code": "backlog_flush_tail",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -124,
         "delta_p90_days": 120,
         "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
@@ -2175,7 +2175,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -2,
         "delta_p90_days": 11,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2226,7 +2226,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -7,
         "delta_p90_days": 30,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2277,7 +2277,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 0,
         "delta_p90_days": -12,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2328,7 +2328,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -16,
         "delta_p90_days": -27,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -2379,7 +2379,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 4,
         "delta_p90_days": -114,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2436,7 +2436,7 @@
       },
       "regime": {
         "code": "backlog_flush_tail",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -11,
         "delta_p90_days": 126,
         "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
@@ -2487,7 +2487,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 30,
         "delta_p90_days": 30,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -2544,7 +2544,7 @@
       },
       "regime": {
         "code": "backlog_flush_tail",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -15,
         "delta_p90_days": 60,
         "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
@@ -2584,7 +2584,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 2,
         "delta_p90_days": 4,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2624,7 +2624,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -16,
         "delta_p90_days": -1,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -2664,7 +2664,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 8,
         "delta_p90_days": -4,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2704,7 +2704,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 0,
         "delta_p90_days": 0,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2744,7 +2744,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 18,
         "delta_p90_days": 44,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -2784,7 +2784,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 0,
         "delta_p90_days": 0,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2824,7 +2824,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 0,
         "delta_p90_days": 0,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2864,7 +2864,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -60,
         "delta_p90_days": 60,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -2904,7 +2904,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -30,
         "delta_p90_days": 60,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2944,7 +2944,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 90,
         "delta_p90_days": -60,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -2993,7 +2993,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 150,
         "delta_p90_days": 0,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -3033,8 +3033,8 @@
       },
       "regime": {
         "code": "accumulating_baseline",
-        "span_days": 41,
-        "obs_count": 17,
+        "span_days": 42,
+        "obs_count": 18,
         "label_ko": "신규 편입 · 추세 누적 중",
         "label_en": "Newly Added · Accumulating Baseline",
         "summary_ko": "수집 기간이 45일 미만인 신규 편입 스트림으로 최소 2회 이상 월간 발표 누적 후 추세를 판정합니다.",
@@ -3072,7 +3072,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": -30,
         "delta_p90_days": -60,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -3121,7 +3121,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 0,
         "delta_p90_days": -90,
         "label_ko": "보합 · 안정 유지 국면",
@@ -3170,7 +3170,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 120,
         "delta_p90_days": -300,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -3210,7 +3210,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 90,
         "delta_p90_days": 150,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -3250,7 +3250,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 60,
         "delta_p90_days": 120,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -3290,7 +3290,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 30,
         "delta_p90_days": 0,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -3330,7 +3330,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 223,
+        "span_days": 224,
         "delta_p50_days": 0,
         "delta_p90_days": 1,
         "label_ko": "보합 · 안정 유지 국면",
