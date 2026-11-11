@@ -1,9 +1,9 @@
 {
   "schema_version": "visa-processing-typed-manifest-2.1",
-  "generated_at_utc": "2026-11-11 13:45 UTC",
-  "latest_date": "2026-11-11",
-  "snapshot_sha256": "8b216de90fff33e725f11df5143c1f852bd85e56a33aacb0410e06fbfc34e115",
-  "total_dates_archived": 203,
+  "generated_at_utc": "2026-11-11 20:55 UTC",
+  "latest_date": "2026-11-12",
+  "snapshot_sha256": "b860ebd0cd83131cc455626175fc555bc5063fc786074db7abc3c38aa65f3653",
+  "total_dates_archived": 204,
   "latest_stream_count": 74,
   "official_cohort_end_dates": [
     "30 September 2026",
@@ -96,10 +96,10 @@
       "visa_type": "Partner",
       "visa_stream": "100",
       "days_p25": 274,
-      "days_median": 270,
+      "days_median": 274,
       "days_p75": 396,
-      "percentile_90": 540,
-      "change_days": 0,
+      "percentile_90": 548,
+      "change_days": 4,
       "raw_p25": "9 Months",
       "raw_p50": "9 Months",
       "raw_p75": "13 Months",
@@ -110,23 +110,23 @@
         265.88,
         282.12,
         396.0,
-        540.0,
-        720.0
+        548.0,
+        738.0
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.47
+        "cliff_ratio": 1.45
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
-        "delta_p50_days": -30,
-        "delta_p90_days": -30,
+        "span_days": 225,
+        "delta_p50_days": -26,
+        "delta_p90_days": -22,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(300일→270일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (300d→270d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(300일→274일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (300d→274d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -136,10 +136,10 @@
       "visa_type": "Child",
       "visa_stream": "101",
       "days_p25": 639,
-      "days_median": 870,
+      "days_median": 883,
       "days_p75": 944,
-      "percentile_90": 990,
-      "change_days": 0,
+      "percentile_90": 1004,
+      "change_days": 13,
       "raw_p25": "21 Months",
       "raw_p50": "29 Months",
       "raw_p75": "31 Months",
@@ -148,25 +148,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         639.0,
-        870.0,
+        883.0,
         944.0,
-        990.0,
-        1207.8
+        1004.0,
+        1224.88
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.09
+        "cliff_ratio": 1.07
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 180,
-        "delta_p90_days": 90,
+        "span_days": 225,
+        "delta_p50_days": 193,
+        "delta_p90_days": 104,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 690일→870일(+180일, +26%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 690d to 870d (+180d, +26%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 690일→883일(+193일, +28%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 690d to 883d (+193d, +28%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -176,10 +176,10 @@
       "visa_type": "Adoption",
       "visa_stream": "102",
       "days_p25": 183,
-      "days_median": 300,
+      "days_median": 304,
       "days_p75": 396,
-      "percentile_90": 570,
-      "change_days": 0,
+      "percentile_90": 578,
+      "change_days": 4,
       "raw_p25": "6 Months",
       "raw_p50": "10 Months",
       "raw_p75": "13 Months",
@@ -188,25 +188,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         183.0,
-        300.0,
+        304.0,
         396.0,
-        570.0,
-        787.5
+        578.0,
+        805.5
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.32
+        "cliff_ratio": 1.3
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 180,
-        "delta_p90_days": 210,
+        "span_days": 225,
+        "delta_p50_days": 184,
+        "delta_p90_days": 218,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 120일→300일(+180일, +150%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 120d to 300d (+180d, +150%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 120일→304일(+184일, +153%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 120d to 304d (+184d, +153%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -216,10 +216,10 @@
       "visa_type": "Orphan Relative",
       "visa_stream": "117",
       "days_p25": 1583,
-      "days_median": 2250,
+      "days_median": 2283,
       "days_p75": 2587,
-      "percentile_90": 2880,
-      "change_days": 0,
+      "percentile_90": 2922,
+      "change_days": 33,
       "raw_p25": "52 Months",
       "raw_p50": "75 Months",
       "raw_p75": "85 Months",
@@ -228,25 +228,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         1583.0,
-        2250.0,
+        2283.0,
         2587.0,
-        2880.0,
-        3513.6
+        2922.0,
+        3564.84
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.15
+        "cliff_ratio": 1.13
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
-        "delta_p50_days": -30,
-        "delta_p90_days": 0,
+        "span_days": 225,
+        "delta_p50_days": 3,
+        "delta_p90_days": 42,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(2280일→2250일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (2280d→2250d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(2280일→2283일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (2280d→2283d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -256,10 +256,10 @@
       "visa_type": "Business Talent",
       "visa_stream": "Significant Business History",
       "days_p25": 1857,
-      "days_median": 2010,
+      "days_median": 2039,
       "days_p75": 2100,
-      "percentile_90": 2100,
-      "change_days": 0,
+      "percentile_90": 2131,
+      "change_days": 29,
       "raw_p25": "61 Months",
       "raw_p50": "67 Months",
       "raw_p75": "69 Months",
@@ -268,25 +268,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         1857.0,
-        2010.0,
-        2091.88,
-        2108.12,
-        2571.91
+        2039.0,
+        2100.0,
+        2131.0,
+        2599.82
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.04
+        "cliff_ratio": 1.03
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
-        "delta_p50_days": 30,
-        "delta_p90_days": 30,
+        "span_days": 225,
+        "delta_p50_days": 59,
+        "delta_p90_days": 61,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(1980일→2010일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (1980d→2010d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(1980일→2039일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (1980d→2039d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -320,7 +320,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 0,
         "delta_p90_days": -24,
         "label_ko": "보합 · 안정 유지 국면",
@@ -360,7 +360,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -22,
         "delta_p90_days": -6,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -378,7 +378,7 @@
       "days_p25": 20,
       "days_median": 44,
       "days_p75": 365,
-      "percentile_90": 390,
+      "percentile_90": 396,
       "change_days": 0,
       "raw_p25": "20 Days",
       "raw_p50": "44 Days",
@@ -390,8 +390,8 @@
         20.0,
         44.0,
         365.0,
-        390.0,
-        475.8
+        396.0,
+        483.12
       ],
       "two_tier": {
         "is_two_tier": true,
@@ -401,18 +401,18 @@
         "second_tier_days": 365,
         "label_ko": "이원화 심사 절벽 감지 (50% 44일 → 75% 365일, 8.3배 점프)",
         "label_en": "Two-Tier Processing Cliff (50% 44d → 75% 365d, 8.3x jump)",
-        "note_ko": "우선심사·완비 서류 트랙은 44일 이내에 빠르게 마무리되지만 44일을 넘기면 일반 대기·보완(s56) 구간(365~390일)으로 넘어가는 양봉형 구조입니다.",
-        "note_en": "Priority/decision-ready files clear within 44d, whereas applications passing 44d enter the standard/RFI cohort targeting 365–390 days."
+        "note_ko": "우선심사·완비 서류 트랙은 44일 이내에 빠르게 마무리되지만 44일을 넘기면 일반 대기·보완(s56) 구간(365~396일)으로 넘어가는 양봉형 구조입니다.",
+        "note_en": "Priority/decision-ready files clear within 44d, whereas applications passing 44d enter the standard/RFI cohort targeting 365–396 days."
       },
       "regime": {
         "code": "backlog_flush_tail",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -3,
-        "delta_p90_days": 120,
+        "delta_p90_days": 126,
         "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
         "label_en": "Legacy Backlog Flush · 90% Tail Widening",
-        "summary_ko": "2026-04-01 기준 50% 중앙값(47일→44일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(270일→390일)만 넓어진 국면입니다.",
-        "summary_en": "Since 2026-04-01, median stayed steady/faster (47d→44d) while 90th pct widened (270d→390d) as older backlog files were finalised."
+        "summary_ko": "2026-04-01 기준 50% 중앙값(47일→44일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(270일→396일)만 넓어진 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (47d→44d) while 90th pct widened (270d→396d) as older backlog files were finalised."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -431,10 +431,10 @@
       "visa_type": "Employer Nomination",
       "visa_stream": "Direct Entry Pathway",
       "days_p25": 487,
-      "days_median": 660,
+      "days_median": 670,
       "days_p75": 700,
-      "percentile_90": 720,
-      "change_days": 0,
+      "percentile_90": 730,
+      "change_days": 10,
       "raw_p25": "16 Months",
       "raw_p50": "22 Months",
       "raw_p75": "23 Months",
@@ -443,25 +443,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         487.0,
-        660.0,
+        670.0,
         700.0,
-        720.0,
-        878.4
+        730.0,
+        890.6
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.06
+        "cliff_ratio": 1.04
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 330,
-        "delta_p90_days": 90,
+        "span_days": 225,
+        "delta_p50_days": 340,
+        "delta_p90_days": 100,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 330일→660일(+330일, +100%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 330d to 660d (+330d, +100%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 330일→670일(+340일, +103%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 330d to 670d (+340d, +103%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -480,10 +480,10 @@
       "visa_type": "Employer Nomination",
       "visa_stream": "Transition Pathway",
       "days_p25": 517,
-      "days_median": 660,
+      "days_median": 670,
       "days_p75": 700,
-      "percentile_90": 720,
-      "change_days": 0,
+      "percentile_90": 730,
+      "change_days": 10,
       "raw_p25": "17 Months",
       "raw_p50": "22 Months",
       "raw_p75": "23 Months",
@@ -492,25 +492,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         517.0,
-        660.0,
+        670.0,
         700.0,
-        720.0,
-        878.4
+        730.0,
+        890.6
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.06
+        "cliff_ratio": 1.04
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 330,
-        "delta_p90_days": 120,
+        "span_days": 225,
+        "delta_p50_days": 340,
+        "delta_p90_days": 130,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 330일→660일(+330일, +100%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 330d to 660d (+330d, +100%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 330일→670일(+340일, +103%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 330d to 670d (+340d, +103%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -529,10 +529,10 @@
       "visa_type": "Business Innovation",
       "visa_stream": "Business Innovation Extension",
       "days_p25": 152,
-      "days_median": 210,
+      "days_median": 213,
       "days_p75": 304,
-      "percentile_90": 330,
-      "change_days": 0,
+      "percentile_90": 335,
+      "change_days": 3,
       "raw_p25": "5 Months",
       "raw_p50": "7 Months",
       "raw_p75": "10 Months",
@@ -541,25 +541,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         152.0,
-        210.0,
+        213.0,
         304.0,
-        330.0,
-        402.6
+        335.0,
+        408.7
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.45
+        "cliff_ratio": 1.43
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 90,
-        "delta_p90_days": 120,
+        "span_days": 225,
+        "delta_p50_days": 93,
+        "delta_p90_days": 125,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 120일→210일(+90일, +75%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 120d to 210d (+90d, +75%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 120일→213일(+93일, +78%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 120d to 213d (+93d, +78%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -569,10 +569,10 @@
       "visa_type": "Skilled Independent",
       "visa_stream": "New Zealand",
       "days_p25": 1491,
-      "days_median": 1680,
+      "days_median": 1704,
       "days_p75": 1796,
-      "percentile_90": 1860,
-      "change_days": 0,
+      "percentile_90": 1887,
+      "change_days": 24,
       "raw_p25": "49 Months",
       "raw_p50": "56 Months",
       "raw_p75": "59 Months",
@@ -581,20 +581,20 @@
       "official_end_date": "30 September 2026",
       "knots": [
         1491.0,
-        1680.0,
+        1704.0,
         1796.0,
-        1860.0,
-        2269.2
+        1887.0,
+        2302.14
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.07
+        "cliff_ratio": 1.05
       },
       "regime": {
         "code": "accumulating_baseline",
-        "span_days": 224,
-        "obs_count": 17,
+        "span_days": 225,
+        "obs_count": 18,
         "label_ko": "신규 편입 · 추세 누적 중",
         "label_en": "Newly Added · Accumulating Baseline",
         "summary_ko": "수집 기간이 45일 미만인 신규 편입 스트림으로 최소 2회 이상 월간 발표 누적 후 추세를 판정합니다.",
@@ -610,7 +610,7 @@
       "days_p25": 60,
       "days_median": 90,
       "days_p75": 122,
-      "percentile_90": 270,
+      "percentile_90": 274,
       "change_days": 0,
       "raw_p25": "60 Days",
       "raw_p50": "90 Days",
@@ -622,8 +622,8 @@
         60.0,
         90.0,
         122.0,
-        270.0,
-        455.0
+        274.0,
+        464.0
       ],
       "two_tier": {
         "is_two_tier": false,
@@ -632,13 +632,13 @@
       },
       "regime": {
         "code": "backlog_flush_tail",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -30,
-        "delta_p90_days": 90,
+        "delta_p90_days": 94,
         "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
         "label_en": "Legacy Backlog Flush · 90% Tail Widening",
-        "summary_ko": "2026-04-01 기준 50% 중앙값(120일→90일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(180일→270일)만 넓어진 국면입니다.",
-        "summary_en": "Since 2026-04-01, median stayed steady/faster (120d→90d) while 90th pct widened (180d→270d) as older backlog files were finalised."
+        "summary_ko": "2026-04-01 기준 50% 중앙값(120일→90일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(180일→274일)만 넓어진 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (120d→90d) while 90th pct widened (180d→274d) as older backlog files were finalised."
       },
       "supply_pressure": {
         "pressure_level": "moderate",
@@ -657,10 +657,10 @@
       "visa_type": "Skilled Nominated",
       "visa_stream": "190",
       "days_p25": 122,
-      "days_median": 240,
+      "days_median": 244,
       "days_p75": 426,
-      "percentile_90": 480,
-      "change_days": 0,
+      "percentile_90": 487,
+      "change_days": 4,
       "raw_p25": "4 Months",
       "raw_p50": "8 Months",
       "raw_p75": "14 Months",
@@ -669,25 +669,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         122.0,
-        240.0,
+        244.0,
         426.0,
-        480.0,
-        585.6
+        487.0,
+        594.14
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.77
+        "cliff_ratio": 1.75
       },
       "regime": {
         "code": "clearing",
-        "span_days": 224,
-        "delta_p50_days": -60,
-        "delta_p90_days": 30,
+        "span_days": 225,
+        "delta_p50_days": -56,
+        "delta_p90_days": 37,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 300일→240일(-60일, -20%)로 뚜렷하게 줄고 있습니다.",
-        "summary_en": "Median processing speed improved from 300d to 240d (-60d, -20%) since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 300일→244일(-56일, -19%)로 뚜렷하게 줄고 있습니다.",
+        "summary_en": "Median processing speed improved from 300d to 244d (-56d, -19%) since 2026-04-01."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -706,10 +706,10 @@
       "visa_type": "Skilled Regional",
       "visa_stream": "Regional Provisional Visa",
       "days_p25": 213,
-      "days_median": 210,
+      "days_median": 213,
       "days_p75": 244,
-      "percentile_90": 330,
-      "change_days": 0,
+      "percentile_90": 335,
+      "change_days": 3,
       "raw_p25": "7 Months",
       "raw_p50": "7 Months",
       "raw_p75": "8 Months",
@@ -720,23 +720,23 @@
         204.88,
         221.12,
         244.0,
-        330.0,
-        437.5
+        335.0,
+        448.75
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.16
+        "cliff_ratio": 1.15
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
-        "delta_p50_days": -30,
-        "delta_p90_days": -120,
+        "span_days": 225,
+        "delta_p50_days": -27,
+        "delta_p90_days": -115,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(240일→210일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (240d→210d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(240일→213일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (240d→213d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": {
         "pressure_level": "moderate",
@@ -755,10 +755,10 @@
       "visa_type": "Prospective Marriage",
       "visa_stream": "300",
       "days_p25": 457,
-      "days_median": 540,
+      "days_median": 548,
       "days_p75": 670,
-      "percentile_90": 930,
-      "change_days": 0,
+      "percentile_90": 944,
+      "change_days": 8,
       "raw_p25": "15 Months",
       "raw_p50": "18 Months",
       "raw_p75": "22 Months",
@@ -767,25 +767,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         457.0,
-        540.0,
+        548.0,
         670.0,
-        930.0,
-        1255.0
+        944.0,
+        1286.5
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.24
+        "cliff_ratio": 1.22
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 150,
-        "delta_p90_days": 0,
+        "span_days": 225,
+        "delta_p50_days": 158,
+        "delta_p90_days": 14,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 390일→540일(+150일, +38%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 390d to 540d (+150d, +38%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 390일→548일(+158일, +41%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 390d to 548d (+158d, +41%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -795,10 +795,10 @@
       "visa_type": "Partner",
       "visa_stream": "309",
       "days_p25": 517,
-      "days_median": 630,
+      "days_median": 639,
       "days_p75": 822,
-      "percentile_90": 1050,
-      "change_days": 0,
+      "percentile_90": 1065,
+      "change_days": 9,
       "raw_p25": "17 Months",
       "raw_p50": "21 Months",
       "raw_p75": "27 Months",
@@ -807,25 +807,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         517.0,
-        630.0,
+        639.0,
         822.0,
-        1050.0,
-        1335.0
+        1065.0,
+        1368.75
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.3
+        "cliff_ratio": 1.29
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 150,
-        "delta_p90_days": 300,
+        "span_days": 225,
+        "delta_p50_days": 159,
+        "delta_p90_days": 315,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 480일→630일(+150일, +31%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 480d to 630d (+150d, +31%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 480일→639일(+159일, +33%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 480d to 639d (+159d, +33%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -868,7 +868,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 4,
         "delta_p90_days": 13,
         "label_ko": "보합 · 안정 유지 국면",
@@ -886,7 +886,7 @@
       "days_p25": 4,
       "days_median": 14,
       "days_p75": 41,
-      "percentile_90": 90,
+      "percentile_90": 91,
       "change_days": 0,
       "raw_p25": "4 Days",
       "raw_p50": "14 Days",
@@ -898,8 +898,8 @@
         4.0,
         14.0,
         41.0,
-        90.0,
-        151.25
+        91.0,
+        153.5
       ],
       "two_tier": {
         "is_two_tier": false,
@@ -908,9 +908,9 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -41,
-        "delta_p90_days": 8,
+        "delta_p90_days": 9,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 55일→14일(-41일, -75%)로 뚜렷하게 줄고 있습니다.",
@@ -926,7 +926,7 @@
       "days_p25": 13,
       "days_median": 42,
       "days_p75": 85,
-      "percentile_90": 120,
+      "percentile_90": 122,
       "change_days": 0,
       "raw_p25": "13 Days",
       "raw_p50": "42 Days",
@@ -938,8 +938,8 @@
         13.0,
         42.0,
         85.0,
-        120.0,
-        163.75
+        122.0,
+        168.25
       ],
       "two_tier": {
         "is_two_tier": false,
@@ -948,9 +948,9 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -25,
-        "delta_p90_days": 0,
+        "delta_p90_days": 2,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 67일→42일(-25일, -37%)로 뚜렷하게 줄고 있습니다.",
@@ -988,7 +988,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 8,
         "delta_p90_days": -25,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1006,7 +1006,7 @@
       "days_p25": 55,
       "days_median": 69,
       "days_p75": 91,
-      "percentile_90": 90,
+      "percentile_90": 91,
       "change_days": 0,
       "raw_p25": "55 Days",
       "raw_p50": "69 Days",
@@ -1028,9 +1028,9 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -17,
-        "delta_p90_days": -30,
+        "delta_p90_days": -29,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 86일→69일(-17일, -20%)로 뚜렷하게 줄고 있습니다.",
@@ -1068,7 +1068,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 3,
         "delta_p90_days": 7,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1084,10 +1084,10 @@
       "visa_type": "Training",
       "visa_stream": "407",
       "days_p25": 304,
-      "days_median": 450,
+      "days_median": 457,
       "days_p75": 548,
-      "percentile_90": 570,
-      "change_days": 0,
+      "percentile_90": 578,
+      "change_days": 7,
       "raw_p25": "10 Months",
       "raw_p50": "15 Months",
       "raw_p75": "18 Months",
@@ -1096,25 +1096,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         304.0,
-        450.0,
+        457.0,
         548.0,
-        570.0,
-        695.4
+        578.0,
+        705.16
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.22
+        "cliff_ratio": 1.2
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 210,
-        "delta_p90_days": 150,
+        "span_days": 225,
+        "delta_p50_days": 217,
+        "delta_p90_days": 158,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 240일→450일(+210일, +88%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 240d to 450d (+210d, +88%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 240일→457일(+217일, +90%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 240d to 457d (+217d, +90%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -1148,7 +1148,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 10,
         "delta_p90_days": 18,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1188,7 +1188,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 1,
         "delta_p90_days": -100,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1228,7 +1228,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 3,
         "delta_p90_days": 20,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1244,10 +1244,10 @@
       "visa_type": "Temporary Activity",
       "visa_stream": "Religious Work",
       "days_p25": 122,
-      "days_median": 120,
+      "days_median": 122,
       "days_p75": 244,
-      "percentile_90": 300,
-      "change_days": 0,
+      "percentile_90": 304,
+      "change_days": 2,
       "raw_p25": "4 Months",
       "raw_p50": "4 Months",
       "raw_p75": "8 Months",
@@ -1258,23 +1258,23 @@
         113.88,
         130.12,
         244.0,
-        300.0,
-        370.0
+        304.0,
+        379.0
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 2.03
+        "cliff_ratio": 2.0
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
-        "delta_p50_days": 0,
-        "delta_p90_days": -300,
+        "span_days": 225,
+        "delta_p50_days": 2,
+        "delta_p90_days": -296,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(120일→120일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (120d→120d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(120일→122일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (120d→122d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -1286,7 +1286,7 @@
       "days_p25": 44,
       "days_median": 77,
       "days_p75": 91,
-      "percentile_90": 420,
+      "percentile_90": 426,
       "change_days": 0,
       "raw_p25": "44 Days",
       "raw_p50": "77 Days",
@@ -1298,8 +1298,8 @@
         44.0,
         77.0,
         91.0,
-        420.0,
-        831.25
+        426.0,
+        844.75
       ],
       "two_tier": {
         "is_two_tier": false,
@@ -1308,9 +1308,9 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 59,
-        "delta_p90_days": 210,
+        "delta_p90_days": 216,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 18일→77일(+59일, +328%)로 길어지며 심사 적체가 쌓이고 있습니다.",
@@ -1348,7 +1348,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -36,
         "delta_p90_days": -20,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -1388,7 +1388,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -1,
         "delta_p90_days": 17,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1428,7 +1428,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -6,
         "delta_p90_days": -16,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1468,7 +1468,7 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 57,
         "delta_p90_days": -3,
         "label_ko": "전반적 병목·지연 확대 국면",
@@ -1484,10 +1484,10 @@
       "visa_type": "Dependent Child",
       "visa_stream": "445",
       "days_p25": 730,
-      "days_median": 780,
+      "days_median": 791,
       "days_p75": 944,
-      "percentile_90": 990,
-      "change_days": 0,
+      "percentile_90": 1004,
+      "change_days": 11,
       "raw_p25": "24 Months",
       "raw_p50": "26 Months",
       "raw_p75": "31 Months",
@@ -1496,25 +1496,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         730.0,
-        780.0,
+        791.0,
         944.0,
-        990.0,
-        1207.8
+        1004.0,
+        1224.88
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.21
+        "cliff_ratio": 1.19
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
-        "delta_p50_days": 90,
-        "delta_p90_days": 150,
+        "span_days": 225,
+        "delta_p50_days": 101,
+        "delta_p90_days": 164,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(690일→780일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (690d→780d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(690일→791일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (690d→791d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -1524,10 +1524,10 @@
       "visa_type": "New Zealand Citizen Family Relationship",
       "visa_stream": "461",
       "days_p25": 122,
-      "days_median": 150,
+      "days_median": 152,
       "days_p75": 183,
-      "percentile_90": 210,
-      "change_days": 0,
+      "percentile_90": 213,
+      "change_days": 2,
       "raw_p25": "4 Months",
       "raw_p50": "5 Months",
       "raw_p75": "6 Months",
@@ -1536,25 +1536,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         122.0,
-        150.0,
+        152.0,
         183.0,
-        210.0,
-        256.2
+        213.0,
+        259.86
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.22
+        "cliff_ratio": 1.2
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 72,
-        "delta_p90_days": 60,
+        "span_days": 225,
+        "delta_p50_days": 74,
+        "delta_p90_days": 63,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 78일→150일(+72일, +92%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 78d to 150d (+72d, +92%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 78일→152일(+74일, +95%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 78d to 152d (+74d, +95%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -1588,7 +1588,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -39,
         "delta_p90_days": -46,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -1604,10 +1604,10 @@
       "visa_type": "Skills In Demand",
       "visa_stream": "Core Skills",
       "days_p25": 72,
-      "days_median": 180,
+      "days_median": 183,
       "days_p75": 244,
-      "percentile_90": 270,
-      "change_days": 0,
+      "percentile_90": 274,
+      "change_days": 3,
       "raw_p25": "72 Days",
       "raw_p50": "6 Months",
       "raw_p75": "8 Months",
@@ -1616,25 +1616,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         72.0,
-        180.0,
+        183.0,
         244.0,
-        270.0,
-        329.4
+        274.0,
+        334.28
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.36
+        "cliff_ratio": 1.33
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 90,
-        "delta_p90_days": 30,
+        "span_days": 225,
+        "delta_p50_days": 93,
+        "delta_p90_days": 34,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 90일→180일(+90일, +100%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 90d to 180d (+90d, +100%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 90일→183일(+93일, +103%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 90d to 183d (+93d, +103%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -1653,10 +1653,10 @@
       "visa_type": "Skills In Demand",
       "visa_stream": "Labour Agreement",
       "days_p25": 91,
-      "days_median": 180,
+      "days_median": 183,
       "days_p75": 213,
-      "percentile_90": 300,
-      "change_days": 0,
+      "percentile_90": 304,
+      "change_days": 3,
       "raw_p25": "3 Months",
       "raw_p50": "6 Months",
       "raw_p75": "7 Months",
@@ -1665,20 +1665,20 @@
       "official_end_date": "30 September 2026",
       "knots": [
         91.0,
-        180.0,
+        183.0,
         213.0,
-        300.0,
-        408.75
+        304.0,
+        417.75
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.18
+        "cliff_ratio": 1.16
       },
       "regime": {
         "code": "accumulating_baseline",
-        "span_days": 224,
-        "obs_count": 17,
+        "span_days": 225,
+        "obs_count": 18,
         "label_ko": "신규 편입 · 추세 누적 중",
         "label_en": "Newly Added · Accumulating Baseline",
         "summary_ko": "수집 기간이 45일 미만인 신규 편입 스트림으로 최소 2회 이상 월간 발표 누적 후 추세를 판정합니다.",
@@ -1703,7 +1703,7 @@
       "days_p25": 1,
       "days_median": 36,
       "days_p75": 213,
-      "percentile_90": 270,
+      "percentile_90": 274,
       "change_days": 0,
       "raw_p25": "1 Day",
       "raw_p50": "36 Days",
@@ -1715,8 +1715,8 @@
         1.0,
         36.0,
         213.0,
-        270.0,
-        341.25
+        274.0,
+        350.25
       ],
       "two_tier": {
         "is_two_tier": true,
@@ -1726,14 +1726,14 @@
         "second_tier_days": 213,
         "label_ko": "이원화 심사 절벽 감지 (50% 36일 → 75% 213일, 5.9배 점프)",
         "label_en": "Two-Tier Processing Cliff (50% 36d → 75% 213d, 5.9x jump)",
-        "note_ko": "우선심사·완비 서류 트랙은 36일 이내에 빠르게 마무리되지만 36일을 넘기면 일반 대기·보완(s56) 구간(213~270일)으로 넘어가는 양봉형 구조입니다.",
-        "note_en": "Priority/decision-ready files clear within 36d, whereas applications passing 36d enter the standard/RFI cohort targeting 213–270 days."
+        "note_ko": "우선심사·완비 서류 트랙은 36일 이내에 빠르게 마무리되지만 36일을 넘기면 일반 대기·보완(s56) 구간(213~274일)으로 넘어가는 양봉형 구조입니다.",
+        "note_en": "Priority/decision-ready files clear within 36d, whereas applications passing 36d enter the standard/RFI cohort targeting 213–274 days."
       },
       "regime": {
         "code": "clearing",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -45,
-        "delta_p90_days": 30,
+        "delta_p90_days": 34,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 81일→36일(-45일, -56%)로 뚜렷하게 줄고 있습니다.",
@@ -1758,7 +1758,7 @@
       "days_p25": 40,
       "days_median": 59,
       "days_p75": 72,
-      "percentile_90": 90,
+      "percentile_90": 91,
       "change_days": 0,
       "raw_p25": "40 Days",
       "raw_p50": "59 Days",
@@ -1770,8 +1770,8 @@
         40.0,
         59.0,
         72.0,
-        90.0,
-        112.5
+        91.0,
+        114.75
       ],
       "two_tier": {
         "is_two_tier": false,
@@ -1780,9 +1780,9 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 51,
-        "delta_p90_days": 22,
+        "delta_p90_days": 23,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 8일→59일(+51일, +638%)로 길어지며 심사 적체가 쌓이고 있습니다.",
@@ -1807,7 +1807,7 @@
       "days_p25": 7,
       "days_median": 15,
       "days_p75": 56,
-      "percentile_90": 120,
+      "percentile_90": 122,
       "change_days": 0,
       "raw_p25": "7 Days",
       "raw_p50": "15 Days",
@@ -1819,8 +1819,8 @@
         7.0,
         15.0,
         56.0,
-        120.0,
-        200.0
+        122.0,
+        204.5
       ],
       "two_tier": {
         "is_two_tier": false,
@@ -1829,8 +1829,8 @@
       },
       "regime": {
         "code": "accumulating_baseline",
-        "span_days": 224,
-        "obs_count": 17,
+        "span_days": 225,
+        "obs_count": 18,
         "label_ko": "신규 편입 · 추세 누적 중",
         "label_en": "Newly Added · Accumulating Baseline",
         "summary_ko": "수집 기간이 45일 미만인 신규 편입 스트림으로 최소 2회 이상 월간 발표 누적 후 추세를 판정합니다.",
@@ -1877,7 +1877,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 10,
         "delta_p90_days": -19,
         "label_ko": "보합 · 안정 유지 국면",
@@ -1906,7 +1906,7 @@
       "days_p25": 21,
       "days_median": 52,
       "days_p75": 91,
-      "percentile_90": 120,
+      "percentile_90": 122,
       "change_days": 0,
       "raw_p25": "21 Days",
       "raw_p50": "52 Days",
@@ -1918,8 +1918,8 @@
         21.0,
         52.0,
         91.0,
-        120.0,
-        156.25
+        122.0,
+        160.75
       ],
       "two_tier": {
         "is_two_tier": false,
@@ -1928,9 +1928,9 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -6,
-        "delta_p90_days": -30,
+        "delta_p90_days": -28,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값(58일→52일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
@@ -1955,10 +1955,10 @@
       "visa_type": "Skilled Work Regional",
       "visa_stream": "Family Sponsored Regional",
       "days_p25": 71,
-      "days_median": 120,
+      "days_median": 122,
       "days_p75": 152,
-      "percentile_90": 210,
-      "change_days": 0,
+      "percentile_90": 213,
+      "change_days": 2,
       "raw_p25": "71 Days",
       "raw_p50": "4 Months",
       "raw_p75": "5 Months",
@@ -1967,25 +1967,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         71.0,
-        120.0,
+        122.0,
         152.0,
-        210.0,
-        282.5
+        213.0,
+        289.25
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.27
+        "cliff_ratio": 1.25
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 42,
-        "delta_p90_days": -690,
+        "span_days": 225,
+        "delta_p50_days": 44,
+        "delta_p90_days": -687,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 78일→120일(+42일, +54%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 78d to 120d (+42d, +54%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 78일→122일(+44일, +56%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 78d to 122d (+44d, +56%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -2004,10 +2004,10 @@
       "visa_type": "Skilled Work Regional",
       "visa_stream": "State/Territory Government Nominated Regional",
       "days_p25": 183,
-      "days_median": 510,
+      "days_median": 517,
       "days_p75": 578,
-      "percentile_90": 900,
-      "change_days": 0,
+      "percentile_90": 913,
+      "change_days": 7,
       "raw_p25": "6 Months",
       "raw_p50": "17 Months",
       "raw_p75": "19 Months",
@@ -2016,25 +2016,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         183.0,
-        510.0,
+        517.0,
         578.0,
-        900.0,
-        1302.5
+        913.0,
+        1331.75
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.13
+        "cliff_ratio": 1.12
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 150,
-        "delta_p90_days": 60,
+        "span_days": 225,
+        "delta_p50_days": 157,
+        "delta_p90_days": 73,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 360일→510일(+150일, +42%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 360d to 510d (+150d, +42%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 360일→517일(+157일, +44%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 360d to 517d (+157d, +44%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -2053,10 +2053,10 @@
       "visa_type": "Skilled Employer Sponsored Regional",
       "visa_stream": "Employer Sponsored",
       "days_p25": 152,
-      "days_median": 300,
+      "days_median": 304,
       "days_p75": 396,
-      "percentile_90": 600,
-      "change_days": 0,
+      "percentile_90": 609,
+      "change_days": 4,
       "raw_p25": "5 Months",
       "raw_p50": "10 Months",
       "raw_p75": "13 Months",
@@ -2065,25 +2065,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         152.0,
-        300.0,
+        304.0,
         396.0,
-        600.0,
-        855.0
+        609.0,
+        875.25
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.32
+        "cliff_ratio": 1.3
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 90,
-        "delta_p90_days": 270,
+        "span_days": 225,
+        "delta_p50_days": 94,
+        "delta_p90_days": 279,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 210일→300일(+90일, +43%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 210d to 300d (+90d, +43%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 210일→304일(+94일, +45%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 210d to 304d (+94d, +45%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "moderate",
@@ -2104,7 +2104,7 @@
       "days_p25": 70,
       "days_median": 86,
       "days_p75": 122,
-      "percentile_90": 390,
+      "percentile_90": 396,
       "change_days": 0,
       "raw_p25": "70 Days",
       "raw_p50": "86 Days",
@@ -2116,8 +2116,8 @@
         70.0,
         86.0,
         122.0,
-        390.0,
-        725.0
+        396.0,
+        738.5
       ],
       "two_tier": {
         "is_two_tier": false,
@@ -2126,13 +2126,13 @@
       },
       "regime": {
         "code": "backlog_flush_tail",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -124,
-        "delta_p90_days": 120,
+        "delta_p90_days": 126,
         "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
         "label_en": "Legacy Backlog Flush · 90% Tail Widening",
-        "summary_ko": "2026-04-01 기준 50% 중앙값(210일→86일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(270일→390일)만 넓어진 국면입니다.",
-        "summary_en": "Since 2026-04-01, median stayed steady/faster (210d→86d) while 90th pct widened (270d→390d) as older backlog files were finalised."
+        "summary_ko": "2026-04-01 기준 50% 중앙값(210일→86일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(270일→396일)만 넓어진 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (210d→86d) while 90th pct widened (270d→396d) as older backlog files were finalised."
       },
       "supply_pressure": {
         "pressure_level": "moderate",
@@ -2175,7 +2175,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -2,
         "delta_p90_days": 11,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2204,7 +2204,7 @@
       "days_p25": 7,
       "days_median": 25,
       "days_p75": 61,
-      "percentile_90": 210,
+      "percentile_90": 213,
       "change_days": 0,
       "raw_p25": "7 Days",
       "raw_p50": "25 Days",
@@ -2216,8 +2216,8 @@
         7.0,
         25.0,
         61.0,
-        210.0,
-        396.25
+        213.0,
+        403.0
       ],
       "two_tier": {
         "is_two_tier": false,
@@ -2226,9 +2226,9 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -7,
-        "delta_p90_days": 30,
+        "delta_p90_days": 33,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값(32일→25일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
@@ -2277,7 +2277,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 0,
         "delta_p90_days": -12,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2328,7 +2328,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -16,
         "delta_p90_days": -27,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -2379,7 +2379,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 4,
         "delta_p90_days": -114,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2408,7 +2408,7 @@
       "days_p25": 10,
       "days_median": 24,
       "days_p75": 183,
-      "percentile_90": 210,
+      "percentile_90": 213,
       "change_days": 0,
       "raw_p25": "10 Days",
       "raw_p50": "24 Days",
@@ -2420,8 +2420,8 @@
         10.0,
         24.0,
         183.0,
-        210.0,
-        256.2
+        213.0,
+        259.86
       ],
       "two_tier": {
         "is_two_tier": true,
@@ -2431,18 +2431,18 @@
         "second_tier_days": 183,
         "label_ko": "이원화 심사 절벽 감지 (50% 24일 → 75% 183일, 7.6배 점프)",
         "label_en": "Two-Tier Processing Cliff (50% 24d → 75% 183d, 7.6x jump)",
-        "note_ko": "우선심사·완비 서류 트랙은 24일 이내에 빠르게 마무리되지만 24일을 넘기면 일반 대기·보완(s56) 구간(183~210일)으로 넘어가는 양봉형 구조입니다.",
-        "note_en": "Priority/decision-ready files clear within 24d, whereas applications passing 24d enter the standard/RFI cohort targeting 183–210 days."
+        "note_ko": "우선심사·완비 서류 트랙은 24일 이내에 빠르게 마무리되지만 24일을 넘기면 일반 대기·보완(s56) 구간(183~213일)으로 넘어가는 양봉형 구조입니다.",
+        "note_en": "Priority/decision-ready files clear within 24d, whereas applications passing 24d enter the standard/RFI cohort targeting 183–213 days."
       },
       "regime": {
         "code": "backlog_flush_tail",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -11,
-        "delta_p90_days": 126,
+        "delta_p90_days": 129,
         "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
         "label_en": "Legacy Backlog Flush · 90% Tail Widening",
-        "summary_ko": "2026-04-01 기준 50% 중앙값(35일→24일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(84일→210일)만 넓어진 국면입니다.",
-        "summary_en": "Since 2026-04-01, median stayed steady/faster (35d→24d) while 90th pct widened (84d→210d) as older backlog files were finalised."
+        "summary_ko": "2026-04-01 기준 50% 중앙값(35일→24일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(84일→213일)만 넓어진 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (35d→24d) while 90th pct widened (84d→213d) as older backlog files were finalised."
       },
       "supply_pressure": {
         "pressure_level": "balanced",
@@ -2463,10 +2463,10 @@
       "visa_type": "Student",
       "visa_stream": "Vocational Education and Training Sector",
       "days_p25": 28,
-      "days_median": 120,
+      "days_median": 122,
       "days_p75": 213,
-      "percentile_90": 210,
-      "change_days": 0,
+      "percentile_90": 213,
+      "change_days": 2,
       "raw_p25": "28 Days",
       "raw_p50": "4 Months",
       "raw_p75": "7 Months",
@@ -2475,7 +2475,7 @@
       "official_end_date": "30 September 2026",
       "knots": [
         28.0,
-        120.0,
+        122.0,
         204.88,
         221.12,
         269.77
@@ -2483,17 +2483,17 @@
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.77
+        "cliff_ratio": 1.75
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 30,
-        "delta_p90_days": 30,
+        "span_days": 225,
+        "delta_p50_days": 32,
+        "delta_p90_days": 33,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 90일→120일(+30일, +33%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 90d to 120d (+30d, +33%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 90일→122일(+32일, +36%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 90d to 122d (+32d, +36%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -2516,7 +2516,7 @@
       "days_p25": 13,
       "days_median": 34,
       "days_p75": 213,
-      "percentile_90": 240,
+      "percentile_90": 244,
       "change_days": 0,
       "raw_p25": "13 Days",
       "raw_p50": "34 Days",
@@ -2528,8 +2528,8 @@
         13.0,
         34.0,
         213.0,
-        240.0,
-        292.8
+        244.0,
+        297.68
       ],
       "two_tier": {
         "is_two_tier": true,
@@ -2539,18 +2539,18 @@
         "second_tier_days": 213,
         "label_ko": "이원화 심사 절벽 감지 (50% 34일 → 75% 213일, 6.3배 점프)",
         "label_en": "Two-Tier Processing Cliff (50% 34d → 75% 213d, 6.3x jump)",
-        "note_ko": "우선심사·완비 서류 트랙은 34일 이내에 빠르게 마무리되지만 34일을 넘기면 일반 대기·보완(s56) 구간(213~240일)으로 넘어가는 양봉형 구조입니다.",
-        "note_en": "Priority/decision-ready files clear within 34d, whereas applications passing 34d enter the standard/RFI cohort targeting 213–240 days."
+        "note_ko": "우선심사·완비 서류 트랙은 34일 이내에 빠르게 마무리되지만 34일을 넘기면 일반 대기·보완(s56) 구간(213~244일)으로 넘어가는 양봉형 구조입니다.",
+        "note_en": "Priority/decision-ready files clear within 34d, whereas applications passing 34d enter the standard/RFI cohort targeting 213–244 days."
       },
       "regime": {
         "code": "backlog_flush_tail",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -15,
-        "delta_p90_days": 60,
+        "delta_p90_days": 64,
         "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
         "label_en": "Legacy Backlog Flush · 90% Tail Widening",
-        "summary_ko": "2026-04-01 기준 50% 중앙값(49일→34일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(180일→240일)만 넓어진 국면입니다.",
-        "summary_en": "Since 2026-04-01, median stayed steady/faster (49d→34d) while 90th pct widened (180d→240d) as older backlog files were finalised."
+        "summary_ko": "2026-04-01 기준 50% 중앙값(49일→34일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(180일→244일)만 넓어진 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (49d→34d) while 90th pct widened (180d→244d) as older backlog files were finalised."
       },
       "supply_pressure": null
     },
@@ -2584,7 +2584,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 2,
         "delta_p90_days": 4,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2624,7 +2624,7 @@
       },
       "regime": {
         "code": "clearing",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": -16,
         "delta_p90_days": -1,
         "label_ko": "전반적 심사 단축(해소) 국면",
@@ -2664,7 +2664,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 8,
         "delta_p90_days": -4,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2704,7 +2704,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 0,
         "delta_p90_days": 0,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2722,7 +2722,7 @@
       "days_p25": 3,
       "days_median": 21,
       "days_p75": 64,
-      "percentile_90": 90,
+      "percentile_90": 91,
       "change_days": 0,
       "raw_p25": "3 Days",
       "raw_p50": "21 Days",
@@ -2734,8 +2734,8 @@
         3.0,
         21.0,
         64.0,
-        90.0,
-        122.5
+        91.0,
+        124.75
       ],
       "two_tier": {
         "is_two_tier": false,
@@ -2744,9 +2744,9 @@
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 18,
-        "delta_p90_days": 44,
+        "delta_p90_days": 45,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 3일→21일(+18일, +600%)로 길어지며 심사 적체가 쌓이고 있습니다.",
@@ -2784,7 +2784,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 0,
         "delta_p90_days": 0,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2824,7 +2824,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 0,
         "delta_p90_days": 0,
         "label_ko": "보합 · 안정 유지 국면",
@@ -2840,10 +2840,10 @@
       "visa_type": "Partner",
       "visa_stream": "801",
       "days_p25": 91,
-      "days_median": 180,
+      "days_median": 183,
       "days_p75": 335,
-      "percentile_90": 570,
-      "change_days": 0,
+      "percentile_90": 578,
+      "change_days": 3,
       "raw_p25": "3 Months",
       "raw_p50": "6 Months",
       "raw_p75": "11 Months",
@@ -2852,25 +2852,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         91.0,
-        180.0,
+        183.0,
         335.0,
-        570.0,
-        863.75
+        578.0,
+        881.75
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.86
+        "cliff_ratio": 1.83
       },
       "regime": {
         "code": "clearing",
-        "span_days": 224,
-        "delta_p50_days": -60,
-        "delta_p90_days": 60,
+        "span_days": 225,
+        "delta_p50_days": -57,
+        "delta_p90_days": 68,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 240일→180일(-60일, -25%)로 뚜렷하게 줄고 있습니다.",
-        "summary_en": "Median processing speed improved from 240d to 180d (-60d, -25%) since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 240일→183일(-57일, -24%)로 뚜렷하게 줄고 있습니다.",
+        "summary_en": "Median processing speed improved from 240d to 183d (-57d, -24%) since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -2880,10 +2880,10 @@
       "visa_type": "Child",
       "visa_stream": "802",
       "days_p25": 548,
-      "days_median": 630,
+      "days_median": 639,
       "days_p75": 700,
-      "percentile_90": 930,
-      "change_days": 0,
+      "percentile_90": 944,
+      "change_days": 9,
       "raw_p25": "18 Months",
       "raw_p50": "21 Months",
       "raw_p75": "23 Months",
@@ -2892,25 +2892,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         548.0,
-        630.0,
+        639.0,
         700.0,
-        930.0,
-        1217.5
+        944.0,
+        1249.0
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.11
+        "cliff_ratio": 1.1
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
-        "delta_p50_days": -30,
-        "delta_p90_days": 60,
+        "span_days": 225,
+        "delta_p50_days": -21,
+        "delta_p90_days": 74,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(660일→630일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (660d→630d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(660일→639일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (660d→639d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -2920,10 +2920,10 @@
       "visa_type": "Partner",
       "visa_stream": "820",
       "days_p25": 578,
-      "days_median": 630,
+      "days_median": 639,
       "days_p75": 791,
-      "percentile_90": 900,
-      "change_days": 0,
+      "percentile_90": 913,
+      "change_days": 9,
       "raw_p25": "19 Months",
       "raw_p50": "21 Months",
       "raw_p75": "26 Months",
@@ -2932,25 +2932,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         578.0,
-        630.0,
+        639.0,
         791.0,
-        900.0,
-        1098.0
+        913.0,
+        1113.86
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.26
+        "cliff_ratio": 1.24
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 90,
-        "delta_p90_days": -60,
+        "span_days": 225,
+        "delta_p50_days": 99,
+        "delta_p90_days": -47,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 540일→630일(+90일, +17%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 540d to 630d (+90d, +17%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 540일→639일(+99일, +18%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 540d to 639d (+99d, +18%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -2969,10 +2969,10 @@
       "visa_type": "Global Talent",
       "visa_stream": "Distinguished Talent / Global Talent (Independent)",
       "days_p25": 396,
-      "days_median": 480,
+      "days_median": 487,
       "days_p75": 578,
-      "percentile_90": 720,
-      "change_days": 0,
+      "percentile_90": 730,
+      "change_days": 7,
       "raw_p25": "13 Months",
       "raw_p50": "16 Months",
       "raw_p75": "19 Months",
@@ -2981,25 +2981,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         396.0,
-        480.0,
+        487.0,
         578.0,
-        720.0,
-        897.5
+        730.0,
+        920.0
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.2
+        "cliff_ratio": 1.19
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 150,
-        "delta_p90_days": 0,
+        "span_days": 225,
+        "delta_p50_days": 157,
+        "delta_p90_days": 10,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 330일→480일(+150일, +45%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 330d to 480d (+150d, +45%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 330일→487일(+157일, +48%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 330d to 487d (+157d, +48%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -3011,7 +3011,7 @@
       "days_p25": 56,
       "days_median": 78,
       "days_p75": 122,
-      "percentile_90": 210,
+      "percentile_90": 213,
       "change_days": 0,
       "raw_p25": "56 Days",
       "raw_p50": "78 Days",
@@ -3023,8 +3023,8 @@
         56.0,
         78.0,
         122.0,
-        210.0,
-        320.0
+        213.0,
+        326.75
       ],
       "two_tier": {
         "is_two_tier": false,
@@ -3033,8 +3033,8 @@
       },
       "regime": {
         "code": "accumulating_baseline",
-        "span_days": 42,
-        "obs_count": 18,
+        "span_days": 43,
+        "obs_count": 19,
         "label_ko": "신규 편입 · 추세 누적 중",
         "label_en": "Newly Added · Accumulating Baseline",
         "summary_ko": "수집 기간이 45일 미만인 신규 편입 스트림으로 최소 2회 이상 월간 발표 누적 후 추세를 판정합니다.",
@@ -3048,10 +3048,10 @@
       "visa_type": "Sponsored Parent",
       "visa_stream": "Sponsorship",
       "days_p25": 122,
-      "days_median": 120,
+      "days_median": 122,
       "days_p75": 122,
-      "percentile_90": 120,
-      "change_days": 0,
+      "percentile_90": 122,
+      "change_days": 2,
       "raw_p25": "4 months",
       "raw_p50": "4 months",
       "raw_p75": "4 months",
@@ -3068,17 +3068,17 @@
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.02
+        "cliff_ratio": 1.0
       },
       "regime": {
         "code": "clearing",
-        "span_days": 224,
-        "delta_p50_days": -30,
-        "delta_p90_days": -60,
+        "span_days": 225,
+        "delta_p50_days": -28,
+        "delta_p90_days": -58,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 150일→120일(-30일, -20%)로 뚜렷하게 줄고 있습니다.",
-        "summary_en": "Median processing speed improved from 150d to 120d (-30d, -20%) since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 150일→122일(-28일, -19%)로 뚜렷하게 줄고 있습니다.",
+        "summary_en": "Median processing speed improved from 150d to 122d (-28d, -19%) since 2026-04-01."
       },
       "supply_pressure": {
         "pressure_level": "moderate",
@@ -3097,10 +3097,10 @@
       "visa_type": "Sponsored Parent",
       "visa_stream": "Visa Application",
       "days_p25": 183,
-      "days_median": 210,
+      "days_median": 213,
       "days_p75": 244,
-      "percentile_90": 270,
-      "change_days": 0,
+      "percentile_90": 274,
+      "change_days": 3,
       "raw_p25": "6 Months",
       "raw_p50": "7 Months",
       "raw_p75": "8 Months",
@@ -3109,25 +3109,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         183.0,
-        210.0,
+        213.0,
         244.0,
-        270.0,
-        329.4
+        274.0,
+        334.28
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.16
+        "cliff_ratio": 1.15
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
-        "delta_p50_days": 0,
-        "delta_p90_days": -90,
+        "span_days": 225,
+        "delta_p50_days": 3,
+        "delta_p90_days": -86,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(210일→210일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (210d→210d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(210일→213일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (210d→213d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": {
         "pressure_level": "moderate",
@@ -3146,10 +3146,10 @@
       "visa_type": "Skilled Regional",
       "visa_stream": "887",
       "days_p25": 274,
-      "days_median": 300,
+      "days_median": 304,
       "days_p75": 304,
-      "percentile_90": 330,
-      "change_days": 0,
+      "percentile_90": 335,
+      "change_days": 4,
       "raw_p25": "9 Months",
       "raw_p50": "10 Months",
       "raw_p75": "10 Months",
@@ -3158,25 +3158,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         274.0,
-        300.0,
-        304.0,
-        330.0,
-        402.6
+        295.88,
+        312.12,
+        335.0,
+        408.7
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.01
+        "cliff_ratio": 1.0
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 120,
-        "delta_p90_days": -300,
+        "span_days": 225,
+        "delta_p50_days": 124,
+        "delta_p90_days": -295,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 180일→300일(+120일, +67%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 180d to 300d (+120d, +67%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 180일→304일(+124일, +69%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 180d to 304d (+124d, +69%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -3186,10 +3186,10 @@
       "visa_type": "Business Innovation & Investment",
       "visa_stream": "Business Innovation",
       "days_p25": 274,
-      "days_median": 270,
+      "days_median": 274,
       "days_p75": 304,
-      "percentile_90": 330,
-      "change_days": 0,
+      "percentile_90": 335,
+      "change_days": 4,
       "raw_p25": "9 Months",
       "raw_p50": "9 Months",
       "raw_p75": "10 Months",
@@ -3200,23 +3200,23 @@
         265.88,
         282.12,
         304.0,
-        330.0,
-        402.6
+        335.0,
+        408.7
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.13
+        "cliff_ratio": 1.11
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 90,
-        "delta_p90_days": 150,
+        "span_days": 225,
+        "delta_p50_days": 94,
+        "delta_p90_days": 155,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 180일→270일(+90일, +50%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 180d to 270d (+90d, +50%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 180일→274일(+94일, +52%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 180d to 274d (+94d, +52%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -3226,10 +3226,10 @@
       "visa_type": "Business Innovation & Investment",
       "visa_stream": "Investor",
       "days_p25": 122,
-      "days_median": 180,
+      "days_median": 183,
       "days_p75": 244,
-      "percentile_90": 270,
-      "change_days": 0,
+      "percentile_90": 274,
+      "change_days": 3,
       "raw_p25": "4 Months",
       "raw_p50": "6 Months",
       "raw_p75": "8 Months",
@@ -3238,25 +3238,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         122.0,
-        180.0,
+        183.0,
         244.0,
-        270.0,
-        329.4
+        274.0,
+        334.28
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.36
+        "cliff_ratio": 1.33
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 60,
-        "delta_p90_days": 120,
+        "span_days": 225,
+        "delta_p50_days": 63,
+        "delta_p90_days": 124,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 120일→180일(+60일, +50%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 120d to 180d (+60d, +50%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 120일→183일(+63일, +52%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 120d to 183d (+63d, +52%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -3266,10 +3266,10 @@
       "visa_type": "Business Innovation & Investment",
       "visa_stream": "Significant Investor",
       "days_p25": 91,
-      "days_median": 120,
+      "days_median": 122,
       "days_p75": 152,
-      "percentile_90": 180,
-      "change_days": 0,
+      "percentile_90": 183,
+      "change_days": 2,
       "raw_p25": "3 Months",
       "raw_p50": "4 Months",
       "raw_p75": "5 Months",
@@ -3278,25 +3278,25 @@
       "official_end_date": "30 September 2026",
       "knots": [
         91.0,
-        120.0,
+        122.0,
         152.0,
-        180.0,
-        219.6
+        183.0,
+        223.26
       ],
       "two_tier": {
         "is_two_tier": false,
         "cliff_type": null,
-        "cliff_ratio": 1.27
+        "cliff_ratio": 1.25
       },
       "regime": {
         "code": "slowing",
-        "span_days": 224,
-        "delta_p50_days": 30,
-        "delta_p90_days": 0,
+        "span_days": 225,
+        "delta_p50_days": 32,
+        "delta_p90_days": 3,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 90일→120일(+30일, +33%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 90d to 120d (+30d, +33%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 90일→122일(+32일, +36%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 90d to 122d (+32d, +36%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -3330,7 +3330,7 @@
       },
       "regime": {
         "code": "stable",
-        "span_days": 224,
+        "span_days": 225,
         "delta_p50_days": 0,
         "delta_p90_days": 1,
         "label_ko": "보합 · 안정 유지 국면",
