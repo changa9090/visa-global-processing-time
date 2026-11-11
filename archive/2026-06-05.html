@@ -785,6 +785,12 @@ Australian Government or the Department of Home Affairs.</p>
     document.querySelectorAll('[data-ko-placeholder][data-en-placeholder]').forEach(function (el) {
       el.setAttribute('placeholder', el.getAttribute(clean === 'en' ? 'data-en-placeholder' : 'data-ko-placeholder'));
     });
+    document.querySelectorAll('.subnav a[href], a.product[href]').forEach(function (a) {
+      var raw = a.getAttribute('href') || '';
+      if (!raw || raw.indexOf('http') === 0 || raw.indexOf('#') === 0) return;
+      var base = raw.split('?')[0];
+      a.setAttribute('href', clean === 'en' ? (base + '?lang=en') : base);
+    });
     if (syncUrl && typeof history !== 'undefined' && history.replaceState) {
       try {
         var nextParams = new URLSearchParams(window.location.search);

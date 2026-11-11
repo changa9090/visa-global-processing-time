@@ -3,7 +3,7 @@
   "as_of": "2026-11-11",
   "k_anonymity_floor": 5,
   "curve_floor": 10,
-  "total_verified_cases": 0,
+  "total_verified_cases": 2,
   "public_cohort_count": 0,
   "streams": {
     "100|Partner|100": {
@@ -164,7 +164,7 @@
       "as_of": "2026-11-11",
       "k_suppressed": true,
       "k_min_threshold": 5,
-      "verified_n": 0,
+      "verified_n": 1,
       "completed_n": 0,
       "crowd_p50_days": null,
       "crowd_p90_days": null,
@@ -623,7 +623,7 @@
       "as_of": "2026-11-11",
       "k_suppressed": true,
       "k_min_threshold": 5,
-      "verified_n": 0,
+      "verified_n": 1,
       "completed_n": 0,
       "crowd_p50_days": null,
       "crowd_p90_days": null,
