@@ -1599,8 +1599,8 @@ Australian Government or the Department of Home Affairs.</p>
     var headerOpt = '';
     if (!currentInMatched) {
       var promptTxt = lang === 'ko'
-        ? ('검색 결과 ' + matched.length + '건 — 변경하려면 아래에서 비자 스트림을 선택하십시오')
-        : (matched.length + ' match(es) — select a stream below to switch');
+        ? ('검색 결과 ' + matched.length + '건 · 변경하려면 아래에서 비자 스트림을 선택하십시오')
+        : (matched.length + ' match(es) · select a stream below to switch');
       headerOpt = '<option value="" disabled selected>' + esc(promptTxt) + '</option>';
     }
     selectEl.innerHTML = headerOpt + matched.map(function (s) {
@@ -1619,8 +1619,8 @@ Australian Government or the Department of Home Affairs.</p>
       var previewItems = matched.slice(0, 8).map(function (s) {
         var isCur = s.key === current ? ' is-current' : '';
         var shortLbl = lang === 'ko'
-          ? (s.subclass + ' · ' + s.visa_ko + ' — ' + s.stream_ko)
-          : (s.subclass + ' · ' + s.visa_type + ' — ' + s.visa_stream);
+          ? (s.subclass + ' · ' + s.visa_ko + ' · ' + s.stream_ko)
+          : (s.subclass + ' · ' + s.visa_type + ' · ' + s.visa_stream);
         return '<button type="button" class="stream-filter-item' + isCur + '" data-pick-stream="' + esc(s.key) + '">' + esc(shortLbl) + '</button>';
       }).join('');
       filterResEl.innerHTML = '<span class="stream-filter-hint">' + esc(hintTxt) + '</span><div class="stream-filter-list">' + previewItems + '</div>';
