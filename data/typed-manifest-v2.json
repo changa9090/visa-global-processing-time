@@ -1,6 +1,6 @@
 {
   "schema_version": "visa-processing-typed-manifest-2.1",
-  "generated_at_utc": "2026-11-17 20:55 UTC",
+  "generated_at_utc": "2026-11-17 22:47 UTC",
   "latest_date": "2026-11-18",
   "snapshot_sha256": "78deb3b5d6657f6bb64de4adeed8d9097eaca5534c44c877f2319ecec84316bd",
   "total_dates_archived": 210,
@@ -121,12 +121,12 @@
       "regime": {
         "code": "stable",
         "span_days": 231,
-        "delta_p50_days": -26,
-        "delta_p90_days": -22,
+        "delta_p50_days": -30,
+        "delta_p90_days": -30,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(300일→274일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (300d→274d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(304일→274일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (304d→274d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -161,12 +161,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 193,
-        "delta_p90_days": 104,
+        "delta_p50_days": 183,
+        "delta_p90_days": 91,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 690일→883일(+193일, +28%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 690d to 883d (+193d, +28%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 700일→883일(+183일, +26%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 700d to 883d (+183d, +26%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -201,12 +201,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 184,
-        "delta_p90_days": 218,
+        "delta_p50_days": 182,
+        "delta_p90_days": 213,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 120일→304일(+184일, +153%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 120d to 304d (+184d, +153%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 122일→304일(+182일, +149%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 122d to 304d (+182d, +149%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -241,12 +241,12 @@
       "regime": {
         "code": "stable",
         "span_days": 231,
-        "delta_p50_days": 3,
-        "delta_p90_days": 42,
+        "delta_p50_days": -30,
+        "delta_p90_days": 0,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(2280일→2283일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (2280d→2283d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(2313일→2283일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (2313d→2283d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -281,12 +281,12 @@
       "regime": {
         "code": "stable",
         "span_days": 231,
-        "delta_p50_days": 59,
-        "delta_p90_days": 61,
+        "delta_p50_days": 30,
+        "delta_p90_days": 31,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(1980일→2039일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (1980d→2039d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(2009일→2039일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (2009d→2039d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -408,11 +408,11 @@
         "code": "backlog_flush_tail",
         "span_days": 231,
         "delta_p50_days": -3,
-        "delta_p90_days": 126,
+        "delta_p90_days": 122,
         "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
         "label_en": "Legacy Backlog Flush · 90% Tail Widening",
-        "summary_ko": "2026-04-01 기준 50% 중앙값(47일→44일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(270일→396일)만 넓어진 국면입니다.",
-        "summary_en": "Since 2026-04-01, median stayed steady/faster (47d→44d) while 90th pct widened (270d→396d) as older backlog files were finalised."
+        "summary_ko": "2026-04-01 기준 50% 중앙값(47일→44일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(274일→396일)만 넓어진 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (47d→44d) while 90th pct widened (274d→396d) as older backlog files were finalised."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -456,12 +456,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 340,
-        "delta_p90_days": 100,
+        "delta_p50_days": 335,
+        "delta_p90_days": 91,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 330일→670일(+340일, +103%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 330d to 670d (+340d, +103%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 335일→670일(+335일, +100%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 335d to 670d (+335d, +100%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -505,12 +505,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 340,
-        "delta_p90_days": 130,
+        "delta_p50_days": 335,
+        "delta_p90_days": 121,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 330일→670일(+340일, +103%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 330d to 670d (+340d, +103%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 335일→670일(+335일, +100%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 335d to 670d (+335d, +100%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -554,12 +554,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 93,
-        "delta_p90_days": 125,
+        "delta_p50_days": 91,
+        "delta_p90_days": 122,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 120일→213일(+93일, +78%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 120d to 213d (+93d, +78%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 122일→213일(+91일, +75%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 122d to 213d (+91d, +75%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -594,12 +594,12 @@
       "regime": {
         "code": "stable",
         "span_days": 231,
-        "delta_p50_days": 174,
-        "delta_p90_days": 87,
+        "delta_p50_days": 152,
+        "delta_p90_days": 61,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(1530일→1704일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (1530d→1704d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(1552일→1704일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (1552d→1704d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -634,12 +634,12 @@
       "regime": {
         "code": "backlog_flush_tail",
         "span_days": 231,
-        "delta_p50_days": -30,
-        "delta_p90_days": 94,
+        "delta_p50_days": -32,
+        "delta_p90_days": 91,
         "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
         "label_en": "Legacy Backlog Flush · 90% Tail Widening",
-        "summary_ko": "2026-04-01 기준 50% 중앙값(120일→90일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(180일→274일)만 넓어진 국면입니다.",
-        "summary_en": "Since 2026-04-01, median stayed steady/faster (120d→90d) while 90th pct widened (180d→274d) as older backlog files were finalised."
+        "summary_ko": "2026-04-01 기준 50% 중앙값(122일→90일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(183일→274일)만 넓어진 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (122d→90d) while 90th pct widened (183d→274d) as older backlog files were finalised."
       },
       "supply_pressure": {
         "pressure_level": "moderate",
@@ -683,12 +683,12 @@
       "regime": {
         "code": "clearing",
         "span_days": 231,
-        "delta_p50_days": -56,
-        "delta_p90_days": 37,
+        "delta_p50_days": -60,
+        "delta_p90_days": 30,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 300일→244일(-56일, -19%)로 뚜렷하게 줄고 있습니다.",
-        "summary_en": "Median processing speed improved from 300d to 244d (-56d, -19%) since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 304일→244일(-60일, -20%)로 뚜렷하게 줄고 있습니다.",
+        "summary_en": "Median processing speed improved from 304d to 244d (-60d, -20%) since 2026-04-01."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -732,12 +732,12 @@
       "regime": {
         "code": "stable",
         "span_days": 231,
-        "delta_p50_days": -27,
-        "delta_p90_days": -115,
+        "delta_p50_days": -31,
+        "delta_p90_days": -122,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(240일→213일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (240d→213d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(244일→213일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (244d→213d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": {
         "pressure_level": "moderate",
@@ -781,12 +781,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 158,
-        "delta_p90_days": 14,
+        "delta_p50_days": 152,
+        "delta_p90_days": 0,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 390일→548일(+158일, +41%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 390d to 548d (+158d, +41%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 396일→548일(+152일, +38%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 396d to 548d (+152d, +38%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -821,12 +821,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 159,
-        "delta_p90_days": 315,
+        "delta_p50_days": 152,
+        "delta_p90_days": 304,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 480일→639일(+159일, +33%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 480d to 639d (+159d, +33%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 487일→639일(+152일, +31%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 487d to 639d (+152d, +31%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -951,7 +951,7 @@
         "code": "clearing",
         "span_days": 231,
         "delta_p50_days": -25,
-        "delta_p90_days": 2,
+        "delta_p90_days": 0,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 67일→42일(-25일, -37%)로 뚜렷하게 줄고 있습니다.",
@@ -1031,7 +1031,7 @@
         "code": "clearing",
         "span_days": 231,
         "delta_p50_days": -17,
-        "delta_p90_days": -29,
+        "delta_p90_days": -31,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 86일→69일(-17일, -20%)로 뚜렷하게 줄고 있습니다.",
@@ -1110,12 +1110,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 217,
-        "delta_p90_days": 158,
+        "delta_p50_days": 213,
+        "delta_p90_days": 152,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 240일→457일(+217일, +90%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 240d to 457d (+217d, +90%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 244일→457일(+213일, +87%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 244d to 457d (+213d, +87%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -1191,7 +1191,7 @@
         "code": "stable",
         "span_days": 231,
         "delta_p50_days": 1,
-        "delta_p90_days": -100,
+        "delta_p90_days": -102,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값(28일→29일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
@@ -1270,12 +1270,12 @@
       "regime": {
         "code": "stable",
         "span_days": 231,
-        "delta_p50_days": 2,
-        "delta_p90_days": -296,
+        "delta_p50_days": 0,
+        "delta_p90_days": -305,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(120일→122일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (120d→122d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(122일→122일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (122d→122d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -1311,7 +1311,7 @@
         "code": "slowing",
         "span_days": 231,
         "delta_p50_days": 59,
-        "delta_p90_days": 216,
+        "delta_p90_days": 213,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 18일→77일(+59일, +328%)로 길어지며 심사 적체가 쌓이고 있습니다.",
@@ -1510,12 +1510,12 @@
       "regime": {
         "code": "stable",
         "span_days": 231,
-        "delta_p50_days": 101,
-        "delta_p90_days": 164,
+        "delta_p50_days": 91,
+        "delta_p90_days": 152,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(690일→791일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (690d→791d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(700일→791일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (700d→791d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -1551,7 +1551,7 @@
         "code": "slowing",
         "span_days": 231,
         "delta_p50_days": 74,
-        "delta_p90_days": 63,
+        "delta_p90_days": 61,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 78일→152일(+74일, +95%)로 길어지며 심사 적체가 쌓이고 있습니다.",
@@ -1591,7 +1591,7 @@
         "code": "clearing",
         "span_days": 231,
         "delta_p50_days": -39,
-        "delta_p90_days": -46,
+        "delta_p90_days": -48,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 46일→7일(-39일, -85%)로 뚜렷하게 줄고 있습니다.",
@@ -1630,12 +1630,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 93,
-        "delta_p90_days": 34,
+        "delta_p50_days": 92,
+        "delta_p90_days": 30,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 90일→183일(+93일, +103%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 90d to 183d (+93d, +103%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 91일→183일(+92일, +101%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 91d to 183d (+92d, +101%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -1679,12 +1679,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 93,
-        "delta_p90_days": 94,
+        "delta_p50_days": 92,
+        "delta_p90_days": 91,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 90일→183일(+93일, +103%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 90d to 183d (+93d, +103%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 91일→183일(+92일, +101%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 91d to 183d (+92d, +101%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -1735,7 +1735,7 @@
         "code": "clearing",
         "span_days": 231,
         "delta_p50_days": -45,
-        "delta_p90_days": 34,
+        "delta_p90_days": 30,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 81일→36일(-45일, -56%)로 뚜렷하게 줄고 있습니다.",
@@ -1833,7 +1833,7 @@
         "code": "clearing",
         "span_days": 231,
         "delta_p50_days": -45,
-        "delta_p90_days": -28,
+        "delta_p90_days": -30,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 60일→15일(-45일, -75%)로 뚜렷하게 줄고 있습니다.",
@@ -1933,7 +1933,7 @@
         "code": "stable",
         "span_days": 231,
         "delta_p50_days": -6,
-        "delta_p90_days": -28,
+        "delta_p90_days": -30,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값(58일→52일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
@@ -1984,7 +1984,7 @@
         "code": "slowing",
         "span_days": 231,
         "delta_p50_days": 44,
-        "delta_p90_days": -687,
+        "delta_p90_days": -700,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 78일→122일(+44일, +56%)로 길어지며 심사 적체가 쌓이고 있습니다.",
@@ -2032,12 +2032,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 157,
-        "delta_p90_days": 73,
+        "delta_p50_days": 152,
+        "delta_p90_days": 61,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 360일→517일(+157일, +44%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 360d to 517d (+157d, +44%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 365일→517일(+152일, +42%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 365d to 517d (+152d, +42%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -2081,12 +2081,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 94,
-        "delta_p90_days": 279,
+        "delta_p50_days": 91,
+        "delta_p90_days": 274,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 210일→304일(+94일, +45%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 210d to 304d (+94d, +45%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 213일→304일(+91일, +43%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 213d to 304d (+91d, +43%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "moderate",
@@ -2130,12 +2130,12 @@
       "regime": {
         "code": "backlog_flush_tail",
         "span_days": 231,
-        "delta_p50_days": -124,
-        "delta_p90_days": 126,
+        "delta_p50_days": -127,
+        "delta_p90_days": 122,
         "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
         "label_en": "Legacy Backlog Flush · 90% Tail Widening",
-        "summary_ko": "2026-04-01 기준 50% 중앙값(210일→86일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(270일→396일)만 넓어진 국면입니다.",
-        "summary_en": "Since 2026-04-01, median stayed steady/faster (210d→86d) while 90th pct widened (270d→396d) as older backlog files were finalised."
+        "summary_ko": "2026-04-01 기준 50% 중앙값(213일→86일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(274일→396일)만 넓어진 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (213d→86d) while 90th pct widened (274d→396d) as older backlog files were finalised."
       },
       "supply_pressure": {
         "pressure_level": "moderate",
@@ -2231,7 +2231,7 @@
         "code": "stable",
         "span_days": 231,
         "delta_p50_days": -7,
-        "delta_p90_days": 33,
+        "delta_p90_days": 30,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값(32일→25일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
@@ -2384,7 +2384,7 @@
         "code": "stable",
         "span_days": 231,
         "delta_p50_days": 4,
-        "delta_p90_days": -114,
+        "delta_p90_days": -117,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값(21일→25일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
@@ -2491,12 +2491,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 32,
-        "delta_p90_days": 33,
+        "delta_p50_days": 31,
+        "delta_p90_days": 30,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 90일→122일(+32일, +36%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 90d to 122d (+32d, +36%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 91일→122일(+31일, +34%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 91d to 122d (+31d, +34%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -2549,11 +2549,11 @@
         "code": "backlog_flush_tail",
         "span_days": 231,
         "delta_p50_days": -15,
-        "delta_p90_days": 64,
+        "delta_p90_days": 61,
         "label_ko": "장기적체 일괄해소 · 90% 꼬리 확대",
         "label_en": "Legacy Backlog Flush · 90% Tail Widening",
-        "summary_ko": "2026-04-01 기준 50% 중앙값(49일→34일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(180일→244일)만 넓어진 국면입니다.",
-        "summary_en": "Since 2026-04-01, median stayed steady/faster (49d→34d) while 90th pct widened (180d→244d) as older backlog files were finalised."
+        "summary_ko": "2026-04-01 기준 50% 중앙값(49일→34일)은 안정·단축된 반면 묵은 장기 미결건 처리분이 반영되면서 90% 상한(183일→244일)만 넓어진 국면입니다.",
+        "summary_en": "Since 2026-04-01, median stayed steady/faster (49d→34d) while 90th pct widened (183d→244d) as older backlog files were finalised."
       },
       "supply_pressure": null
     },
@@ -2629,7 +2629,7 @@
         "code": "clearing",
         "span_days": 231,
         "delta_p50_days": -16,
-        "delta_p90_days": -1,
+        "delta_p90_days": -2,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
         "summary_ko": "2026-04-01 이후 50% 중앙값이 56일→40일(-16일, -29%)로 뚜렷하게 줄고 있습니다.",
@@ -2868,12 +2868,12 @@
       "regime": {
         "code": "clearing",
         "span_days": 231,
-        "delta_p50_days": -57,
-        "delta_p90_days": 68,
+        "delta_p50_days": -61,
+        "delta_p90_days": 61,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 240일→183일(-57일, -24%)로 뚜렷하게 줄고 있습니다.",
-        "summary_en": "Median processing speed improved from 240d to 183d (-57d, -24%) since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 244일→183일(-61일, -25%)로 뚜렷하게 줄고 있습니다.",
+        "summary_en": "Median processing speed improved from 244d to 183d (-61d, -25%) since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -2908,12 +2908,12 @@
       "regime": {
         "code": "stable",
         "span_days": 231,
-        "delta_p50_days": -21,
-        "delta_p90_days": 74,
+        "delta_p50_days": -31,
+        "delta_p90_days": 61,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(660일→639일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (660d→639d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(670일→639일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (670d→639d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": null
     },
@@ -2948,12 +2948,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 99,
-        "delta_p90_days": -47,
+        "delta_p50_days": 91,
+        "delta_p90_days": -61,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 540일→639일(+99일, +18%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 540d to 639d (+99d, +18%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 548일→639일(+91일, +17%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 548d to 639d (+91d, +17%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": {
         "pressure_level": "high",
@@ -2997,12 +2997,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 157,
-        "delta_p90_days": 10,
+        "delta_p50_days": 152,
+        "delta_p90_days": 0,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 330일→487일(+157일, +48%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 330d to 487d (+157d, +48%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 335일→487일(+152일, +45%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 335d to 487d (+152d, +45%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -3037,12 +3037,12 @@
       "regime": {
         "code": "clearing",
         "span_days": 49,
-        "delta_p50_days": -102,
-        "delta_p90_days": 3,
+        "delta_p50_days": -105,
+        "delta_p90_days": 0,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
-        "summary_ko": "2026-09-30 이후 50% 중앙값이 180일→78일(-102일, -57%)로 뚜렷하게 줄고 있습니다.",
-        "summary_en": "Median processing speed improved from 180d to 78d (-102d, -57%) since 2026-09-30."
+        "summary_ko": "2026-09-30 이후 50% 중앙값이 183일→78일(-105일, -57%)로 뚜렷하게 줄고 있습니다.",
+        "summary_en": "Median processing speed improved from 183d to 78d (-105d, -57%) since 2026-09-30."
       },
       "supply_pressure": null
     },
@@ -3077,12 +3077,12 @@
       "regime": {
         "code": "clearing",
         "span_days": 231,
-        "delta_p50_days": -28,
-        "delta_p90_days": -58,
+        "delta_p50_days": -30,
+        "delta_p90_days": -61,
         "label_ko": "전반적 심사 단축(해소) 국면",
         "label_en": "Accelerating / Clearing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 150일→122일(-28일, -19%)로 뚜렷하게 줄고 있습니다.",
-        "summary_en": "Median processing speed improved from 150d to 122d (-28d, -19%) since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 152일→122일(-30일, -20%)로 뚜렷하게 줄고 있습니다.",
+        "summary_en": "Median processing speed improved from 152d to 122d (-30d, -20%) since 2026-04-01."
       },
       "supply_pressure": {
         "pressure_level": "moderate",
@@ -3126,12 +3126,12 @@
       "regime": {
         "code": "stable",
         "span_days": 231,
-        "delta_p50_days": 3,
-        "delta_p90_days": -86,
+        "delta_p50_days": 0,
+        "delta_p90_days": -91,
         "label_ko": "보합 · 안정 유지 국면",
         "label_en": "Stable Processing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값(210일→213일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
-        "summary_en": "Median processing time (210d→213d) has remained within a stable corridor since 2026-04-01."
+        "summary_ko": "2026-04-01 이후 50% 중앙값(213일→213일)이 큰 추세 이탈 없이 안정 범위를 유지하고 있습니다.",
+        "summary_en": "Median processing time (213d→213d) has remained within a stable corridor since 2026-04-01."
       },
       "supply_pressure": {
         "pressure_level": "moderate",
@@ -3175,12 +3175,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 124,
-        "delta_p90_days": -295,
+        "delta_p50_days": 121,
+        "delta_p90_days": -304,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 180일→304일(+124일, +69%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 180d to 304d (+124d, +69%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 183일→304일(+121일, +66%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 183d to 304d (+121d, +66%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -3215,12 +3215,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 94,
-        "delta_p90_days": 155,
+        "delta_p50_days": 91,
+        "delta_p90_days": 152,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 180일→274일(+94일, +52%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 180d to 274d (+94d, +52%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 183일→274일(+91일, +50%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 183d to 274d (+91d, +50%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -3255,12 +3255,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 63,
-        "delta_p90_days": 124,
+        "delta_p50_days": 61,
+        "delta_p90_days": 122,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 120일→183일(+63일, +52%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 120d to 183d (+63d, +52%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 122일→183일(+61일, +50%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 122d to 183d (+61d, +50%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
@@ -3295,12 +3295,12 @@
       "regime": {
         "code": "slowing",
         "span_days": 231,
-        "delta_p50_days": 32,
-        "delta_p90_days": 3,
+        "delta_p50_days": 31,
+        "delta_p90_days": 0,
         "label_ko": "전반적 병목·지연 확대 국면",
         "label_en": "Broad Bottleneck / Slowing Regime",
-        "summary_ko": "2026-04-01 이후 50% 중앙값이 90일→122일(+32일, +36%)로 길어지며 심사 적체가 쌓이고 있습니다.",
-        "summary_en": "Median wait expanded from 90d to 122d (+32d, +36%) since 2026-04-01, indicating rising queue pressure."
+        "summary_ko": "2026-04-01 이후 50% 중앙값이 91일→122일(+31일, +34%)로 길어지며 심사 적체가 쌓이고 있습니다.",
+        "summary_en": "Median wait expanded from 91d to 122d (+31d, +34%) since 2026-04-01, indicating rising queue pressure."
       },
       "supply_pressure": null
     },
